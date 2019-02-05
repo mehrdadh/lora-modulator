@@ -1,0 +1,95 @@
+#--  Synopsys, Inc.
+#--  Version M-2017.03L-SP1-1
+#--  Project file C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\scratchproject.prs
+
+#project files
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/accInc.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/chirpGenerator.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/clockDivider.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/constant.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/cosIdeal.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/counter.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/DEDFF.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/initialPhase.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/IQSerializer.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/loRaModulator.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/loraPacketGenerator.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/LoRaTXDefines.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/phaseInc.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/radioDefines.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/sinIdeal.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/squareCos.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/squareSin.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source/LoRaTransmitter.v"
+add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.v"
+
+
+
+#implementation: "impl1"
+impl -add C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1 -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std v2001
+set_option -num_critical_paths 20
+set_option -project_relative_includes 1
+set_option -hdl_define -set SBP_SYNTHESIS
+set_option -include_path {C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/}
+set_option -include_path {C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/source;C:/lscc/lattice_projects/xsdr_fpga_lora_tx}
+
+#device options
+set_option -technology ECP5U
+set_option -part LFE5U_25F
+set_option -package BG256I
+set_option -speed_grade -6
+set_option -part_companion ""
+
+#compilation/mapping options
+
+# hdl_compiler_options
+set_option -distributed_compile 0
+
+# mapper_without_write_options
+set_option -frequency 64
+set_option -srs_instrumentation 1
+
+# mapper_options
+set_option -write_verilog 0
+set_option -write_vhdl 0
+
+# Lattice XP
+set_option -maxfan 1000
+set_option -disable_io_insertion 0
+set_option -retiming 0
+set_option -pipe 1
+set_option -forcegsr false
+set_option -fix_gated_and_generated_clocks 1
+set_option -rw_check_on_ram 1
+set_option -update_models_cp 0
+set_option -syn_edif_array_rename 1
+set_option -Write_declared_clocks_only 1
+
+# NFilter
+set_option -no_sequential_opt 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/lora_tx_impl1.edi"
+
+#set log file 
+set_option log_file "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/lora_tx_impl1.srf" 
+impl -active "impl1"

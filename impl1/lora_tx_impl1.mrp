@@ -1,0 +1,2646 @@
+
+       Lattice Mapping Report File for Design Module 'LoRaTransmitter'
+
+
+Design Information
+------------------
+
+Command line:   map -a ECP5U -p LFE5U-25F -t CABGA256 -s 6 -oc Industrial
+     lora_tx_impl1.ngd -o lora_tx_impl1_map.ncd -pr lora_tx_impl1.prf -mp
+     lora_tx_impl1.mrp -lpf C:/lscc/lattice_projects/xsdr_fpga_lora_tx/impl1/lor
+     a_tx_impl1_synplify.lpf -lpf C:/lscc/lattice_projects/xsdr_fpga_lora_tx/imp
+     l1/source/xsdr_fpga_singletone_tx_lattice.lpf -gui 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-25FCABGA256
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.10.3.144
+Mapped on:  02/03/19  21:34:32
+
+Design Summary
+--------------
+
+   Number of registers:    344 out of 24879 (1%)
+      PFU registers:          344 out of 24288 (1%)
+      PIO registers:            0 out of   591 (0%)
+   Number of SLICEs:      1140 out of 12144 (9%)
+      SLICEs as Logic/ROM:   1140 out of 12144 (9%)
+      SLICEs as RAM:            0 out of  9108 (0%)
+      SLICEs as Carry:        187 out of 12144 (2%)
+   Number of LUT4s:        1964 out of 24288 (8%)
+      Number used as logic LUTs:        1590
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      374
+      Number used as shift registers:     0
+   Number of PIO sites used: 10 out of 197 (5%)
+      Number of PIO sites used for single ended IOs: 6
+      Number of PIO sites used for differential IOs: 4 (represented by 2 PIO
+     comps in NCD)
+   Number of block RAMs:  0 out of 56 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          6
+
+                                    Page 1
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Design Summary (cont)
+---------------------
+   MULT9X9D            0
+   ALU54B              3
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  12 out of 56 (21 %)
+   Number of Used DSP ALU Sites:  6 out of 28 (21 %)
+   Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
+   Number of clocks:  3
+     Net pll_clko_0: 194 loads, 185 rising, 9 falling (Driver:
+     my_pll_instance/PLLInst_0 )
+     Net my_pll_instance/CLKIt: 1 loads, 1 rising, 0 falling (Driver:
+     my_pll_instance/PLLRefcs_0 )
+     Net clk_in_c: 1 loads, 1 rising, 0 falling (Driver: PIO clk_in )
+   Number of Clock Enables:  3
+     Net clkOut4_RNIEVSP: 111 loads, 111 LSLICEs
+     Net loraPacketGenerator_0/current_statece[0]: 3 loads, 3 LSLICEs
+     Net loraPacketGenerator_0/current_statece[7]: 1 loads, 1 LSLICEs
+   Number of LSRs:  12
+     Net AND2_0_Y_i: 11 loads, 11 LSLICEs
+     Net loraPacketGenerator_0/current_state_605: 4 loads, 4 LSLICEs
+     Net loraPacketGenerator_0/fb: 1 loads, 1 LSLICEs
+     Net clkOut4_RNIEVSP: 53 loads, 53 LSLICEs
+     Net current_state_RNI93IE1[7]: 35 loads, 35 LSLICEs
+     Net loraPacketGenerator_0/un1_preambleCounter15_0_a2_RNIPTAM1: 8 loads, 8
+     LSLICEs
+     Net loraPacketGenerator_0/payloadCounter_1_sqmuxa_1_RNIVUMB1: 8 loads, 8
+     LSLICEs
+     Net loraModulator_0_IQStart: 6 loads, 6 LSLICEs
+     Net loraModulator_0/chirpGen0/chirp_count7_0_I_99_0_RNIEP0E1: 18 loads, 18
+     LSLICEs
+     Net IQSerializer_0/current_state_RNI893L[2]: 3 loads, 3 LSLICEs
+     Net counter_0/countDone_RNO_0: 1 loads, 1 LSLICEs
+     Net counter_0/un3_waitcountlto19_0_a2_RNIADFG4: 11 loads, 11 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net loraModulator_0/chirpGen0/acc[19]: 249 loads
+     Net loraModulator_0/chirpGen0/acc[18]: 236 loads
+     Net loraModulator_0/chirpGen0/acc[21]: 222 loads
+     Net loraModulator_0/chirpGen0/acc[22]: 207 loads
+     Net loraModulator_0/chirpGen0/acc[20]: 202 loads
+     Net loraModulator_0/chirpGen0/acc[17]: 191 loads
+     Net clkOut4_RNIEVSP: 176 loads
+     Net loraModulator_0/chirpGen0/acc[23]: 172 loads
+     Net loraModulator_0/chirpGen0/acc[25]: 162 loads
+     Net loraModulator_0/chirpGen0/acc[16]: 149 loads
+
+
+
+
+   Number of warnings:  20
+   Number of errors:    0
+     
+
+
+
+                                    Page 2
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : removed
+     the input signal of SIGNEDCIN pin because it's not legal.
+WARNING - map: loraModulator_0/initPhase0/phaseOut0_3_add[0:53] : removed the
+     input signal of SIGNEDCIN pin because it's not legal.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R53 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R52 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R51 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R50 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R49 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R48 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R47 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R46 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R45 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R44 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R43 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R42 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R41 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R40 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R39 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R38 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R37 pin
+     may contain garbage data if ternary 36 bit operation.
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : R36 pin
+     may contain garbage data if ternary 36 bit operation.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| pll_clko            | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| POR_N               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| IQSerializer_0_serial_N| OUTPUT    | LVDS      |            |
++---------------------+-----------+-----------+------------+
+| serial              | OUTPUT    | LVCMOS25  |            |
+
+                                    Page 3
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| countDone           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk_4M              | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| serial_clk          | OUTPUT    | LVDS      |            |
++---------------------+-----------+-----------+------------+
+| clk_in              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block VCC undriven or does not drive anything - clipped.
+Block GSR_INST undriven or does not drive anything - clipped.
+Block GND undriven or does not drive anything - clipped.
+Block clockDivider_0/GND undriven or does not drive anything - clipped.
+Block counter_0/GND undriven or does not drive anything - clipped.
+Block IQSerializer_0/GND undriven or does not drive anything - clipped.
+Block IQSerializer_0/VCC undriven or does not drive anything - clipped.
+Block IQSerializer_0/DEDFF_0/GND undriven or does not drive anything - clipped.
+Block IQSerializer_0/DEDFF_0/VCC undriven or does not drive anything - clipped.
+Block loraModulator_0/GND undriven or does not drive anything - clipped.
+Block loraModulator_0/VCC undriven or does not drive anything - clipped.
+Block loraModulator_0/constant0/GND undriven or does not drive anything -
+     clipped.
+Block loraModulator_0/constant0/VCC undriven or does not drive anything -
+     clipped.
+Block loraModulator_0/chirpGen0/GND undriven or does not drive anything -
+     clipped.
+Block loraModulator_0/chirpGen0/accInc_u1/GND undriven or does not drive
+     anything - clipped.
+Block loraModulator_0/chirpGen0/cosIdeal_0/GND undriven or does not drive
+     anything - clipped.
+Block loraModulator_0/chirpGen0/cosIdeal_0/VCC undriven or does not drive
+     anything - clipped.
+Block loraModulator_0/chirpGen0/sinIdeal_0/GND undriven or does not drive
+     anything - clipped.
+Block loraModulator_0/chirpGen0/sinIdeal_0/VCC undriven or does not drive
+     anything - clipped.
+Block loraPacketGenerator_0/GND undriven or does not drive anything - clipped.
+Signal IQSerializer_0/CN was merged into signal pll_clko_0
+Signal clockDivider_0/VCC undriven or does not drive anything - clipped.
+Signal counter_0/VCC undriven or does not drive anything - clipped.
+Signal loraModulator_0/initPhase0/GND undriven or does not drive anything -
+     clipped.
+Signal loraModulator_0/initPhase0/VCC undriven or does not drive anything -
+     clipped.
+Signal loraModulator_0/chirpGen0/VCC undriven or does not drive anything -
+     clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/GND undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/VCC undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/VCC undriven or does not drive
+     anything - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraPacketGenerator_0/VCC undriven or does not drive anything - clipped.
+Signal my_pll_instance/VCC undriven or does not drive anything - clipped.
+Signal VCC undriven or does not drive anything - clipped.
+Signal clockDivider_0/un2_counter_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+Signal clockDivider_0/un2_counter_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal clockDivider_0/N_1 undriven or does not drive anything - clipped.
+Signal clockDivider_0/un1_lockCounter_s_7_0_S1 undriven or does not drive
+     anything - clipped.
+Signal clockDivider_0/un1_lockCounter_s_7_0_COUT undriven or does not drive
+     anything - clipped.
+Signal clockDivider_0/un1_lockCounter_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal clockDivider_0/un1_lockCounter_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal clockDivider_0/N_2 undriven or does not drive anything - clipped.
+Signal clockDivider_0/un2_counter_s_7_0_S1 undriven or does not drive anything -
+     clipped.
+Signal clockDivider_0/un2_counter_s_7_0_COUT undriven or does not drive anything
+     - clipped.
+Signal counter_0/un5_waitcount_s_19_0_S1 undriven or does not drive anything -
+     clipped.
+Signal counter_0/un5_waitcount_s_19_0_COUT undriven or does not drive anything -
+     clipped.
+Signal counter_0/un5_waitcount_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal counter_0/un5_waitcount_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal counter_0/N_1 undriven or does not drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC1 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC2 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC3 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC4 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC5 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC6 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC7 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC8 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC9 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC10 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC11 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC12 undriven or does not drive
+     anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC13 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC14 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC15 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC16 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC17 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB1 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB2 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB3 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB4 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB5 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB6 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB7 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB8 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB9 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB10 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB11 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB12 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB13 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB14 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB15 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB16 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB17 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA1 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA2 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA3 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA4 undriven or does not drive
+     anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA5 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA6 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA7 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA8 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA9 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA10 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA11 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA12 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA13 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA14 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA15 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA16 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA17 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_s_33_0_S1 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_s_33_0_COUT undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_cry_0_0_S0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/N_1 undriven or does not drive anything -
+     clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC0_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC1_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC2_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC3_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC4_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC5_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC6_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC7_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC8_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC9_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC10_0 undriven or does not drive
+     anything - clipped.
+
+                                    Page 7
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC11_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC12_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC13_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC14_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC15_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC16_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_ROC17_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB0_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB1_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB2_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB3_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB4_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB5_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB6_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB7_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB8_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB9_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB10_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB11_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB12_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB13_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB14_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB15_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB16_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROB17_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA0_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA1_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA2_0 undriven or does not drive
+     anything - clipped.
+
+                                    Page 8
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA3_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA4_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA5_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA6_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA7_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA8_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA9_0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA10_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA11_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA12_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA13_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA14_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA15_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA16_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_SROA17_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_OVERUNDER undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_UNDER undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_OVER undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_EQPATB undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_EQPAT undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_EQOM undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_EQZM undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_EQZ undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO0 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO1 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO2 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO3 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO4 undriven or does not drive
+     anything - clipped.
+
+                                    Page 9
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO5 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO6 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO7 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO8 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO9 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO10 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO11 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO12 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO13 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO14 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO15 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO16 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO17 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO18 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO19 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO20 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO21 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO22 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO23 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO24 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO25 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO26 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO27 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO28 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO29 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO30 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO31 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO32 undriven or does not
+     drive anything - clipped.
+
+                                   Page 10
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO33 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO34 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO35 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO36 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO37 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO38 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO39 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO40 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO41 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO42 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO43 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO44 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO45 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO46 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO47 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO48 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO49 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO50 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO51 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO52 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO53 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[34] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[35] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[36] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[37] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[38] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[39] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[40] undriven or does not drive
+     anything - clipped.
+
+                                   Page 11
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[41] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[42] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[43] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[44] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[45] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[46] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[47] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[48] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[49] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[50] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[51] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[52] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add[53] undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/initPhase0/phaseOut0_3_add_SIGNEDR undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_99_0_S1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_99_0_COUT undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_93_0_S1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_93_0_S0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_81_0_S1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_81_0_S0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_69_0_S1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_69_0_S0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_57_0_S1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_57_0_S0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_45_0_S1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_45_0_S0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_33_0_S1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_33_0_S0 undriven or does not
+     drive anything - clipped.
+
+                                   Page 12
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_21_0_S1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_21_0_S0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_9_0_S1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_9_0_S0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_1_0_S1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/chirp_count7_0_I_1_0_S0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/N_1 undriven or does not drive anything -
+     clipped.
+Signal loraModulator_0/chirpGen0/un2_chirp_count_1_s_33_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/un2_chirp_count_1_s_33_0_COUT undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/un2_chirp_count_1_cry_0_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/un2_chirp_count_1_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/N_2 undriven or does not drive anything -
+     clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC0_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC1_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC2_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC3_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC4_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC5_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC6_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC7_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC8_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC9_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC10_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC11_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC12_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC13_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC14_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC15_1 undriven or does not
+     drive anything - clipped.
+
+                                   Page 13
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC16_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC17_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB0_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB1_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB2_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB3_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB4_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB5_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB6_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB7_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB8_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB9_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB10_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB11_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB12_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB13_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB14_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB15_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB16_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB17_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA0_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA1_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA2_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA3_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA4_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA5_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA6_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA7_1 undriven or does not
+     drive anything - clipped.
+
+                                   Page 14
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA8_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA9_1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA10_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA11_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA12_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA13_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA14_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA15_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA16_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA17_1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC2 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC3 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC4 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC5 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC6 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC7 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC8 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC9 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC10 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC11 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC12 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC13 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC14 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC15 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC16 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC17 undriven or does not
+     drive anything - clipped.
+
+                                   Page 15
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB2 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB3 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB4 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB5 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB6 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB7 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB8 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB9 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB10 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB11 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB12 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB13 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB14 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB15 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB16 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB17 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA2 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA3 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA4 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA5 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA6 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA7 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA8 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA9 undriven or does not
+     drive anything - clipped.
+
+                                   Page 16
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA10 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA11 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA12 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA13 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA14 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA15 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA16 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA17 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC0_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC1_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC2_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC3_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC4_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC5_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC6_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC7_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC8_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC9_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC10_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC11_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC12_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC13_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC14_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC15_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC16_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC17_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB0_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB1_0 undriven or does not
+     drive anything - clipped.
+
+                                   Page 17
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB2_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB3_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB4_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB5_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB6_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB7_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB8_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB9_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB10_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB11_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB12_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB13_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB14_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB15_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB16_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB17_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA0_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA1_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA2_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA3_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA4_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA5_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA6_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA7_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA8_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA9_0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA10_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA11_0 undriven or does
+     not drive anything - clipped.
+
+                                   Page 18
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA12_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA13_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA14_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA15_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA16_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA17_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC2 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC3 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC4 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC5 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC6 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC7 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC8 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC9 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC10 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC11 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC12 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC13 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC14 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC15 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC16 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC17 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB2 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB3 undriven or does not
+     drive anything - clipped.
+
+                                   Page 19
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB4 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB5 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB6 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB7 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB8 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB9 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB10 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB11 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB12 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB13 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB14 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB15 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB16 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB17 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA2 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA3 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA4 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA5 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA6 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA7 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA8 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA9 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA10 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA11 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA12 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA13 undriven or does not
+     drive anything - clipped.
+
+                                   Page 20
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA14 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA15 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA16 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA17 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_OVERUNDER_0 undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_UNDER_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_OVER_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_EQPATB_0 undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_EQPAT_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_EQOM_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_EQZM_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_EQZ_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO0_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO1_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO2_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO3_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO4_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO5_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO6_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO7_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO8_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO9_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO10_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO11_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO12_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO13_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO14_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO15_0 undriven or does
+     not drive anything - clipped.
+
+                                   Page 21
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO16_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO17_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO18_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO19_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO20_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO21_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO22_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO23_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO24_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO25_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO26_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO27_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO28_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO29_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO30_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO31_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO32_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO33_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO34_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO35_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO36_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO37_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO38_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO39_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO40_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO41_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO42_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO43_0 undriven or does
+     not drive anything - clipped.
+
+                                   Page 22
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO44_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO45_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO46_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO47_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO48_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO49_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO50_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO51_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO52_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO53_0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_OVERUNDER undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_UNDER undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_OVER undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_EQPATB undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_EQPAT undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_EQOM undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_EQZM undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_EQZ undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO0 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO1 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO2 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO3 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO4 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO5 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO6 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO7 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO8 undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO9 undriven or does not
+     drive anything - clipped.
+
+                                   Page 23
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO10 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO11 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO12 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO13 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO14 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO15 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO16 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO17 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO18 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO19 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO20 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO21 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO22 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO23 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO24 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO25 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO26 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO27 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO28 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO29 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO30 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO31 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO32 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO33 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO34 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO35 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO36 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO37 undriven or does
+     not drive anything - clipped.
+
+                                   Page 24
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO38 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO39 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO40 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO41 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO42 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO43 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO44 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO45 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO46 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO47 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO48 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO49 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO50 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO51 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO52 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO53 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[16] undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[17] undriven or does not
+     drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[18] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[19] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[20] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[21] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[22] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[23] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[24] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[25] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[26] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[27] undriven or does
+     not drive anything - clipped.
+
+                                   Page 25
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[28] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[29] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[30] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[31] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[32] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[33] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[34] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[35] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[36] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[37] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[38] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[39] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[40] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[41] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[42] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[43] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[44] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[45] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[46] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[47] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[48] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[49] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[50] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[51] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[52] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[53] undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_SIGNEDR undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[32] undriven or
+     does not drive anything - clipped.
+
+                                   Page 26
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_COUT[32] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[30] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[30] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[26] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[26] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[22] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[22] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[18] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[18] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[15] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[15] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[13] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[13] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[11] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[11] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[9] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[9] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[7] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[7] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[5] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[5] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[3] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[3] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[1] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[1] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[0] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[0] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/N_1 undriven or does not drive
+     anything - clipped.
+
+                                   Page 27
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[32] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_COUT[32] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[30] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[30] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[26] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[26] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[22] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[22] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[18] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[18] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[15] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[15] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[13] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[13] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[11] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[11] undriven
+     or does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[9] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[9] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[7] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[7] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[5] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[5] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[3] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[3] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[1] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[1] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[0] undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[0] undriven or
+     does not drive anything - clipped.
+
+                                   Page 28
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/phase_u1/N_2 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut_4_s_33_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut_4_s_33_0_COUT undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut_4_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/N_3 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut_s_33_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut_s_33_0_COUT undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/phaseOut_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/phase_u1/N_4 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_s_33_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_s_33_0_COUT undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_5_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_5_0_S0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_3_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_3_0_S0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_1_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_1_0_S0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_0_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_5_0_COUT undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_0_0_S1 undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_0_0_S0 undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/N_2 undriven or does not drive
+     anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_1_s_33_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_1_s_33_0_COUT undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_1_cry_0_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_1_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
+
+                                   Page 29
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+Removed logic (cont)
+--------------------
+Signal loraModulator_0/chirpGen0/accInc_u1/N_3 undriven or does not drive
+     anything - clipped.
+Signal loraPacketGenerator_0/un1_payloadCounter_14_s_13_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraPacketGenerator_0/un1_payloadCounter_14_s_13_0_COUT undriven or does
+     not drive anything - clipped.
+Signal loraPacketGenerator_0/un1_payloadCounter_14_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
+Signal loraPacketGenerator_0/N_1 undriven or does not drive anything - clipped.
+Signal loraPacketGenerator_0/un1_preambleCounter_s_13_0_S1 undriven or does not
+     drive anything - clipped.
+Signal loraPacketGenerator_0/un1_preambleCounter_s_13_0_COUT undriven or does
+     not drive anything - clipped.
+Signal loraPacketGenerator_0/un1_preambleCounter_cry_0_0_S0 undriven or does not
+     drive anything - clipped.
+Signal loraPacketGenerator_0/N_10 undriven or does not drive anything - clipped.
+     
+Signal my_pll_instance/CLKINTFB undriven or does not drive anything - clipped.
+Signal my_pll_instance/REFCLK undriven or does not drive anything - clipped.
+Signal my_pll_instance/INTLOCK undriven or does not drive anything - clipped.
+Signal my_pll_instance/CLKOS3 undriven or does not drive anything - clipped.
+Signal my_pll_instance/CLKOS2 undriven or does not drive anything - clipped.
+Signal my_pll_instance/CLKOS undriven or does not drive anything - clipped.
+Block IQSerializer_0/current_state_0_.CN was optimized away.
+Block clockDivider_0/VCC was optimized away.
+Block counter_0/VCC was optimized away.
+Block loraModulator_0/initPhase0/GND was optimized away.
+Block loraModulator_0/initPhase0/VCC was optimized away.
+Block loraModulator_0/chirpGen0/VCC was optimized away.
+Block loraModulator_0/chirpGen0/phase_u1/GND was optimized away.
+Block loraModulator_0/chirpGen0/phase_u1/VCC was optimized away.
+Block loraModulator_0/chirpGen0/accInc_u1/VCC was optimized away.
+Block loraPacketGenerator_0/VCC was optimized away.
+Block my_pll_instance/VCC was optimized away.
+
+DSP Component Details
+---------------------
+
+
+     . ALU54B  loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[18:71]:
+
+     54-Bit ALU
+	Opcode  0		1
+	Opcode  1		0
+	Opcode  2		0
+	Opcode  3		0
+	Opcode  4		1
+	Opcode  5		0
+	Opcode  6		0
+	Opcode  7		0
+	Opcode  8		0
+	Opcode  9		1
+	Opcode 10		0
+
+     	OpcodeOP0 Registers	CLK	CE	RST
+	--------------------------------------------
+
+                                   Page 30
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+DSP Component Details (cont)
+----------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	OpcodeOP1 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	--	--
+		Pipeline	    	--	--
+
+     	OpcodeIN Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST
+	--------------------------------------------
+		C0		    	   	    
+		C1		    	   	    
+		CFB		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output0		    	   	    
+		Output1		    	   	    
+
+     	Flag Register		CLK	CE	RST
+	--------------------------------------------
+		Flag		    	   	    
+Other
+	MCPAT_SOURCE	STATIC
+	MASKPAT_SOURCE	STATIC
+	MASK01		0x00000000000000
+	MCPAT		0x00000000000000
+	MASKPAT		0x00000000000000
+	RNDPAT		0x00000000000000
+	PSE17		0b00000000000000000
+	PSE44		0b00000000000000000000000000
+	PSE53		0b00000000
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	MULT9_MODE	DISABLED
+     
+	LEGACY  	DISABLED
+     
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+
+     . ALU54B  loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53]:
+
+     54-Bit ALU
+	Opcode  0		1
+	Opcode  1		0
+	Opcode  2		0
+	Opcode  3		0
+	Opcode  4		0
+
+                                   Page 31
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+DSP Component Details (cont)
+----------------------------
+	Opcode  5		0
+	Opcode  6		0
+	Opcode  7		0
+	Opcode  8		0
+	Opcode  9		1
+	Opcode 10		0
+
+     	OpcodeOP0 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	OpcodeOP1 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	--	--
+		Pipeline	    	--	--
+
+     	OpcodeIN Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST
+	--------------------------------------------
+		C0		    	   	    
+		C1		    	   	    
+		CFB		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output0		    	   	    
+		Output1		    	   	    
+
+     	Flag Register		CLK	CE	RST
+	--------------------------------------------
+		Flag		    	   	    
+Other
+	MCPAT_SOURCE	STATIC
+	MASKPAT_SOURCE	STATIC
+	MASK01		0x00000000000000
+	MCPAT		0x00000000000000
+	MASKPAT		0x00000000000000
+	RNDPAT		0x00000000000000
+	PSE17		0b00000000000000000
+	PSE44		0b00000000000000000000000000
+	PSE53		0b00000000
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	MULT9_MODE	DISABLED
+     
+	LEGACY  	DISABLED
+     
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+
+                                   Page 32
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+DSP Component Details (cont)
+----------------------------
+
+     . MULT18X18D  loraModulator_0/chirpGen0/phase_u1/un1_BW_SR[0:35]:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  loraModulator_0/chirpGen0/phase_u1/un1_BW_SR[18:53]:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+
+                                   Page 33
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+DSP Component Details (cont)
+----------------------------
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0[18:53]:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+                                   Page 34
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+DSP Component Details (cont)
+----------------------------
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  loraModulator_0/chirpGen0/phase_u1/un1_BW_SR[36:71]:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+
+                                   Page 35
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+DSP Component Details (cont)
+----------------------------
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . ALU54B  loraModulator_0/initPhase0/phaseOut0_3_add[0:53]:
+
+     54-Bit ALU
+	Opcode  0		1
+	Opcode  1		0
+	Opcode  2		0
+	Opcode  3		0
+	Opcode  4		0
+	Opcode  5		0
+	Opcode  6		0
+	Opcode  7		0
+	Opcode  8		0
+	Opcode  9		1
+	Opcode 10		0
+
+     	OpcodeOP0 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	OpcodeOP1 Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	--	--
+		Pipeline	    	--	--
+
+     	OpcodeIN Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST
+	--------------------------------------------
+		C0		    	   	    
+		C1		    	   	    
+		CFB		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output0		    	   	    
+		Output1		    	   	    
+
+     	Flag Register		CLK	CE	RST
+	--------------------------------------------
+
+                                   Page 36
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+DSP Component Details (cont)
+----------------------------
+		Flag		    	   	    
+Other
+	MCPAT_SOURCE	STATIC
+	MASKPAT_SOURCE	STATIC
+	MASK01		0x00000000000000
+	MCPAT		0x00000000000000
+	MASKPAT		0x00000000000000
+	RNDPAT		0x00000000000000
+	PSE17		0b00000000000000000
+	PSE44		0b00000000000000000000000000
+	PSE53		0b00000000
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	MULT9_MODE	DISABLED
+     
+	LEGACY  	DISABLED
+     
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+
+     . MULT18X18D  loraModulator_0/initPhase0/phaseOut0_3[18:53]:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+
+                                   Page 37
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+DSP Component Details (cont)
+----------------------------
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+     . MULT18X18D  loraModulator_0/initPhase0/phaseOut0_3[0:35]:
+
+     Multiplier
+	Operation A		Unsigned
+	Operation A Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+
+     	Operation B		Unsigned
+	Operation B Registers	CLK	CE	RST
+	--------------------------------------------
+		Input		    	   	    
+		Pipeline	    	   	    
+Data
+	Input Registers		CLK	CE	RST	Source
+	-------------------------------------------------------
+		A		    	   	    	A Data In
+		B		    	   	    	B Data In
+		C		    	   	    	N/A
+	Cascaded Match
+
+     	Pipeline Registers	CLK	CE	RST
+	--------------------------------------------
+		Pipe		    	   	    
+
+     	Output Register		CLK	CE	RST
+	--------------------------------------------
+		Output		    	   	    
+Other
+	SOURCEB_MODE	B_SHIFT
+	MULT_BYPASS	DISABLED
+	CAS_MATCH_REG	FALSE
+	GSR		DISABLED
+	RESETMODE	ASYNC
+	CLK0_DIV	ENABLED
+	CLK1_DIV	ENABLED
+	CLK2_DIV	ENABLED
+	CLK3_DIV	ENABLED
+	HIGHSPEED_CLK	NONE
+	PSE17		0b00000000000000000
+	PSE35		0b00000000000000000
+     
+	C_PSE17		0b00000000000000000
+
+
+                                   Page 38
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+DSP Component Details (cont)
+----------------------------
+     
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                my_pll_instance/PLLInst_0
+  PLL Type:                                         EHXPLLL
+  Input Clock:                             NODE     my_pll_instance/GND
+  Input Clock2:                            PIN      clk_in_c
+  Input Clock select:                               NONE
+  Output Clock(P):                         PIN,NODE pll_clko_0
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     pll_clko_0
+  Reset Signal:                                     NONE
+  Standby Signal:                          NODE     my_pll_instance/GND
+  PLL LOCK signal:                         NODE     pll_lock
+  PLL Internal LOCK Signal:                         NONE
+  Input Clock Frequency (MHz):                      32.0000
+  Output Clock(P) Frequency (MHz):                  64.0000
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              NONE
+  Pre Divider B Input:                              NONE
+  Pre Divider C Input:                              NONE
+  Pre Divider D Input:                              NONE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     1
+  CLKFB Divider:                                    2
+  CLKOP Divider:                                    9
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             NONE
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 FALLING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS2 Trim Option Rising/Falling:                NONE
+  CLKOS2 Trim Option Delay:                         NONE
+  CLKOS3 Desired Phase Shift(degree):               0
+  CLKOS3 Trim Option Rising/Falling:                NONE
+  CLKOS3 Trim Option Delay:                         NONE
+
+
+
+
+                                   Page 39
+
+
+
+
+Design:  LoRaTransmitter                               Date:  02/03/19  21:34:32
+
+ASIC Components
+---------------
+
+Instance Name: my_pll_instance/PLLInst_0
+         Type: EHXPLLL
+Instance Name: my_pll_instance/PLLRefcs_0
+         Type: PLLREFCS
+Instance Name: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[18:71]
+         Type: ALU54B
+Instance Name: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53]
+         Type: ALU54B
+Instance Name: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR[0:35]
+         Type: MULT18X18D
+Instance Name: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR[18:53]
+         Type: MULT18X18D
+Instance Name: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0[18:53]
+         Type: MULT18X18D
+Instance Name: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR[36:71]
+         Type: MULT18X18D
+Instance Name: loraModulator_0/initPhase0/phaseOut0_3_add[0:53]
+         Type: ALU54B
+Instance Name: loraModulator_0/initPhase0/phaseOut0_3[18:53]
+         Type: MULT18X18D
+Instance Name: loraModulator_0/initPhase0/phaseOut0_3[0:35]
+         Type: MULT18X18D
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs  
+   Total REAL Time: 2 secs  
+   Peak Memory Usage: 124 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 40
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights
+     reserved.

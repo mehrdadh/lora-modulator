@@ -1,0 +1,1181 @@
+#Build: Synplify Pro (R) M-2017.03L-SP1-1, Build 086R, Aug  4 2017
+#install: C:\lscc\diamond\3.10_x64\synpbase
+#OS: Windows 8 6.2
+#Hostname: DESKTOP-I2N610G
+
+# Sun Feb  3 20:10:08 2019
+
+#Implementation: impl1
+
+Synopsys HDL Compiler, version comp2017q2p1, Build 190R, built Aug  4 2017
+@N|Running in 64-bit mode
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+Synopsys Verilog Compiler, version comp2017q2p1, Build 190R, built Aug  4 2017
+@N|Running in 64-bit mode
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+@I::"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v" (library work)
+@I::"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.10_x64\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.10_x64\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.10_x64\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.10_x64\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\accInc.v" (library work)
+@I:"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\accInc.v":"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\LoRaTXDefines.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpGenerator.v" (library work)
+@I:"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpGenerator.v":"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\RadioDefines.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\clockDivider.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\cosIdeal.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\counter.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\DEDFF.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\initialPhase.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\IQSerializer.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loRaModulator.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\phaseInc.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\radioDefines.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\sinIdeal.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\squareCos.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\squareSin.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\LoRaTransmitter.v" (library work)
+@I::"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v" (library work)
+Verilog syntax check successful!
+Selecting top level module LoRaTransmitter
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\clockDivider.v":14:7:14:18|Synthesizing module clockDivider in library work.
+
+	Freq=8'b00000100
+   Generated name = clockDivider_4s
+@N: CG179 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\clockDivider.v":43:23:43:28|Removing redundant assignment.
+@N: CG179 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\clockDivider.v":50:23:50:29|Removing redundant assignment.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\counter.v":17:7:17:13|Synthesizing module counter in library work.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\DEDFF.v":21:7:21:11|Synthesizing module DEDFF in library work.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\IQSerializer.v":20:7:20:18|Synthesizing module IQSerializer in library work.
+
+	VCC=32'b00000000000000000000000000000001
+	VSS=32'b00000000000000000000000000000000
+	Init0=4'b0000
+	Init1=4'b0001
+	ISYNC=4'b0010
+	IDATA=4'b0011
+	QSYNC=4'b0100
+	QDATA=4'b0101
+   Generated name = IQSerializer_1s_0s_0s_1s_2s_3s_4s_5s
+@W:"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\IQSerializer.v":71:33:71:44|Index into variable I could be out of range - a simulation mismatch is possible
+@W:"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\IQSerializer.v":72:33:72:44|Index into variable I could be out of range - a simulation mismatch is possible
+@W:"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\IQSerializer.v":79:33:79:44|Index into variable Q could be out of range - a simulation mismatch is possible
+@W:"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\IQSerializer.v":80:33:80:44|Index into variable Q could be out of range - a simulation mismatch is possible
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":15:7:15:14|Synthesizing module constant in library work.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\initialPhase.v":15:7:15:18|Synthesizing module initialPhase in library work.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\phaseInc.v":16:7:16:14|Synthesizing module phaseInc in library work.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\accInc.v":15:7:15:12|Synthesizing module accInc in library work.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\cosIdeal.v":4:7:4:14|Synthesizing module cosIdeal in library work.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\sinIdeal.v":4:7:4:14|Synthesizing module sinIdeal in library work.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpGenerator.v":22:7:22:20|Synthesizing module chirpGenerator in library work.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loRaModulator.v":19:7:19:19|Synthesizing module loraModulator in library work.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":16:7:16:25|Synthesizing module loraPacketGenerator in library work.
+
+	STATE_PREAMBLE=5'b00000
+	STATE_SYNC_0=5'b00001
+	STATE_SYNC_1=5'b00010
+	STATE_DOWNCHIRP_0=5'b00011
+	STATE_DOWNCHIRP_1=5'b00100
+	STATE_QDOWNCHIRP=5'b00101
+	STATE_PAYLOAD=5'b00110
+	STATE_DONE=5'b00111
+	STATE_CONST0=5'b01000
+	STATE_CONST1=5'b01001
+	VSS=32'b00000000000000000000000000000000
+	VCC=32'b00000000000000000000000000000001
+   Generated name = loraPacketGenerator_Z1
+@N: CG179 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":137:39:137:53|Removing redundant assignment.
+@N: CG179 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":138:39:138:52|Removing redundant assignment.
+@N: CG179 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":361:26:361:36|Removing redundant assignment.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit BW_select[0] is always 1.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit BW_select[1] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit BW_select[2] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit SF_select[0] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit SF_select[1] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit SF_select[2] is always 1.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[0] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[1] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[2] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[3] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[4] is always 1.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[5] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[6] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[7] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[8] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[9] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[10] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[11] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[12] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[13] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[0] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[1] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[2] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[3] is always 1.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[4] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[5] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[6] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[7] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[8] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[9] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[10] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[11] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[12] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[13] is always 0.
+@N: CG364 :"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v":757:7:757:9|Synthesizing module VHI in library work.
+@N: CG364 :"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v":761:7:761:9|Synthesizing module VLO in library work.
+@N: CG364 :"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+@N: CG364 :"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v":1568:7:1568:14|Synthesizing module PLLREFCS in library work.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":8:7:8:18|Synthesizing module my_pll_64mhz in library work.
+@W: CL168 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":21:8:21:21|Removing instance scuba_vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@N: CG364 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\LoRaTransmitter.v":9:7:9:21|Synthesizing module LoRaTransmitter in library work.
+@W: CG360 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\LoRaTransmitter.v":81:14:81:40|Removing wire SYSRESET_0_POWER_ON_RESET_N, as there is no assignment to it.
+@W: CL156 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\LoRaTransmitter.v":269:9:269:16|*Input pll_clki to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@N: CL201 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":112:0:112:5|Trying to extract state machine for register current_state.
+Extracted state machine for register current_state
+State machine has 8 reachable states with original encodings of:
+   00000
+   00001
+   00010
+   00011
+   00100
+   00101
+   00110
+   00111
+@W: CL246 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\sinIdeal.v":6:24:6:28|Input port bits 13 to 0 of angle[33:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL246 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\cosIdeal.v":6:24:6:28|Input port bits 13 to 0 of angle[33:0] are unused. Assign logic for all port bits or change the input port size.
+@N: CL159 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\initialPhase.v":20:39:20:44|Input offset is unused.
+@N: CL159 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\initialPhase.v":21:40:21:49|Input chirp_size is unused.
+@N: CL201 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\IQSerializer.v":121:0:121:5|Trying to extract state machine for register current_state.
+Extracted state machine for register current_state
+State machine has 5 reachable states with original encodings of:
+   0000
+   0010
+   0011
+   0100
+   0101
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[20] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[21] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[22] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[23] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[24] is always 0.
+@N: CL189 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[25] is always 0.
+@W: CL279 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Pruning register bits 25 to 20 of waitcount[25:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 79MB peak: 81MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Feb  3 20:10:09 2019
+
+###########################################################]
+Synopsys Netlist Linker, version comp2017q2p1, Build 190R, built Aug  4 2017
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 71MB peak: 72MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Feb  3 20:10:09 2019
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Feb  3 20:10:09 2019
+
+###########################################################]
+Synopsys Netlist Linker, version comp2017q2p1, Build 190R, built Aug  4 2017
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 72MB peak: 73MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sun Feb  3 20:10:10 2019
+
+###########################################################]
+Pre-mapping Report
+
+# Sun Feb  3 20:10:10 2019
+
+Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1796R, Built Aug  4 2017 11:10:16
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version M-2017.03L-SP1-1
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@A: MF827 |No constraint file specified.
+@L: C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\lora_tx_impl1_scck.rpt 
+Printing clock  summary report in "C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\lora_tx_impl1_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 107MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 107MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 117MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 119MB)
+
+ICG Latch Removal Summary:
+Number of ICG latches removed:	0
+Number of ICG latches not removed:	0
+syn_allowed_resources : blockrams=56  set on top level netlist LoRaTransmitter
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 147MB peak: 148MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                      Requested     Requested     Clock                                                Clock                     Clock
+Level     Clock                                      Frequency     Period        Type                                                 Group                     Load 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       System                                     1.0 MHz       1000.000      system                                               system_clkgroup           0    
+                                                                                                                                                                     
+0 -       my_pll_64mhz|CLKOP_inferred_clock          1.0 MHz       1000.000      inferred                                             Autoconstr_clkgroup_0     33   
+1 .         clockDivider_4s|clkOut_derived_clock     1.0 MHz       1000.000      derived (from my_pll_64mhz|CLKOP_inferred_clock)     Autoconstr_clkgroup_0     311  
+=====================================================================================================================================================================
+
+@W: MT529 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\clockdivider.v":31:0:31:5|Found inferred clock my_pll_64mhz|CLKOP_inferred_clock which controls 33 sequential elements including clockDivider_0.counter[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 147MB peak: 148MB)
+
+Encoding state machine current_state[4:0] (in view: work.IQSerializer_1s_0s_0s_1s_2s_3s_4s_5s(verilog))
+original code -> new code
+   0000 -> 00001
+   0010 -> 00010
+   0011 -> 00100
+   0100 -> 01000
+   0101 -> 10000
+Encoding state machine current_state[7:0] (in view: work.loraPacketGenerator_Z1(verilog))
+original code -> new code
+   00000 -> 00000001
+   00001 -> 00000010
+   00010 -> 00000100
+   00011 -> 00001000
+   00100 -> 00010000
+   00101 -> 00100000
+   00110 -> 01000000
+   00111 -> 10000000
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 147MB peak: 148MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 147MB peak: 149MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 62MB peak: 149MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun Feb  3 20:10:11 2019
+
+###########################################################]
+Map & Optimize Report
+
+# Sun Feb  3 20:10:11 2019
+
+Synopsys Lattice Technology Mapper, Version maplat, Build 1796R, Built Aug  4 2017 11:10:16
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version M-2017.03L-SP1-1
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 101MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 114MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 143MB peak: 145MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: MT206 |Auto Constrain mode is enabled
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 144MB peak: 146MB)
+
+Encoding state machine current_state[4:0] (in view: work.IQSerializer_1s_0s_0s_1s_2s_3s_4s_5s(verilog))
+original code -> new code
+   0000 -> 00001
+   0010 -> 00010
+   0011 -> 00100
+   0100 -> 01000
+   0101 -> 10000
+@N: MF179 :|Found 34 by 34 bit equality operator ('==') chirp_count7 (in view: work.chirpGenerator(verilog))
+Encoding state machine current_state[7:0] (in view: work.loraPacketGenerator_Z1(verilog))
+original code -> new code
+   00000 -> 00000001
+   00001 -> 00000010
+   00010 -> 00000100
+   00011 -> 00001000
+   00100 -> 00010000
+   00101 -> 00100000
+   00110 -> 01000000
+   00111 -> 10000000
+
+Starting factoring (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:04s; Memory used current: 188MB peak: 249MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 210MB peak: 249MB)
+
+
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 195MB peak: 249MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 195MB peak: 249MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 186MB peak: 249MB)
+
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+@W: FX528 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[0] which prevents the register from being packed into DSP
+
+Only the first 100 messages of id 'FX528' are reported. To see all messages use 'report_messages -log C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\synlog\lora_tx_impl1_fpga_mapper.srr -id FX528' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {FX528} -count unlimited' in the Tcl shell.
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:13s; CPU Time elapsed 0h:00m:11s; Memory used current: 189MB peak: 249MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:14s; Memory used current: 206MB peak: 249MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:14s; Memory used current: 205MB peak: 249MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:15s; Memory used current: 204MB peak: 249MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:16s; Memory used current: 251MB peak: 254MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:16s		    -3.78ns		1612 /       344
+   2		0h:00m:16s		    -3.78ns		1599 /       344
+   3		0h:00m:16s		    -3.59ns		1600 /       344
+   4		0h:00m:16s		    -3.59ns		1602 /       344
+   5		0h:00m:16s		    -3.59ns		1602 /       344
+@N: FX271 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpgenerator.v":60:0:60:5|Replicating instance loraModulator_0.chirpGen0.acc[19] (in view: work.LoRaTransmitter(verilog)) with 233 loads 3 times to improve timing.
+@N: FX271 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpgenerator.v":60:0:60:5|Replicating instance loraModulator_0.chirpGen0.acc[18] (in view: work.LoRaTransmitter(verilog)) with 200 loads 3 times to improve timing.
+@N: FX271 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpgenerator.v":60:0:60:5|Replicating instance loraModulator_0.chirpGen0.acc[21] (in view: work.LoRaTransmitter(verilog)) with 201 loads 3 times to improve timing.
+@N: FX271 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpgenerator.v":60:0:60:5|Replicating instance loraModulator_0.chirpGen0.acc[17] (in view: work.LoRaTransmitter(verilog)) with 193 loads 3 times to improve timing.
+@N: FX271 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpgenerator.v":60:0:60:5|Replicating instance loraModulator_0.chirpGen0.acc[20] (in view: work.LoRaTransmitter(verilog)) with 192 loads 3 times to improve timing.
+@N: FX271 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpgenerator.v":60:0:60:5|Replicating instance loraModulator_0.chirpGen0.acc[22] (in view: work.LoRaTransmitter(verilog)) with 197 loads 3 times to improve timing.
+@N: FX271 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpgenerator.v":60:0:60:5|Replicating instance loraModulator_0.chirpGen0.acc[16] (in view: work.LoRaTransmitter(verilog)) with 158 loads 3 times to improve timing.
+@N: FX271 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpgenerator.v":60:0:60:5|Replicating instance loraModulator_0.chirpGen0.acc[23] (in view: work.LoRaTransmitter(verilog)) with 159 loads 3 times to improve timing.
+@N: FX271 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpgenerator.v":60:0:60:5|Replicating instance loraModulator_0.chirpGen0.acc[15] (in view: work.LoRaTransmitter(verilog)) with 107 loads 3 times to improve timing.
+@N: FX271 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpgenerator.v":60:0:60:5|Replicating instance loraModulator_0.chirpGen0.acc[14] (in view: work.LoRaTransmitter(verilog)) with 62 loads 3 times to improve timing.
+@N: FX271 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpgenerator.v":60:0:60:5|Replicating instance loraModulator_0.chirpGen0.acc[25] (in view: work.LoRaTransmitter(verilog)) with 149 loads 3 times to improve timing.
+@N: FX271 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\chirpgenerator.v":60:0:60:5|Replicating instance loraModulator_0.chirpGen0.acc[24] (in view: work.LoRaTransmitter(verilog)) with 120 loads 3 times to improve timing.
+Timing driven replication report
+Added 36 Registers via timing driven replication
+Added 0 LUTs via timing driven replication
+
+   6		0h:00m:17s		    -3.59ns		1602 /       380
+
+
+   7		0h:00m:17s		    -3.59ns		1602 /       380
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:17s; Memory used current: 253MB peak: 255MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@A: BN291 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Boundary register counter_0.countDone.fb (in view: work.LoRaTransmitter(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:19s; CPU Time elapsed 0h:00m:17s; Memory used current: 254MB peak: 255MB)
+
+@N: MT611 :|Automatically generated clock clockDivider_4s|clkOut_derived_clock is not used and is being removed
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 380 clock pin(s) of sequential element(s)
+0 instances converted, 380 sequential instances remain driven by gated/generated clocks
+
+================================================================================================================= Gated/Generated Clocks ==================================================================================================================
+Clock Tree ID     Driving Element               Drive Element Type     Fanout     Sample Instance                            Explanation                                                                                                                   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       my_pll_instance.PLLInst_0     EHXPLLL                380        loraPacketGenerator_0.current_state[5]     Gating structure creates improper gating logic. See the Gated Clocks description in the user guide for conversion requirements
+===========================================================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:19s; CPU Time elapsed 0h:00m:18s; Memory used current: 215MB peak: 255MB)
+
+Writing Analyst data base C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\synwork\lora_tx_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:20s; Memory used current: 258MB peak: 261MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\lora_tx_impl1.edi
+M-2017.03L-SP1-1
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:20s; Memory used current: 263MB peak: 265MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:20s; Memory used current: 253MB peak: 265MB)
+
+@W: MT246 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":68:13:68:22|Blackbox PLLREFCS is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT246 :"c:\lscc\lattice_projects\xsdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":57:12:57:20|Blackbox EHXPLLL is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT420 |Found inferred clock my_pll_64mhz|CLKOP_inferred_clock with period 9.34ns. Please declare a user-defined clock on object "n:my_pll_instance.CLKOP"
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Sun Feb  3 20:10:34 2019
+#
+
+
+Top view:               LoRaTransmitter
+Requested Frequency:    107.1 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -3.002
+
+@N: MT286 |System clock period 0.000 stretches to negative invalid value -- ignoring stretching.
+                                      Requested     Estimated     Requested     Estimated                Clock        Clock                
+Starting Clock                        Frequency     Frequency     Period        Period        Slack      Type         Group                
+-------------------------------------------------------------------------------------------------------------------------------------------
+my_pll_64mhz|CLKOP_inferred_clock     107.1 MHz     65.2 MHz      9.340         15.343        -3.002     inferred     Autoconstr_clkgroup_0
+System                                1.0 MHz       1.0 MHz       1000.000      996.785       3.215      system       system_clkgroup      
+===========================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                |    rise  to  rise      |    fall  to  fall   |    rise  to  fall    |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                           Ending                             |  constraint  slack     |  constraint  slack  |  constraint  slack   |  constraint  slack
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                             System                             |  1000.000    1000.000  |  No paths    -      |  No paths    -       |  No paths    -    
+System                             my_pll_64mhz|CLKOP_inferred_clock  |  9.340       3.215     |  No paths    -      |  No paths    -       |  No paths    -    
+my_pll_64mhz|CLKOP_inferred_clock  System                             |  9.340       8.313     |  No paths    -      |  No paths    -       |  No paths    -    
+my_pll_64mhz|CLKOP_inferred_clock  my_pll_64mhz|CLKOP_inferred_clock  |  9.340       -1.438    |  9.340       5.181  |  4.670       -3.002  |  4.670       0.858
+================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: my_pll_64mhz|CLKOP_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                           Starting                                                                   Arrival           
+Instance                                   Reference                             Type        Pin     Net              Time        Slack 
+                                           Clock                                                                                        
+----------------------------------------------------------------------------------------------------------------------------------------
+loraModulator_0.chirpGen0.acc_fast[19]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     Q       acc_fast[19]     1.138       -3.002
+loraModulator_0.chirpGen0.acc_fast[18]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     Q       acc_fast[18]     1.128       -2.992
+loraModulator_0.chirpGen0.acc_fast[16]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     Q       acc_fast[16]     1.108       -2.962
+loraModulator_0.chirpGen0.acc_fast[21]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     Q       acc_fast[21]     1.128       -2.959
+loraModulator_0.chirpGen0.acc_fast[20]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     Q       acc_fast[20]     1.124       -2.955
+loraModulator_0.chirpGen0.acc_fast[17]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     Q       acc_fast[17]     1.122       -2.954
+loraModulator_0.chirpGen0.acc_fast[22]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     Q       acc_fast[22]     1.130       -2.949
+loraModulator_0.chirpGen0.acc_fast[23]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     Q       acc_fast[23]     1.112       -2.931
+loraModulator_0.chirpGen0.acc_fast[15]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     Q       acc_fast[15]     1.075       -2.929
+loraModulator_0.chirpGen0.acc_fast[14]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     Q       acc_fast[14]     1.015       -2.795
+========================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                        Starting                                                                  Required           
+Instance                                Reference                             Type        Pin     Net             Time         Slack 
+                                        Clock                                                                                        
+-------------------------------------------------------------------------------------------------------------------------------------
+IQSerializer_0.DEDFF_0.neg_edge         my_pll_64mhz|CLKOP_inferred_clock     FD1S3IX     D       Q2              4.616        -3.002
+loraModulator_0.chirpGen0.phase[33]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     D       phase_3[33]     9.286        -1.438
+loraModulator_0.chirpGen0.phase[31]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     D       phase_3[31]     9.286        -1.377
+loraModulator_0.chirpGen0.phase[32]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     D       phase_3[32]     9.286        -1.377
+loraModulator_0.chirpGen0.phase[29]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     D       phase_3[29]     9.286        -1.316
+loraModulator_0.chirpGen0.phase[30]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     D       phase_3[30]     9.286        -1.316
+loraModulator_0.chirpGen0.phase[27]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     D       phase_3[27]     9.286        -1.255
+loraModulator_0.chirpGen0.phase[28]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     D       phase_3[28]     9.286        -1.255
+loraModulator_0.chirpGen0.phase[25]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     D       phase_3[25]     9.286        -1.194
+loraModulator_0.chirpGen0.phase[26]     my_pll_64mhz|CLKOP_inferred_clock     FD1P3IX     D       phase_3[26]     9.286        -1.194
+=====================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      4.670
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.616
+
+    - Propagation time:                      7.617
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -3.002
+
+    Number of logic level(s):                12
+    Starting point:                          loraModulator_0.chirpGen0.acc_fast[19] / Q
+    Ending point:                            IQSerializer_0.DEDFF_0.neg_edge / D
+    The start point is clocked by            my_pll_64mhz|CLKOP_inferred_clock [rising] on pin CK
+    The end   point is clocked by            my_pll_64mhz|CLKOP_inferred_clock [falling] on pin CK
+
+Instance / Net                                                                  Pin      Pin               Arrival     No. of    
+Name                                                               Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------
+loraModulator_0.chirpGen0.acc_fast[19]                             FD1P3IX      Q        Out     1.138     1.138       -         
+acc_fast[19]                                                       Net          -        -       -         -           49        
+loraModulator_0.chirpGen0.sinIdeal_0.un1_angle_143lto5_0           ORCALUT4     B        In      0.000     1.138       -         
+loraModulator_0.chirpGen0.sinIdeal_0.un1_angle_143lto5_0           ORCALUT4     Z        Out     0.881     2.019       -         
+un1_angle_79lt6                                                    Net          -        -       -         -           41        
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_a2_121[6]     ORCALUT4     D        In      0.000     2.019       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_a2_121[6]     ORCALUT4     Z        Out     0.606     2.625       -         
+N_1144                                                             Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2_8              ORCALUT4     D        In      0.000     2.625       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2_8              ORCALUT4     Z        Out     0.606     3.231       -         
+sinOut_m6_0_a2_8                                                   Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2_16             ORCALUT4     D        In      0.000     3.231       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2_16             ORCALUT4     Z        Out     0.606     3.837       -         
+sinOut_m6_0_a2_16                                                  Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2_22             ORCALUT4     D        In      0.000     3.837       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2_22             ORCALUT4     Z        Out     0.606     4.443       -         
+sinOut_m6_0_a2_22                                                  Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2                ORCALUT4     D        In      0.000     4.443       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2                ORCALUT4     Z        Out     0.606     5.049       -         
+sinOut_N_13_mux                                                    Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m3_0                   ORCALUT4     C        In      0.000     5.049       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m3_0                   ORCALUT4     Z        Out     0.606     5.655       -         
+sinOut_m3_2                                                        Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m3                     ORCALUT4     D        In      0.000     5.655       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m3                     ORCALUT4     Z        Out     0.180     5.835       -         
+sinOut_m3                                                          Net          -        -       -         -           2         
+IQSerializer_0.DEDFF_D1_iv_0_5_1                                   ORCALUT4     C        In      0.000     5.835       -         
+IQSerializer_0.DEDFF_D1_iv_0_5_1                                   ORCALUT4     Z        Out     0.606     6.441       -         
+DEDFF_D1_iv_0_5_1                                                  Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_D1_iv_0_5                                     ORCALUT4     B        In      0.000     6.441       -         
+IQSerializer_0.DEDFF_D1_iv_0_5                                     ORCALUT4     Z        Out     0.606     7.047       -         
+DEDFF_D1_iv_0_1                                                    Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_D1_iv_0_1                                     ORCALUT4     A        In      0.000     7.047       -         
+IQSerializer_0.DEDFF_D1_iv_0_1                                     ORCALUT4     Z        Out     0.180     7.227       -         
+DEDFF_D1_iv_0_1_0                                                  Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_0.Q2_0                                        ORCALUT4     D        In      0.000     7.227       -         
+IQSerializer_0.DEDFF_0.Q2_0                                        ORCALUT4     Z        Out     0.390     7.617       -         
+Q2                                                                 Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_0.neg_edge                                    FD1S3IX      D        In      0.000     7.617       -         
+=================================================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      4.670
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.616
+
+    - Propagation time:                      7.617
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -3.002
+
+    Number of logic level(s):                12
+    Starting point:                          loraModulator_0.chirpGen0.acc_fast[19] / Q
+    Ending point:                            IQSerializer_0.DEDFF_0.neg_edge / D
+    The start point is clocked by            my_pll_64mhz|CLKOP_inferred_clock [rising] on pin CK
+    The end   point is clocked by            my_pll_64mhz|CLKOP_inferred_clock [falling] on pin CK
+
+Instance / Net                                                                   Pin      Pin               Arrival     No. of    
+Name                                                                Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------------------------
+loraModulator_0.chirpGen0.acc_fast[19]                              FD1P3IX      Q        Out     1.138     1.138       -         
+acc_fast[19]                                                        Net          -        -       -         -           49        
+loraModulator_0.chirpGen0.sinIdeal_0.un1_angle_143lto5_0            ORCALUT4     B        In      0.000     1.138       -         
+loraModulator_0.chirpGen0.sinIdeal_0.un1_angle_143lto5_0            ORCALUT4     Z        Out     0.881     2.019       -         
+un1_angle_79lt6                                                     Net          -        -       -         -           41        
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_8[6]      ORCALUT4     C        In      0.000     2.019       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_8[6]      ORCALUT4     Z        Out     0.606     2.625       -         
+sinOut_0_0_a2_i_o2_0_8[6]                                           Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_21[6]     ORCALUT4     D        In      0.000     2.625       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_21[6]     ORCALUT4     Z        Out     0.606     3.231       -         
+sinOut_0_0_a2_i_o2_0_21[6]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_34[6]     ORCALUT4     D        In      0.000     3.231       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_34[6]     ORCALUT4     Z        Out     0.606     3.837       -         
+sinOut_0_0_a2_i_o2_0_34[6]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_40[6]     ORCALUT4     D        In      0.000     3.837       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_40[6]     ORCALUT4     Z        Out     0.606     4.443       -         
+sinOut_0_0_a2_i_o2_0_40[6]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_43[6]     ORCALUT4     D        In      0.000     4.443       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_43[6]     ORCALUT4     Z        Out     0.606     5.049       -         
+sinOut_0_0_a2_i_o2_0_43[6]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_a2_0[6]        ORCALUT4     D        In      0.000     5.049       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_a2_0[6]        ORCALUT4     Z        Out     0.606     5.655       -         
+N_1017                                                              Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m3                      ORCALUT4     B        In      0.000     5.655       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m3                      ORCALUT4     Z        Out     0.180     5.835       -         
+sinOut_m3                                                           Net          -        -       -         -           2         
+IQSerializer_0.DEDFF_D1_iv_0_5_1                                    ORCALUT4     C        In      0.000     5.835       -         
+IQSerializer_0.DEDFF_D1_iv_0_5_1                                    ORCALUT4     Z        Out     0.606     6.441       -         
+DEDFF_D1_iv_0_5_1                                                   Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_D1_iv_0_5                                      ORCALUT4     B        In      0.000     6.441       -         
+IQSerializer_0.DEDFF_D1_iv_0_5                                      ORCALUT4     Z        Out     0.606     7.047       -         
+DEDFF_D1_iv_0_1                                                     Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_D1_iv_0_1                                      ORCALUT4     A        In      0.000     7.047       -         
+IQSerializer_0.DEDFF_D1_iv_0_1                                      ORCALUT4     Z        Out     0.180     7.227       -         
+DEDFF_D1_iv_0_1_0                                                   Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_0.Q2_0                                         ORCALUT4     D        In      0.000     7.227       -         
+IQSerializer_0.DEDFF_0.Q2_0                                         ORCALUT4     Z        Out     0.390     7.617       -         
+Q2                                                                  Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_0.neg_edge                                     FD1S3IX      D        In      0.000     7.617       -         
+==================================================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      4.670
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.616
+
+    - Propagation time:                      7.608
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -2.992
+
+    Number of logic level(s):                12
+    Starting point:                          loraModulator_0.chirpGen0.acc_fast[18] / Q
+    Ending point:                            IQSerializer_0.DEDFF_0.neg_edge / D
+    The start point is clocked by            my_pll_64mhz|CLKOP_inferred_clock [rising] on pin CK
+    The end   point is clocked by            my_pll_64mhz|CLKOP_inferred_clock [falling] on pin CK
+
+Instance / Net                                                                  Pin      Pin               Arrival     No. of    
+Name                                                               Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------
+loraModulator_0.chirpGen0.acc_fast[18]                             FD1P3IX      Q        Out     1.128     1.128       -         
+acc_fast[18]                                                       Net          -        -       -         -           41        
+loraModulator_0.chirpGen0.sinIdeal_0.un1_angle_143lto5_0           ORCALUT4     A        In      0.000     1.128       -         
+loraModulator_0.chirpGen0.sinIdeal_0.un1_angle_143lto5_0           ORCALUT4     Z        Out     0.881     2.010       -         
+un1_angle_79lt6                                                    Net          -        -       -         -           41        
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_a2_121[6]     ORCALUT4     D        In      0.000     2.010       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_a2_121[6]     ORCALUT4     Z        Out     0.606     2.616       -         
+N_1144                                                             Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2_8              ORCALUT4     D        In      0.000     2.616       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2_8              ORCALUT4     Z        Out     0.606     3.222       -         
+sinOut_m6_0_a2_8                                                   Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2_16             ORCALUT4     D        In      0.000     3.222       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2_16             ORCALUT4     Z        Out     0.606     3.828       -         
+sinOut_m6_0_a2_16                                                  Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2_22             ORCALUT4     D        In      0.000     3.828       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2_22             ORCALUT4     Z        Out     0.606     4.434       -         
+sinOut_m6_0_a2_22                                                  Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2                ORCALUT4     D        In      0.000     4.434       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m6_0_a2                ORCALUT4     Z        Out     0.606     5.040       -         
+sinOut_N_13_mux                                                    Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m3_0                   ORCALUT4     C        In      0.000     5.040       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m3_0                   ORCALUT4     Z        Out     0.606     5.646       -         
+sinOut_m3_2                                                        Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m3                     ORCALUT4     D        In      0.000     5.646       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m3                     ORCALUT4     Z        Out     0.180     5.826       -         
+sinOut_m3                                                          Net          -        -       -         -           2         
+IQSerializer_0.DEDFF_D1_iv_0_5_1                                   ORCALUT4     C        In      0.000     5.826       -         
+IQSerializer_0.DEDFF_D1_iv_0_5_1                                   ORCALUT4     Z        Out     0.606     6.432       -         
+DEDFF_D1_iv_0_5_1                                                  Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_D1_iv_0_5                                     ORCALUT4     B        In      0.000     6.432       -         
+IQSerializer_0.DEDFF_D1_iv_0_5                                     ORCALUT4     Z        Out     0.606     7.038       -         
+DEDFF_D1_iv_0_1                                                    Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_D1_iv_0_1                                     ORCALUT4     A        In      0.000     7.038       -         
+IQSerializer_0.DEDFF_D1_iv_0_1                                     ORCALUT4     Z        Out     0.180     7.218       -         
+DEDFF_D1_iv_0_1_0                                                  Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_0.Q2_0                                        ORCALUT4     D        In      0.000     7.218       -         
+IQSerializer_0.DEDFF_0.Q2_0                                        ORCALUT4     Z        Out     0.390     7.608       -         
+Q2                                                                 Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_0.neg_edge                                    FD1S3IX      D        In      0.000     7.608       -         
+=================================================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      4.670
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.616
+
+    - Propagation time:                      7.608
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -2.992
+
+    Number of logic level(s):                12
+    Starting point:                          loraModulator_0.chirpGen0.acc_fast[18] / Q
+    Ending point:                            IQSerializer_0.DEDFF_0.neg_edge / D
+    The start point is clocked by            my_pll_64mhz|CLKOP_inferred_clock [rising] on pin CK
+    The end   point is clocked by            my_pll_64mhz|CLKOP_inferred_clock [falling] on pin CK
+
+Instance / Net                                                                   Pin      Pin               Arrival     No. of    
+Name                                                                Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------------------------
+loraModulator_0.chirpGen0.acc_fast[18]                              FD1P3IX      Q        Out     1.128     1.128       -         
+acc_fast[18]                                                        Net          -        -       -         -           41        
+loraModulator_0.chirpGen0.sinIdeal_0.un1_angle_143lto5_0            ORCALUT4     A        In      0.000     1.128       -         
+loraModulator_0.chirpGen0.sinIdeal_0.un1_angle_143lto5_0            ORCALUT4     Z        Out     0.881     2.010       -         
+un1_angle_79lt6                                                     Net          -        -       -         -           41        
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_8[6]      ORCALUT4     C        In      0.000     2.010       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_8[6]      ORCALUT4     Z        Out     0.606     2.616       -         
+sinOut_0_0_a2_i_o2_0_8[6]                                           Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_21[6]     ORCALUT4     D        In      0.000     2.616       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_21[6]     ORCALUT4     Z        Out     0.606     3.222       -         
+sinOut_0_0_a2_i_o2_0_21[6]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_34[6]     ORCALUT4     D        In      0.000     3.222       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_34[6]     ORCALUT4     Z        Out     0.606     3.828       -         
+sinOut_0_0_a2_i_o2_0_34[6]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_40[6]     ORCALUT4     D        In      0.000     3.828       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_40[6]     ORCALUT4     Z        Out     0.606     4.434       -         
+sinOut_0_0_a2_i_o2_0_40[6]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_43[6]     ORCALUT4     D        In      0.000     4.434       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_o2_0_43[6]     ORCALUT4     Z        Out     0.606     5.040       -         
+sinOut_0_0_a2_i_o2_0_43[6]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_a2_0[6]        ORCALUT4     D        In      0.000     5.040       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_0_0_a2_i_a2_0[6]        ORCALUT4     Z        Out     0.606     5.646       -         
+N_1017                                                              Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m3                      ORCALUT4     B        In      0.000     5.646       -         
+loraModulator_0.chirpGen0.sinIdeal_0.sinOut_m3                      ORCALUT4     Z        Out     0.180     5.826       -         
+sinOut_m3                                                           Net          -        -       -         -           2         
+IQSerializer_0.DEDFF_D1_iv_0_5_1                                    ORCALUT4     C        In      0.000     5.826       -         
+IQSerializer_0.DEDFF_D1_iv_0_5_1                                    ORCALUT4     Z        Out     0.606     6.432       -         
+DEDFF_D1_iv_0_5_1                                                   Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_D1_iv_0_5                                      ORCALUT4     B        In      0.000     6.432       -         
+IQSerializer_0.DEDFF_D1_iv_0_5                                      ORCALUT4     Z        Out     0.606     7.038       -         
+DEDFF_D1_iv_0_1                                                     Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_D1_iv_0_1                                      ORCALUT4     A        In      0.000     7.038       -         
+IQSerializer_0.DEDFF_D1_iv_0_1                                      ORCALUT4     Z        Out     0.180     7.218       -         
+DEDFF_D1_iv_0_1_0                                                   Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_0.Q2_0                                         ORCALUT4     D        In      0.000     7.218       -         
+IQSerializer_0.DEDFF_0.Q2_0                                         ORCALUT4     Z        Out     0.390     7.608       -         
+Q2                                                                  Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_0.neg_edge                                     FD1S3IX      D        In      0.000     7.608       -         
+==================================================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      4.670
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.616
+
+    - Propagation time:                      7.599
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -2.984
+
+    Number of logic level(s):                11
+    Starting point:                          loraModulator_0.chirpGen0.acc_fast[19] / Q
+    Ending point:                            IQSerializer_0.DEDFF_0.neg_edge / D
+    The start point is clocked by            my_pll_64mhz|CLKOP_inferred_clock [rising] on pin CK
+    The end   point is clocked by            my_pll_64mhz|CLKOP_inferred_clock [falling] on pin CK
+
+Instance / Net                                                              Pin      Pin               Arrival     No. of    
+Name                                                           Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------
+loraModulator_0.chirpGen0.acc_fast[19]                         FD1P3IX      Q        Out     1.138     1.138       -         
+acc_fast[19]                                                   Net          -        -       -         -           49        
+loraModulator_0.chirpGen0.sinIdeal_0.un1_angle_143lto5_0       ORCALUT4     B        In      0.000     1.138       -         
+loraModulator_0.chirpGen0.sinIdeal_0.un1_angle_143lto5_0       ORCALUT4     Z        Out     0.881     2.019       -         
+un1_angle_79lt6                                                Net          -        -       -         -           41        
+loraModulator_0.chirpGen0.sinIdeal_0.un1_angle_47lto8          ORCALUT4     D        In      0.000     2.019       -         
+loraModulator_0.chirpGen0.sinIdeal_0.un1_angle_47lto8          ORCALUT4     Z        Out     0.768     2.787       -         
+un1_angle_47lt9                                                Net          -        -       -         -           6         
+loraModulator_0.chirpGen0.cosIdeal_0.cosOut_0_i_a2_7_0[8]      ORCALUT4     D        In      0.000     2.787       -         
+loraModulator_0.chirpGen0.cosIdeal_0.cosOut_0_i_a2_7_0[8]      ORCALUT4     Z        Out     0.606     3.393       -         
+cosOut_0_i_a2_7[8]                                             Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.cosIdeal_0.cosOut_0_i_a2_11_1[8]     ORCALUT4     C        In      0.000     3.393       -         
+loraModulator_0.chirpGen0.cosIdeal_0.cosOut_0_i_a2_11_1[8]     ORCALUT4     Z        Out     0.606     3.999       -         
+cosOut_0_i_a2_11[8]                                            Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.cosIdeal_0.cosOut_0_i_a2_15_1[8]     ORCALUT4     D        In      0.000     3.999       -         
+loraModulator_0.chirpGen0.cosIdeal_0.cosOut_0_i_a2_15_1[8]     ORCALUT4     Z        Out     0.606     4.605       -         
+cosOut_0_i_a2_15[8]                                            Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.cosIdeal_0.cosOut_0_i_a2_19_0[8]     ORCALUT4     B        In      0.000     4.605       -         
+loraModulator_0.chirpGen0.cosIdeal_0.cosOut_0_i_a2_19_0[8]     ORCALUT4     Z        Out     0.606     5.211       -         
+cosOut_0_i_a2_19[8]                                            Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.cosIdeal_0.cosOut_0_i_a2_25_1[8]     ORCALUT4     A        In      0.000     5.211       -         
+loraModulator_0.chirpGen0.cosIdeal_0.cosOut_0_i_a2_25_1[8]     ORCALUT4     Z        Out     0.180     5.391       -         
+cosOut_0_i_a2_25[8]                                            Net          -        -       -         -           2         
+IQSerializer_0.DEDFF_0.Q2_m7_i_a3_N_4L5                        ORCALUT4     A        In      0.000     5.391       -         
+IQSerializer_0.DEDFF_0.Q2_m7_i_a3_N_4L5                        ORCALUT4     Z        Out     0.606     5.997       -         
+Q2_m7_i_a3_N_4L5                                               Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_0.Q2_m7_i_a3_N_5L7                        ORCALUT4     A        In      0.000     5.997       -         
+IQSerializer_0.DEDFF_0.Q2_m7_i_a3_N_5L7                        ORCALUT4     Z        Out     0.606     6.603       -         
+Q2_m7_i_a3_N_5L7                                               Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_0.Q2_m7_i_a3                              ORCALUT4     C        In      0.000     6.603       -         
+IQSerializer_0.DEDFF_0.Q2_m7_i_a3                              ORCALUT4     Z        Out     0.606     7.209       -         
+Q2_N_13                                                        Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_0.Q2_0                                    ORCALUT4     B        In      0.000     7.209       -         
+IQSerializer_0.DEDFF_0.Q2_0                                    ORCALUT4     Z        Out     0.390     7.599       -         
+Q2                                                             Net          -        -       -         -           1         
+IQSerializer_0.DEDFF_0.neg_edge                                FD1S3IX      D        In      0.000     7.599       -         
+=============================================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                            Starting                                               Arrival          
+Instance                                                    Reference     Type       Pin     Net                   Time        Slack
+                                                            Clock                                                                   
+------------------------------------------------------------------------------------------------------------------------------------
+loraModulator_0.chirpGen0.phase_u1.un1_BW_SR_add[0:53]      System        ALU54B     R16     un1_BW_SR_add_R16     0.000       3.215
+loraModulator_0.chirpGen0.phase_u1.un1_BW_SR_add[0:53]      System        ALU54B     R17     un1_BW_SR_add_R17     0.000       3.215
+loraModulator_0.chirpGen0.phase_u1.un1_BW_SR_add[18:71]     System        ALU54B     R0      un1_BW_SR_add_R0      0.000       3.276
+loraModulator_0.chirpGen0.phase_u1.un1_BW_SR_add[18:71]     System        ALU54B     R1      un1_BW_SR_add_R1      0.000       3.276
+loraModulator_0.chirpGen0.phase_u1.un1_BW_SR_add[18:71]     System        ALU54B     R2      un1_BW_SR_add_R2      0.000       3.276
+loraModulator_0.chirpGen0.phase_u1.un1_BW_SR_add[18:71]     System        ALU54B     R3      un1_BW_SR_add_R3      0.000       3.276
+loraModulator_0.chirpGen0.phase_u1.un1_BW_SR_add[18:71]     System        ALU54B     R4      un1_BW_SR_add_R4      0.000       3.337
+loraModulator_0.chirpGen0.phase_u1.un1_BW_SR_add[18:71]     System        ALU54B     R5      un1_BW_SR_add_R5      0.000       3.337
+loraModulator_0.chirpGen0.phase_u1.un1_BW_SR_add[18:71]     System        ALU54B     R6      un1_BW_SR_add_R6      0.000       3.337
+loraModulator_0.chirpGen0.phase_u1.un1_BW_SR_add[18:71]     System        ALU54B     R7      un1_BW_SR_add_R7      0.000       3.337
+====================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                        Starting                                          Required          
+Instance                                Reference     Type        Pin     Net             Time         Slack
+                                        Clock                                                               
+------------------------------------------------------------------------------------------------------------
+loraModulator_0.chirpGen0.phase[33]     System        FD1P3IX     D       phase_3[33]     9.286        3.215
+loraModulator_0.chirpGen0.phase[31]     System        FD1P3IX     D       phase_3[31]     9.286        3.276
+loraModulator_0.chirpGen0.phase[32]     System        FD1P3IX     D       phase_3[32]     9.286        3.276
+loraModulator_0.chirpGen0.phase[29]     System        FD1P3IX     D       phase_3[29]     9.286        3.337
+loraModulator_0.chirpGen0.phase[30]     System        FD1P3IX     D       phase_3[30]     9.286        3.337
+loraModulator_0.chirpGen0.phase[27]     System        FD1P3IX     D       phase_3[27]     9.286        3.398
+loraModulator_0.chirpGen0.phase[28]     System        FD1P3IX     D       phase_3[28]     9.286        3.398
+loraModulator_0.chirpGen0.phase[25]     System        FD1P3IX     D       phase_3[25]     9.286        3.459
+loraModulator_0.chirpGen0.phase[26]     System        FD1P3IX     D       phase_3[26]     9.286        3.459
+loraModulator_0.chirpGen0.phase[23]     System        FD1P3IX     D       phase_3[23]     9.286        3.520
+============================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      9.340
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.286
+
+    - Propagation time:                      6.071
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 3.215
+
+    Number of logic level(s):                27
+    Starting point:                          loraModulator_0.chirpGen0.phase_u1.un1_BW_SR_add[0:53] / R16
+    Ending point:                            loraModulator_0.chirpGen0.phase[33] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            my_pll_64mhz|CLKOP_inferred_clock [rising] on pin CK
+
+Instance / Net                                                               Pin      Pin               Arrival     No. of    
+Name                                                            Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------------------
+loraModulator_0.chirpGen0.phase_u1.un1_BW_SR_add[0:53]          ALU54B       R16      Out     0.000     0.000       -         
+un1_BW_SR_add_R16                                               Net          -        -       -         -           3         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_df16          ORCALUT4     C        In      0.000     0.000       -         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_df16          ORCALUT4     Z        Out     0.606     0.606       -         
+un1_phaseOut_1_df16                                             Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_cry_0[15]     CCU2C        A1       In      0.000     0.606       -         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_cry_0[15]     CCU2C        COUT     Out     0.900     1.506       -         
+un1_phaseOut_1_cry[16]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_cry_0[18]     CCU2C        CIN      In      0.000     1.506       -         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_cry_0[18]     CCU2C        COUT     Out     0.061     1.567       -         
+un1_phaseOut_1_cry[20]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_cry_0[22]     CCU2C        CIN      In      0.000     1.567       -         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_cry_0[22]     CCU2C        COUT     Out     0.061     1.628       -         
+un1_phaseOut_1_cry[24]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_cry_0[26]     CCU2C        CIN      In      0.000     1.628       -         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_cry_0[26]     CCU2C        COUT     Out     0.061     1.689       -         
+un1_phaseOut_1_cry[28]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_cry_0[30]     CCU2C        CIN      In      0.000     1.689       -         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_cry_0[30]     CCU2C        COUT     Out     0.061     1.750       -         
+un1_phaseOut_1_cry_cry[32]                                      Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_cry_0[32]     CCU2C        CIN      In      0.000     1.750       -         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut_1_cry_0[32]     CCU2C        S0       Out     0.698     2.447       -         
+un1_phaseOut_1_cry[32]                                          Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut30               ORCALUT4     B        In      0.000     2.447       -         
+loraModulator_0.chirpGen0.phase_u1.un1_phaseOut30               ORCALUT4     Z        Out     0.870     3.317       -         
+un1_phaseOut30                                                  Net          -        -       -         -           34        
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_0_0             CCU2C        B1       In      0.000     3.317       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_0_0             CCU2C        COUT     Out     0.900     4.218       -         
+phaseOut_cry_0                                                  Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_1_0             CCU2C        CIN      In      0.000     4.218       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_1_0             CCU2C        COUT     Out     0.061     4.279       -         
+phaseOut_cry_2                                                  Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_3_0             CCU2C        CIN      In      0.000     4.279       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_3_0             CCU2C        COUT     Out     0.061     4.340       -         
+phaseOut_cry_4                                                  Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_5_0             CCU2C        CIN      In      0.000     4.340       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_5_0             CCU2C        COUT     Out     0.061     4.401       -         
+phaseOut_cry_6                                                  Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_7_0             CCU2C        CIN      In      0.000     4.401       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_7_0             CCU2C        COUT     Out     0.061     4.462       -         
+phaseOut_cry_8                                                  Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_9_0             CCU2C        CIN      In      0.000     4.462       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_9_0             CCU2C        COUT     Out     0.061     4.522       -         
+phaseOut_cry_10                                                 Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_11_0            CCU2C        CIN      In      0.000     4.522       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_11_0            CCU2C        COUT     Out     0.061     4.583       -         
+phaseOut_cry_12                                                 Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_13_0            CCU2C        CIN      In      0.000     4.583       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_13_0            CCU2C        COUT     Out     0.061     4.644       -         
+phaseOut_cry_14                                                 Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_15_0            CCU2C        CIN      In      0.000     4.644       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_15_0            CCU2C        COUT     Out     0.061     4.705       -         
+phaseOut_cry_16                                                 Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_17_0            CCU2C        CIN      In      0.000     4.705       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_17_0            CCU2C        COUT     Out     0.061     4.766       -         
+phaseOut_cry_18                                                 Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_19_0            CCU2C        CIN      In      0.000     4.766       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_19_0            CCU2C        COUT     Out     0.061     4.827       -         
+phaseOut_cry_20                                                 Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_21_0            CCU2C        CIN      In      0.000     4.827       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_21_0            CCU2C        COUT     Out     0.061     4.888       -         
+phaseOut_cry_22                                                 Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_23_0            CCU2C        CIN      In      0.000     4.888       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_23_0            CCU2C        COUT     Out     0.061     4.949       -         
+phaseOut_cry_24                                                 Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_25_0            CCU2C        CIN      In      0.000     4.949       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_25_0            CCU2C        COUT     Out     0.061     5.011       -         
+phaseOut_cry_26                                                 Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_27_0            CCU2C        CIN      In      0.000     5.011       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_27_0            CCU2C        COUT     Out     0.061     5.072       -         
+phaseOut_cry_28                                                 Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_29_0            CCU2C        CIN      In      0.000     5.072       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_29_0            CCU2C        COUT     Out     0.061     5.133       -         
+phaseOut_cry_30                                                 Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_31_0            CCU2C        CIN      In      0.000     5.133       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_cry_31_0            CCU2C        COUT     Out     0.061     5.194       -         
+phaseOut_cry_32                                                 Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_s_33_0              CCU2C        CIN      In      0.000     5.194       -         
+loraModulator_0.chirpGen0.phase_u1.phaseOut_s_33_0              CCU2C        S0       Out     0.698     5.891       -         
+phaseNextOut[33]                                                Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase_u1.phase_3[33]                  ORCALUT4     A        In      0.000     5.891       -         
+loraModulator_0.chirpGen0.phase_u1.phase_3[33]                  ORCALUT4     Z        Out     0.180     6.071       -         
+phase_3[33]                                                     Net          -        -       -         -           1         
+loraModulator_0.chirpGen0.phase[33]                             FD1P3IX      D        In      0.000     6.071       -         
+==============================================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:21s; Memory used current: 254MB peak: 265MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:21s; Memory used current: 254MB peak: 265MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lfe5u_25f-6
+
+Register bits: 380 of 24288 (2%)
+PIC Latch:       0
+I/O cells:       8
+
+DSP primitives:       9 of 42 (21%)
+
+Details:
+ALU54B:         3
+CCU2C:          187
+EHXPLLL:        1
+FD1P3AX:        49
+FD1P3IX:        191
+FD1S3AX:        1
+FD1S3AY:        1
+FD1S3IX:        135
+FD1S3JX:        3
+GSR:            1
+IB:             2
+INV:            5
+L6MUX21:        4
+MULT18X18D:     6
+OB:             6
+ORCALUT4:       1590
+PFUMX:          22
+PLLREFCS:       1
+PUR:            1
+VHI:            15
+VLO:            15
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:21s; Memory used current: 43MB peak: 265MB)
+
+Process took 0h:00m:23s realtime, 0h:00m:21s cputime
+# Sun Feb  3 20:10:35 2019
+
+###########################################################]

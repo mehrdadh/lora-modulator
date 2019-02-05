@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="lora_tx" device="LFE5U-25F-6BG256I" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
+        <Options def_top="LoRaTransmitter"/>
+        <Source name="impl1/source/accInc.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/chirpGenerator.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/clockDivider.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/constant.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/cosIdeal.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/counter.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/DEDFF.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/initialPhase.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/IQSerializer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/loRaModulator.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/loraPacketGenerator.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/LoRaTXDefines.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/phaseInc.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/radioDefines.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/sinIdeal.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="impl1/source/squareCos.v" type="Verilog" type_short="Verilog">
+            <Options top_module="squareCos"/>
+        </Source>
+        <Source name="impl1/source/squareSin.v" type="Verilog" type_short="Verilog">
+            <Options top_module="squareSin"/>
+        </Source>
+        <Source name="impl1/source/LoRaTransmitter.v" type="Verilog" type_short="Verilog">
+            <Options top_module="LoRaTransmitter"/>
+        </Source>
+        <Source name="lora_tx.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="lora_tx1.sty"/>
+</BaliProject>

@@ -1,0 +1,72 @@
+# Synopsys Constraint Checker, version maplat, Build 1796R, built Aug  4 2017
+# Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+# Written on Sun Feb  3 21:29:58 2019
+
+
+##### DESIGN INFO #######################################################
+
+Top View:                "LoRaTransmitter"
+Constraint File(s):      (none)
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 0 issues in 0 out of 0 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting                                 Ending                                   |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                   System                                   |     15.625           |     No paths         |     No paths         |     No paths                         
+System                                   my_pll_64mhz|CLKOP_inferred_clock        |     15.625           |     No paths         |     No paths         |     No paths                         
+my_pll_64mhz|CLKOP_inferred_clock        my_pll_64mhz|CLKOP_inferred_clock        |     15.625           |     15.625           |     7.813            |     7.813                            
+my_pll_64mhz|CLKOP_inferred_clock        clockDivider_4s|clkOut_derived_clock     |     15.625           |     No paths         |     No paths         |     No paths                         
+clockDivider_4s|clkOut_derived_clock     my_pll_64mhz|CLKOP_inferred_clock        |     15.625           |     No paths         |     7.813            |     No paths                         
+clockDivider_4s|clkOut_derived_clock     clockDivider_4s|clkOut_derived_clock     |     15.625           |     No paths         |     No paths         |     No paths                         
+=============================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:IQSerializer_0_serial_N
+p:POR_N
+p:clk_in
+p:countDone
+p:serial
+
+
+Inapplicable constraints
+************************
+
+(none)
+
+
+Applicable constraints with issues
+**********************************
+
+(none)
+
+
+Constraints with matching wildcard expressions
+**********************************************
+
+(none)
+
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report

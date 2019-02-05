@@ -1,0 +1,10 @@
+@W:"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\IQSerializer.v":71:33:71:44|Index into variable I could be out of range - a simulation mismatch is possible
+@W:"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\IQSerializer.v":72:33:72:44|Index into variable I could be out of range - a simulation mismatch is possible
+@W:"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\IQSerializer.v":79:33:79:44|Index into variable Q could be out of range - a simulation mismatch is possible
+@W:"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\IQSerializer.v":80:33:80:44|Index into variable Q could be out of range - a simulation mismatch is possible
+@W: CL168 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":21:8:21:21|Removing instance scuba_vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL156 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\LoRaTransmitter.v":269:9:269:16|*Input pll_clki to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL246 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\sinIdeal.v":6:24:6:28|Input port bits 13 to 0 of angle[33:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL246 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\cosIdeal.v":6:24:6:28|Input port bits 13 to 0 of angle[33:0] are unused. Assign logic for all port bits or change the input port size.
+@W: CL279 :"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Pruning register bits 25 to 20 of waitcount[25:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+
