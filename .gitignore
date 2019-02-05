@@ -1,0 +1,8 @@
+*.html
+#impl*/
+*.xml
+.build_status
+.run_manager.ini
+.recovery
+#*.dir/
+*.log
