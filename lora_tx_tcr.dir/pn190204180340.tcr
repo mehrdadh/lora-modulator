@@ -1,0 +1,13 @@
+#Start recording tcl command: 2/4/2019 17:48:03
+#Project Location: C:/work/tinysdr_fpga_lora_tx; Project name: lora_tx
+prj_project open "C:/work/tinysdr_fpga_lora_tx/lora_tx.ldf"
+prj_src add -exclude "C:/work/tinysdr_fpga_lora_tx/impl1/source/xsdr_fpga_singletone_tx_lattice.lpf"
+prj_src enable "C:/work/tinysdr_fpga_lora_tx/impl1/source/xsdr_fpga_singletone_tx_lattice.lpf"
+prj_run Export -impl impl1
+prj_src remove "C:/work/tinysdr_fpga_lora_tx/lora_tx.lpf"
+prj_run Export -impl impl1 -task Bitgen
+prj_run Synthesis -impl impl1 -forceAll
+prj_run Export -impl impl1 -task Bitgen
+prj_project save
+prj_project close
+#Stop recording: 2/4/2019 18:03:40

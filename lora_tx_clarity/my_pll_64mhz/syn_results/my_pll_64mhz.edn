@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timeStamp 2019 2 3 19 55 53)
+      (timeStamp 2019 4 5 11 20 58)
       (author "Synopsys, Inc.")
       (program "Synplify Pro" (version "M-2017.03L-SP1-1, mapper maplat, Build 1796R"))
      )
@@ -64,7 +64,7 @@
            (port CLKINTFB (direction OUTPUT))
          )
         (property INTFB_WAKE (string "DISABLED"))
-        (property PLLRST_ENA (string "DISABLED"))
+        (property PLLRST_ENA (string "ENABLED"))
         (property DPHASE_SOURCE (string "DISABLED"))
         (property INT_LOCK_STICKY (string "ENABLED"))
         (property SYNC_ENABLE (string "DISABLED"))
@@ -119,6 +119,7 @@
            (port CLKI (direction INPUT))
            (port CLKI2 (direction INPUT))
            (port SEL (direction INPUT))
+           (port RST (direction INPUT))
            (port CLKOP (direction OUTPUT))
            (port LOCK (direction OUTPUT))
          )
@@ -133,7 +134,7 @@
            (property FREQUENCY_PIN_CLKI (string "32.000000"))
            (property ICP_CURRENT (string "5"))
            (property LPF_RESISTOR (string "16"))
-           (property PLLRST_ENA (string "DISABLED"))
+           (property PLLRST_ENA (string "ENABLED"))
            (property INTFB_WAKE (string "DISABLED"))
            (property STDBY_ENABLE (string "DISABLED"))
            (property DPHASE_SOURCE (string "DISABLED"))
@@ -178,6 +179,10 @@
            (portRef SEL)
            (portRef SEL (instanceRef PLLRefcs_0))
           ))
+          (net RST (joined
+           (portRef RST)
+           (portRef RST (instanceRef PLLInst_0))
+          ))
           (net CLKOP (joined
            (portRef CLKOP (instanceRef PLLInst_0))
            (portRef CLKFB (instanceRef PLLInst_0))
@@ -215,7 +220,6 @@
            (portRef ENCLKOS2 (instanceRef PLLInst_0))
            (portRef ENCLKOS (instanceRef PLLInst_0))
            (portRef ENCLKOP (instanceRef PLLInst_0))
-           (portRef RST (instanceRef PLLInst_0))
            (portRef PLLWAKESYNC (instanceRef PLLInst_0))
            (portRef STDBY (instanceRef PLLInst_0))
            (portRef PHASELOADREG (instanceRef PLLInst_0))

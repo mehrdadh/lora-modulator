@@ -1,0 +1,1347 @@
+
+Loading design for application trce from file lora_tx_impl1.ncd.
+Design name: topModule
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFE5U-25F
+Package:     CABGA256
+Performance: 6
+Loading device for application trce from file 'sa5p25.nph' in environment: C:/lscc/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.33.
+Performance Hardware Data Status:   Final          Version 55.1.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.3.144
+Fri Apr 05 11:23:36 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o lora_tx_impl1.twr -gui -msgset C:/work/tinysdr_fpga_lora_tx/promote.xml lora_tx_impl1.ncd lora_tx_impl1.prf 
+Design file:     lora_tx_impl1.ncd
+Preference file: lora_tx_impl1.prf
+Device,speed:    LFE5U-25F,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "pll_clko_0" 64.000000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 4.439ns (weighted slack = -8.878ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/chirpGen0/acc[16]  (from pll_clko_0 +)
+   Destination:    FF         Data in        IQSerializer_0/DEDFF_0/neg_edge  (to pll_clko_0 -)
+
+   Delay:              12.484ns  (26.7% logic, 73.3% route), 13 logic levels.
+
+ Constraint Details:
+
+     12.484ns physical path delay loraModulator_0/chirpGen0/SLICE_26 to IQSerializer_0/SLICE_187 exceeds
+      7.813ns delay constraint less
+      0.000ns skew and
+     -0.232ns DIN_SET requirement (totaling 8.045ns) by 4.439ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/chirpGen0/SLICE_26 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.519    R36C24A.CLK to     R36C24A.Q1 loraModulator_0/chirpGen0/SLICE_26 (from pll_clko_0)
+ROUTE       163     1.306     R36C24A.Q1 to     R38C18A.B1 loraModulator_0/chirpGen0/acc[16]
+CTOF_DEL    ---     0.234     R38C18A.B1 to     R38C18A.F1 loraModulator_0/chirpGen0/SLICE_503
+ROUTE        34     1.133     R38C18A.F1 to     R35C22A.D0 loraModulator_0/chirpGen0/un1_angle_54lt4
+CTOF_DEL    ---     0.234     R35C22A.D0 to     R35C22A.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_1063
+ROUTE         1     0.861     R35C22A.F0 to     R30C22C.C0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a65_59_1[6]
+CTOF_DEL    ---     0.234     R30C22C.C0 to     R30C22C.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_829
+ROUTE         1     0.825     R30C22C.F0 to     R30C18C.C0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_34_tz_0[6]
+CTOF_DEL    ---     0.234     R30C18C.C0 to     R30C18C.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_777
+ROUTE         1     0.604     R30C18C.F0 to     R32C18A.C1 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_34_tz[6]
+CTOF_DEL    ---     0.234     R32C18A.C1 to     R32C18A.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_703
+ROUTE         1     0.560     R32C18A.F1 to     R32C18A.B0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_34[6]
+CTOF_DEL    ---     0.234     R32C18A.B0 to     R32C18A.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_703
+ROUTE         1     0.604     R32C18A.F0 to     R30C18D.C0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_52[6]
+CTOF_DEL    ---     0.234     R30C18D.C0 to     R30C18D.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_695
+ROUTE         1     0.604     R30C18D.F0 to     R29C18A.C0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_55[6]
+CTOF_DEL    ---     0.234     R29C18A.C0 to     R29C18A.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_683
+ROUTE         2     1.049     R29C18A.F0 to     R41C20C.D0 loraModulator_0.chirpGen0.cosIdeal_0.N_438
+CTOF_DEL    ---     0.234     R41C20C.D0 to     R41C20C.F0 IQSerializer_0/SLICE_315
+ROUTE         1     0.375     R41C20C.F0 to     R41C20C.D1 IQSerializer_0/DEDFF_D1_iv_0_m2_1_RNO
+CTOF_DEL    ---     0.234     R41C20C.D1 to     R41C20C.F1 IQSerializer_0/SLICE_315
+ROUTE         1     0.861     R41C20C.F1 to     R41C28A.C1 IQSerializer_0/N_43
+CTOF_DEL    ---     0.234     R41C28A.C1 to     R41C28A.F1 IQSerializer_0/SLICE_187
+ROUTE         1     0.375     R41C28A.F1 to     R41C28A.D0 IQSerializer_0/DEDFF_D1_iv_0_1_0
+CTOF_DEL    ---     0.234     R41C28A.D0 to     R41C28A.F0 IQSerializer_0/SLICE_187
+ROUTE         1     0.000     R41C28A.F0 to    R41C28A.DI0 IQSerializer_0/DEDFF_0/Q2 (to pll_clko_0)
+                  --------
+                   12.484   (26.7% logic, 73.3% route), 13 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/chirpGen0/SLICE_26:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R36C24A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R41C28A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 4.260ns (weighted slack = -8.520ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/chirpGen0/acc[18]  (from pll_clko_0 +)
+   Destination:    FF         Data in        IQSerializer_0/DEDFF_0/neg_edge  (to pll_clko_0 -)
+
+   Delay:              12.305ns  (27.0% logic, 73.0% route), 13 logic levels.
+
+ Constraint Details:
+
+     12.305ns physical path delay loraModulator_0/chirpGen0/SLICE_27 to IQSerializer_0/SLICE_187 exceeds
+      7.813ns delay constraint less
+      0.000ns skew and
+     -0.232ns DIN_SET requirement (totaling 8.045ns) by 4.260ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/chirpGen0/SLICE_27 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.519    R36C24B.CLK to     R36C24B.Q1 loraModulator_0/chirpGen0/SLICE_27 (from pll_clko_0)
+ROUTE       205     1.209     R36C24B.Q1 to     R38C22A.B1 loraModulator_0/chirpGen0/acc[18]
+CTOF_DEL    ---     0.234     R38C22A.B1 to     R38C22A.F1 loraModulator_0/chirpGen0/SLICE_508
+ROUTE        39     1.262     R38C22A.F1 to     R36C30D.C0 loraModulator_0/chirpGen0/N_741_0
+CTOF_DEL    ---     0.234     R36C30D.C0 to     R36C30D.F0 loraModulator_0/chirpGen0/SLICE_905
+ROUTE         1     0.536     R36C30D.F0 to     R38C30C.D1 loraModulator_0/chirpGen0/sinIdeal_0/N_1166
+CTOF_DEL    ---     0.234     R38C30C.D1 to     R38C30C.F1 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_320
+ROUTE         1     0.568     R38C30C.F1 to     R38C30C.A0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_o2_2_33_3[6]
+CTOF_DEL    ---     0.234     R38C30C.A0 to     R38C30C.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_320
+ROUTE         1     1.115     R38C30C.F0 to     R44C22D.C0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_o2_2_33_9[6]
+CTOF_DEL    ---     0.234     R44C22D.C0 to     R44C22D.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_419
+ROUTE         1     0.383     R44C22D.F0 to     R44C22A.C1 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_o2_2_33[6]
+CTOF_DEL    ---     0.234     R44C22A.C1 to     R44C22A.F1 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_318
+ROUTE         1     0.560     R44C22A.F1 to     R44C22A.B0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_1[6]
+CTOF_DEL    ---     0.234     R44C22A.B0 to     R44C22A.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_318
+ROUTE         1     1.024     R44C22A.F0 to     R44C19A.A0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_2[6]
+CTOF_DEL    ---     0.234     R44C19A.A0 to     R44C19A.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_399
+ROUTE         2     0.440     R44C19A.F0 to     R43C19C.D0 loraModulator_0.chirpGen0.N_504
+CTOF_DEL    ---     0.234     R43C19C.D0 to     R43C19C.F0 SLICE_386
+ROUTE         1     0.383     R43C19C.F0 to     R43C19D.C0 IQSerializer_0/DEDFF_D1_iv_0_0_0_1
+CTOF_DEL    ---     0.234     R43C19D.C0 to     R43C19D.F0 IQSerializer_0/SLICE_317
+ROUTE         1     0.383     R43C19D.F0 to     R43C19D.C1 IQSerializer_0/DEDFF_D1_iv_0_0_0_0
+CTOF_DEL    ---     0.234     R43C19D.C1 to     R43C19D.F1 IQSerializer_0/SLICE_317
+ROUTE         1     1.115     R43C19D.F1 to     R41C28A.C0 IQSerializer_0/DEDFF_D1_iv_0_0_0
+CTOF_DEL    ---     0.234     R41C28A.C0 to     R41C28A.F0 IQSerializer_0/SLICE_187
+ROUTE         1     0.000     R41C28A.F0 to    R41C28A.DI0 IQSerializer_0/DEDFF_0/Q2 (to pll_clko_0)
+                  --------
+                   12.305   (27.0% logic, 73.0% route), 13 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/chirpGen0/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R36C24B.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R41C28A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 4.257ns (weighted slack = -8.514ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/chirpGen0/acc[23]  (from pll_clko_0 +)
+   Destination:    FF         Data in        IQSerializer_0/DEDFF_0/neg_edge  (to pll_clko_0 -)
+
+   Delay:              12.302ns  (27.1% logic, 72.9% route), 13 logic levels.
+
+ Constraint Details:
+
+     12.302ns physical path delay loraModulator_0/chirpGen0/SLICE_30 to IQSerializer_0/SLICE_187 exceeds
+      7.813ns delay constraint less
+      0.000ns skew and
+     -0.232ns DIN_SET requirement (totaling 8.045ns) by 4.257ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/chirpGen0/SLICE_30 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R36C25A.CLK to     R36C25A.Q0 loraModulator_0/chirpGen0/SLICE_30 (from pll_clko_0)
+ROUTE       174     1.441     R36C25A.Q0 to     R31C22B.B1 loraModulator_0.chirpGen0.acc[23]
+CTOF_DEL    ---     0.234     R31C22B.B1 to     R31C22B.F1 loraModulator_0/chirpGen0/SLICE_526
+ROUTE        10     0.913     R31C22B.F1 to     R35C21B.D0 loraModulator_0/chirpGen0/un1_angle_123lt19_2
+CTOF_DEL    ---     0.234     R35C21B.D0 to     R35C21B.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_935
+ROUTE         1     0.782     R35C21B.F0 to     R38C20D.D1 loraModulator_0/chirpGen0/cosIdeal_0/N_572_0
+CTOF_DEL    ---     0.234     R38C20D.D1 to     R38C20D.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_803
+ROUTE         1     0.375     R38C20D.F1 to     R38C20D.D0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_2[6]
+CTOF_DEL    ---     0.234     R38C20D.D0 to     R38C20D.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_803
+ROUTE         1     0.636     R38C20D.F0 to     R41C20D.D1 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_17[6]
+CTOF_DEL    ---     0.234     R41C20D.D1 to     R41C20D.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_715
+ROUTE         1     0.568     R41C20D.F1 to     R41C20D.A0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_34_0[6]
+CTOF_DEL    ---     0.234     R41C20D.A0 to     R41C20D.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_715
+ROUTE         1     1.037     R41C20D.F0 to     R29C18A.D1 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_51[6]
+CTOF_DEL    ---     0.234     R29C18A.D1 to     R29C18A.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_683
+ROUTE         1     0.560     R29C18A.F1 to     R29C18A.B0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_54[6]
+CTOF_DEL    ---     0.234     R29C18A.B0 to     R29C18A.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_683
+ROUTE         2     1.049     R29C18A.F0 to     R41C20C.D0 loraModulator_0.chirpGen0.cosIdeal_0.N_438
+CTOF_DEL    ---     0.234     R41C20C.D0 to     R41C20C.F0 IQSerializer_0/SLICE_315
+ROUTE         1     0.375     R41C20C.F0 to     R41C20C.D1 IQSerializer_0/DEDFF_D1_iv_0_m2_1_RNO
+CTOF_DEL    ---     0.234     R41C20C.D1 to     R41C20C.F1 IQSerializer_0/SLICE_315
+ROUTE         1     0.861     R41C20C.F1 to     R41C28A.C1 IQSerializer_0/N_43
+CTOF_DEL    ---     0.234     R41C28A.C1 to     R41C28A.F1 IQSerializer_0/SLICE_187
+ROUTE         1     0.375     R41C28A.F1 to     R41C28A.D0 IQSerializer_0/DEDFF_D1_iv_0_1_0
+CTOF_DEL    ---     0.234     R41C28A.D0 to     R41C28A.F0 IQSerializer_0/SLICE_187
+ROUTE         1     0.000     R41C28A.F0 to    R41C28A.DI0 IQSerializer_0/DEDFF_0/Q2 (to pll_clko_0)
+                  --------
+                   12.302   (27.1% logic, 72.9% route), 13 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/chirpGen0/SLICE_30:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R36C25A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R41C28A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 4.240ns (weighted slack = -8.480ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/chirpGen0/acc[18]  (from pll_clko_0 +)
+   Destination:    FF         Data in        IQSerializer_0/DEDFF_0/neg_edge  (to pll_clko_0 -)
+
+   Delay:              12.285ns  (27.1% logic, 72.9% route), 13 logic levels.
+
+ Constraint Details:
+
+     12.285ns physical path delay loraModulator_0/chirpGen0/SLICE_27 to IQSerializer_0/SLICE_187 exceeds
+      7.813ns delay constraint less
+      0.000ns skew and
+     -0.232ns DIN_SET requirement (totaling 8.045ns) by 4.240ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/chirpGen0/SLICE_27 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.519    R36C24B.CLK to     R36C24B.Q1 loraModulator_0/chirpGen0/SLICE_27 (from pll_clko_0)
+ROUTE       205     1.209     R36C24B.Q1 to     R38C22A.B1 loraModulator_0/chirpGen0/acc[18]
+CTOF_DEL    ---     0.234     R38C22A.B1 to     R38C22A.F1 loraModulator_0/chirpGen0/SLICE_508
+ROUTE        39     1.031     R38C22A.F1 to     R35C22A.C0 loraModulator_0/chirpGen0/N_741_0
+CTOF_DEL    ---     0.234     R35C22A.C0 to     R35C22A.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_1063
+ROUTE         1     0.861     R35C22A.F0 to     R30C22C.C0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a65_59_1[6]
+CTOF_DEL    ---     0.234     R30C22C.C0 to     R30C22C.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_829
+ROUTE         1     0.825     R30C22C.F0 to     R30C18C.C0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_34_tz_0[6]
+CTOF_DEL    ---     0.234     R30C18C.C0 to     R30C18C.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_777
+ROUTE         1     0.604     R30C18C.F0 to     R32C18A.C1 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_34_tz[6]
+CTOF_DEL    ---     0.234     R32C18A.C1 to     R32C18A.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_703
+ROUTE         1     0.560     R32C18A.F1 to     R32C18A.B0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_34[6]
+CTOF_DEL    ---     0.234     R32C18A.B0 to     R32C18A.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_703
+ROUTE         1     0.604     R32C18A.F0 to     R30C18D.C0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_52[6]
+CTOF_DEL    ---     0.234     R30C18D.C0 to     R30C18D.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_695
+ROUTE         1     0.604     R30C18D.F0 to     R29C18A.C0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_55[6]
+CTOF_DEL    ---     0.234     R29C18A.C0 to     R29C18A.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_683
+ROUTE         2     1.049     R29C18A.F0 to     R41C20C.D0 loraModulator_0.chirpGen0.cosIdeal_0.N_438
+CTOF_DEL    ---     0.234     R41C20C.D0 to     R41C20C.F0 IQSerializer_0/SLICE_315
+ROUTE         1     0.375     R41C20C.F0 to     R41C20C.D1 IQSerializer_0/DEDFF_D1_iv_0_m2_1_RNO
+CTOF_DEL    ---     0.234     R41C20C.D1 to     R41C20C.F1 IQSerializer_0/SLICE_315
+ROUTE         1     0.861     R41C20C.F1 to     R41C28A.C1 IQSerializer_0/N_43
+CTOF_DEL    ---     0.234     R41C28A.C1 to     R41C28A.F1 IQSerializer_0/SLICE_187
+ROUTE         1     0.375     R41C28A.F1 to     R41C28A.D0 IQSerializer_0/DEDFF_D1_iv_0_1_0
+CTOF_DEL    ---     0.234     R41C28A.D0 to     R41C28A.F0 IQSerializer_0/SLICE_187
+ROUTE         1     0.000     R41C28A.F0 to    R41C28A.DI0 IQSerializer_0/DEDFF_0/Q2 (to pll_clko_0)
+                  --------
+                   12.285   (27.1% logic, 72.9% route), 13 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/chirpGen0/SLICE_27:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R36C24B.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R41C28A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 4.224ns (weighted slack = -8.448ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/chirpGen0/acc[16]  (from pll_clko_0 +)
+   Destination:    FF         Data in        IQSerializer_0/DEDFF_0/neg_edge  (to pll_clko_0 -)
+
+   Delay:              12.269ns  (27.1% logic, 72.9% route), 13 logic levels.
+
+ Constraint Details:
+
+     12.269ns physical path delay loraModulator_0/chirpGen0/SLICE_26 to IQSerializer_0/SLICE_187 exceeds
+      7.813ns delay constraint less
+      0.000ns skew and
+     -0.232ns DIN_SET requirement (totaling 8.045ns) by 4.224ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/chirpGen0/SLICE_26 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.519    R36C24A.CLK to     R36C24A.Q1 loraModulator_0/chirpGen0/SLICE_26 (from pll_clko_0)
+ROUTE       163     1.306     R36C24A.Q1 to     R38C18A.B1 loraModulator_0/chirpGen0/acc[16]
+CTOF_DEL    ---     0.234     R38C18A.B1 to     R38C18A.F1 loraModulator_0/chirpGen0/SLICE_503
+ROUTE        34     1.129     R38C18A.F1 to     R36C30D.D0 loraModulator_0/chirpGen0/un1_angle_54lt4
+CTOF_DEL    ---     0.234     R36C30D.D0 to     R36C30D.F0 loraModulator_0/chirpGen0/SLICE_905
+ROUTE         1     0.536     R36C30D.F0 to     R38C30C.D1 loraModulator_0/chirpGen0/sinIdeal_0/N_1166
+CTOF_DEL    ---     0.234     R38C30C.D1 to     R38C30C.F1 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_320
+ROUTE         1     0.568     R38C30C.F1 to     R38C30C.A0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_o2_2_33_3[6]
+CTOF_DEL    ---     0.234     R38C30C.A0 to     R38C30C.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_320
+ROUTE         1     1.115     R38C30C.F0 to     R44C22D.C0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_o2_2_33_9[6]
+CTOF_DEL    ---     0.234     R44C22D.C0 to     R44C22D.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_419
+ROUTE         1     0.383     R44C22D.F0 to     R44C22A.C1 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_o2_2_33[6]
+CTOF_DEL    ---     0.234     R44C22A.C1 to     R44C22A.F1 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_318
+ROUTE         1     0.560     R44C22A.F1 to     R44C22A.B0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_1[6]
+CTOF_DEL    ---     0.234     R44C22A.B0 to     R44C22A.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_318
+ROUTE         1     1.024     R44C22A.F0 to     R44C19A.A0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_2[6]
+CTOF_DEL    ---     0.234     R44C19A.A0 to     R44C19A.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_399
+ROUTE         2     0.440     R44C19A.F0 to     R43C19C.D0 loraModulator_0.chirpGen0.N_504
+CTOF_DEL    ---     0.234     R43C19C.D0 to     R43C19C.F0 SLICE_386
+ROUTE         1     0.383     R43C19C.F0 to     R43C19D.C0 IQSerializer_0/DEDFF_D1_iv_0_0_0_1
+CTOF_DEL    ---     0.234     R43C19D.C0 to     R43C19D.F0 IQSerializer_0/SLICE_317
+ROUTE         1     0.383     R43C19D.F0 to     R43C19D.C1 IQSerializer_0/DEDFF_D1_iv_0_0_0_0
+CTOF_DEL    ---     0.234     R43C19D.C1 to     R43C19D.F1 IQSerializer_0/SLICE_317
+ROUTE         1     1.115     R43C19D.F1 to     R41C28A.C0 IQSerializer_0/DEDFF_D1_iv_0_0_0
+CTOF_DEL    ---     0.234     R41C28A.C0 to     R41C28A.F0 IQSerializer_0/SLICE_187
+ROUTE         1     0.000     R41C28A.F0 to    R41C28A.DI0 IQSerializer_0/DEDFF_0/Q2 (to pll_clko_0)
+                  --------
+                   12.269   (27.1% logic, 72.9% route), 13 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/chirpGen0/SLICE_26:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R36C24A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R41C28A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 4.150ns (weighted slack = -8.300ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/chirpGen0/acc[22]  (from pll_clko_0 +)
+   Destination:    FF         Data in        IQSerializer_0/DEDFF_0/neg_edge  (to pll_clko_0 -)
+
+   Delay:              12.195ns  (25.4% logic, 74.6% route), 12 logic levels.
+
+ Constraint Details:
+
+     12.195ns physical path delay loraModulator_0/chirpGen0/SLICE_29 to IQSerializer_0/SLICE_187 exceeds
+      7.813ns delay constraint less
+      0.000ns skew and
+     -0.232ns DIN_SET requirement (totaling 8.045ns) by 4.150ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/chirpGen0/SLICE_29 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.519    R36C24D.CLK to     R36C24D.Q1 loraModulator_0/chirpGen0/SLICE_29 (from pll_clko_0)
+ROUTE       203     1.189     R36C24D.Q1 to     R38C25A.A1 loraModulator_0/chirpGen0/acc[22]
+CTOF_DEL    ---     0.234     R38C25A.A1 to     R38C25A.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_366
+ROUTE         9     1.373     R38C25A.F1 to     R38C17B.D1 loraModulator_0/chirpGen0/N_598
+CTOF_DEL    ---     0.234     R38C17B.D1 to     R38C17B.F1 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_445
+ROUTE         2     1.137     R38C17B.F1 to     R38C30C.C0 loraModulator_0/chirpGen0/sinIdeal_0/N_1068_1
+CTOF_DEL    ---     0.234     R38C30C.C0 to     R38C30C.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_320
+ROUTE         1     1.115     R38C30C.F0 to     R44C22D.C0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_o2_2_33_9[6]
+CTOF_DEL    ---     0.234     R44C22D.C0 to     R44C22D.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_419
+ROUTE         1     0.383     R44C22D.F0 to     R44C22A.C1 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_o2_2_33[6]
+CTOF_DEL    ---     0.234     R44C22A.C1 to     R44C22A.F1 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_318
+ROUTE         1     0.560     R44C22A.F1 to     R44C22A.B0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_1[6]
+CTOF_DEL    ---     0.234     R44C22A.B0 to     R44C22A.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_318
+ROUTE         1     1.024     R44C22A.F0 to     R44C19A.A0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_2[6]
+CTOF_DEL    ---     0.234     R44C19A.A0 to     R44C19A.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_399
+ROUTE         2     0.440     R44C19A.F0 to     R43C19C.D0 loraModulator_0.chirpGen0.N_504
+CTOF_DEL    ---     0.234     R43C19C.D0 to     R43C19C.F0 SLICE_386
+ROUTE         1     0.383     R43C19C.F0 to     R43C19D.C0 IQSerializer_0/DEDFF_D1_iv_0_0_0_1
+CTOF_DEL    ---     0.234     R43C19D.C0 to     R43C19D.F0 IQSerializer_0/SLICE_317
+ROUTE         1     0.383     R43C19D.F0 to     R43C19D.C1 IQSerializer_0/DEDFF_D1_iv_0_0_0_0
+CTOF_DEL    ---     0.234     R43C19D.C1 to     R43C19D.F1 IQSerializer_0/SLICE_317
+ROUTE         1     1.115     R43C19D.F1 to     R41C28A.C0 IQSerializer_0/DEDFF_D1_iv_0_0_0
+CTOF_DEL    ---     0.234     R41C28A.C0 to     R41C28A.F0 IQSerializer_0/SLICE_187
+ROUTE         1     0.000     R41C28A.F0 to    R41C28A.DI0 IQSerializer_0/DEDFF_0/Q2 (to pll_clko_0)
+                  --------
+                   12.195   (25.4% logic, 74.6% route), 12 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/chirpGen0/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R36C24D.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R41C28A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 4.146ns (weighted slack = -8.292ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/chirpGen0/acc[21]  (from pll_clko_0 +)
+   Destination:    FF         Data in        IQSerializer_0/DEDFF_0/neg_edge  (to pll_clko_0 -)
+
+   Delay:              12.191ns  (27.3% logic, 72.7% route), 13 logic levels.
+
+ Constraint Details:
+
+     12.191ns physical path delay loraModulator_0/chirpGen0/SLICE_29 to IQSerializer_0/SLICE_187 exceeds
+      7.813ns delay constraint less
+      0.000ns skew and
+     -0.232ns DIN_SET requirement (totaling 8.045ns) by 4.146ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/chirpGen0/SLICE_29 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R36C24D.CLK to     R36C24D.Q0 loraModulator_0/chirpGen0/SLICE_29 (from pll_clko_0)
+ROUTE       225     0.969     R36C24D.Q0 to     R36C28D.C1 loraModulator_0/chirpGen0/acc[21]
+CTOF_DEL    ---     0.234     R36C28D.C1 to     R36C28D.F1 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_460
+ROUTE         8     0.950     R36C28D.F1 to     R38C28A.A1 loraModulator_0/chirpGen0/N_829
+CTOF_DEL    ---     0.234     R38C28A.A1 to     R38C28A.F1 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_609
+ROUTE         1     0.560     R38C28A.F1 to     R38C28A.B0 loraModulator_0/chirpGen0/sinIdeal_0/N_1100
+CTOF_DEL    ---     0.234     R38C28A.B0 to     R38C28A.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_609
+ROUTE         1     0.671     R38C28A.F0 to     R38C20B.D0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_o2_0_4[6]
+CTOF_DEL    ---     0.234     R38C20B.D0 to     R38C20B.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_520
+ROUTE         1     0.650     R38C20B.F0 to     R38C17D.D0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_o2_0_18[6]
+CTOF_DEL    ---     0.234     R38C17D.D0 to     R38C17D.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_466
+ROUTE         1     1.123     R38C17D.F0 to     R35C17C.B0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_o2_0_31[6]
+CTOF_DEL    ---     0.234     R35C17C.B0 to     R35C17C.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_413
+ROUTE         1     0.756     R35C17C.F0 to     R38C17C.D0 loraModulator_0/chirpGen0/sinIdeal_0/sinOut_0_0_a2_i_o2_0_43[6]
+CTOF_DEL    ---     0.234     R38C17C.D0 to     R38C17C.F0 loraModulator_0/chirpGen0/SLICE_400
+ROUTE         1     0.861     R38C17C.F0 to     R44C19A.C0 loraModulator_0/chirpGen0/sinIdeal_0/N_1017
+CTOF_DEL    ---     0.234     R44C19A.C0 to     R44C19A.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_399
+ROUTE         2     0.440     R44C19A.F0 to     R43C19C.D0 loraModulator_0.chirpGen0.N_504
+CTOF_DEL    ---     0.234     R43C19C.D0 to     R43C19C.F0 SLICE_386
+ROUTE         1     0.383     R43C19C.F0 to     R43C19D.C0 IQSerializer_0/DEDFF_D1_iv_0_0_0_1
+CTOF_DEL    ---     0.234     R43C19D.C0 to     R43C19D.F0 IQSerializer_0/SLICE_317
+ROUTE         1     0.383     R43C19D.F0 to     R43C19D.C1 IQSerializer_0/DEDFF_D1_iv_0_0_0_0
+CTOF_DEL    ---     0.234     R43C19D.C1 to     R43C19D.F1 IQSerializer_0/SLICE_317
+ROUTE         1     1.115     R43C19D.F1 to     R41C28A.C0 IQSerializer_0/DEDFF_D1_iv_0_0_0
+CTOF_DEL    ---     0.234     R41C28A.C0 to     R41C28A.F0 IQSerializer_0/SLICE_187
+ROUTE         1     0.000     R41C28A.F0 to    R41C28A.DI0 IQSerializer_0/DEDFF_0/Q2 (to pll_clko_0)
+                  --------
+                   12.191   (27.3% logic, 72.7% route), 13 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/chirpGen0/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R36C24D.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R41C28A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 4.129ns (weighted slack = -8.258ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/chirpGen0/acc[21]  (from pll_clko_0 +)
+   Destination:    FF         Data in        IQSerializer_0/DEDFF_0/neg_edge  (to pll_clko_0 -)
+
+   Delay:              12.174ns  (25.4% logic, 74.6% route), 12 logic levels.
+
+ Constraint Details:
+
+     12.174ns physical path delay loraModulator_0/chirpGen0/SLICE_29 to IQSerializer_0/SLICE_187 exceeds
+      7.813ns delay constraint less
+      0.000ns skew and
+     -0.232ns DIN_SET requirement (totaling 8.045ns) by 4.129ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/chirpGen0/SLICE_29 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R36C24D.CLK to     R36C24D.Q0 loraModulator_0/chirpGen0/SLICE_29 (from pll_clko_0)
+ROUTE       225     0.728     R36C24D.Q0 to     R35C24B.C1 loraModulator_0/chirpGen0/acc[21]
+CTOF_DEL    ---     0.234     R35C24B.C1 to     R35C24B.F1 loraModulator_0/chirpGen0/SLICE_501
+ROUTE        24     2.214     R35C24B.F1 to     R40C24B.A0 loraModulator_0/chirpGen0/N_551
+CTOF_DEL    ---     0.234     R40C24B.A0 to     R40C24B.F0 loraModulator_0/chirpGen0/SLICE_647
+ROUTE         4     0.432     R40C24B.F0 to     R40C26A.D0 loraModulator_0/chirpGen0/un1_angle_87lt8
+CTOF_DEL    ---     0.234     R40C26A.D0 to     R40C26A.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_1007
+ROUTE         1     0.650     R40C26A.F0 to     R43C26A.D1 loraModulator_0/chirpGen0/cosIdeal_0/N_1346
+CTOF_DEL    ---     0.234     R43C26A.D1 to     R43C26A.F1 loraModulator_0/chirpGen0/SLICE_631
+ROUTE         1     0.972     R43C26A.F1 to     R43C27C.A1 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_6[8]
+CTOF_DEL    ---     0.234     R43C27C.A1 to     R43C27C.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_679
+ROUTE         1     0.801     R43C27C.F1 to     R42C27A.A1 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_13[8]
+CTOF_DEL    ---     0.234     R42C27A.A1 to     R42C27A.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_349
+ROUTE         1     0.780     R42C27A.F1 to     R42C25D.B0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_21[8]
+CTOF_DEL    ---     0.234     R42C25D.B0 to     R42C25D.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_684
+ROUTE         2     0.867     R42C25D.F0 to     R40C28A.C0 loraModulator_0.chirpGen0.N_960
+CTOF_DEL    ---     0.234     R40C28A.C0 to     R40C28A.F0 SLICE_374
+ROUTE         1     0.414     R40C28A.F0 to     R41C28B.D1 IQSerializer_0/N_74
+CTOF_DEL    ---     0.234     R41C28B.D1 to     R41C28B.F1 IQSerializer_0/SLICE_372
+ROUTE         1     0.427     R41C28B.F1 to     R41C28B.D0 IQSerializer_0/N_50
+CTOF_DEL    ---     0.234     R41C28B.D0 to     R41C28B.F0 IQSerializer_0/SLICE_372
+ROUTE         1     0.793     R41C28B.F0 to     R41C28A.B0 IQSerializer_0/N_64
+CTOF_DEL    ---     0.234     R41C28A.B0 to     R41C28A.F0 IQSerializer_0/SLICE_187
+ROUTE         1     0.000     R41C28A.F0 to    R41C28A.DI0 IQSerializer_0/DEDFF_0/Q2 (to pll_clko_0)
+                  --------
+                   12.174   (25.4% logic, 74.6% route), 12 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/chirpGen0/SLICE_29:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R36C24D.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R41C28A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 4.106ns (weighted slack = -8.212ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/chirpGen0/acc[25]  (from pll_clko_0 +)
+   Destination:    FF         Data in        IQSerializer_0/DEDFF_0/neg_edge  (to pll_clko_0 -)
+
+   Delay:              12.151ns  (27.4% logic, 72.6% route), 13 logic levels.
+
+ Constraint Details:
+
+     12.151ns physical path delay loraModulator_0/chirpGen0/SLICE_31 to IQSerializer_0/SLICE_187 exceeds
+      7.813ns delay constraint less
+      0.000ns skew and
+     -0.232ns DIN_SET requirement (totaling 8.045ns) by 4.106ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/chirpGen0/SLICE_31 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.522    R36C25B.CLK to     R36C25B.Q0 loraModulator_0/chirpGen0/SLICE_31 (from pll_clko_0)
+ROUTE       140     1.248     R36C25B.Q0 to     R39C24C.B1 loraModulator_0.chirpGen0.acc[25]
+CTOF_DEL    ---     0.234     R39C24C.B1 to     R39C24C.F1 loraModulator_0/chirpGen0/SLICE_567
+ROUTE        10     1.245     R39C24C.F1 to     R36C20B.D1 loraModulator_0/chirpGen0/N_908
+CTOF_DEL    ---     0.234     R36C20B.D1 to     R36C20B.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_787
+ROUTE         1     0.375     R36C20B.F1 to     R36C20B.D0 loraModulator_0/chirpGen0/cosIdeal_0/N_478
+CTOF_DEL    ---     0.234     R36C20B.D0 to     R36C20B.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_787
+ROUTE         1     0.650     R36C20B.F0 to     R35C21A.D0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a65_31_4[6]
+CTOF_DEL    ---     0.234     R35C21A.D0 to     R35C21A.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_753
+ROUTE         1     0.874     R35C21A.F0 to     R29C21B.C0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a65_31_20[6]
+CTOF_DEL    ---     0.234     R29C21B.C0 to     R29C21B.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_728
+ROUTE         1     0.414     R29C21B.F0 to     R29C19C.D0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a65_31_32[6]
+CTOF_DEL    ---     0.234     R29C19C.D0 to     R29C19C.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_700
+ROUTE         1     0.383     R29C19C.F0 to     R29C19A.C0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a65_31_43[6]
+CTOF_DEL    ---     0.234     R29C19A.C0 to     R29C19A.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_690
+ROUTE         1     0.972     R29C19A.F0 to     R29C18A.A0 loraModulator_0/chirpGen0/cosIdeal_0/N_569
+CTOF_DEL    ---     0.234     R29C18A.A0 to     R29C18A.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_683
+ROUTE         2     1.049     R29C18A.F0 to     R41C20C.D0 loraModulator_0.chirpGen0.cosIdeal_0.N_438
+CTOF_DEL    ---     0.234     R41C20C.D0 to     R41C20C.F0 IQSerializer_0/SLICE_315
+ROUTE         1     0.375     R41C20C.F0 to     R41C20C.D1 IQSerializer_0/DEDFF_D1_iv_0_m2_1_RNO
+CTOF_DEL    ---     0.234     R41C20C.D1 to     R41C20C.F1 IQSerializer_0/SLICE_315
+ROUTE         1     0.861     R41C20C.F1 to     R41C28A.C1 IQSerializer_0/N_43
+CTOF_DEL    ---     0.234     R41C28A.C1 to     R41C28A.F1 IQSerializer_0/SLICE_187
+ROUTE         1     0.375     R41C28A.F1 to     R41C28A.D0 IQSerializer_0/DEDFF_D1_iv_0_1_0
+CTOF_DEL    ---     0.234     R41C28A.D0 to     R41C28A.F0 IQSerializer_0/SLICE_187
+ROUTE         1     0.000     R41C28A.F0 to    R41C28A.DI0 IQSerializer_0/DEDFF_0/Q2 (to pll_clko_0)
+                  --------
+                   12.151   (27.4% logic, 72.6% route), 13 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/chirpGen0/SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R36C25B.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R41C28A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 4.102ns (weighted slack = -8.204ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/chirpGen0/acc[20]  (from pll_clko_0 +)
+   Destination:    FF         Data in        IQSerializer_0/DEDFF_0/neg_edge  (to pll_clko_0 -)
+
+   Delay:              12.147ns  (25.5% logic, 74.5% route), 12 logic levels.
+
+ Constraint Details:
+
+     12.147ns physical path delay loraModulator_0/chirpGen0/SLICE_28 to IQSerializer_0/SLICE_187 exceeds
+      7.813ns delay constraint less
+      0.000ns skew and
+     -0.232ns DIN_SET requirement (totaling 8.045ns) by 4.102ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/chirpGen0/SLICE_28 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.519    R36C24C.CLK to     R36C24C.Q1 loraModulator_0/chirpGen0/SLICE_28 (from pll_clko_0)
+ROUTE       191     0.704     R36C24C.Q1 to     R35C24B.D1 loraModulator_0/chirpGen0/acc[20]
+CTOF_DEL    ---     0.234     R35C24B.D1 to     R35C24B.F1 loraModulator_0/chirpGen0/SLICE_501
+ROUTE        24     2.214     R35C24B.F1 to     R40C24B.A0 loraModulator_0/chirpGen0/N_551
+CTOF_DEL    ---     0.234     R40C24B.A0 to     R40C24B.F0 loraModulator_0/chirpGen0/SLICE_647
+ROUTE         4     0.432     R40C24B.F0 to     R40C26A.D0 loraModulator_0/chirpGen0/un1_angle_87lt8
+CTOF_DEL    ---     0.234     R40C26A.D0 to     R40C26A.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_1007
+ROUTE         1     0.650     R40C26A.F0 to     R43C26A.D1 loraModulator_0/chirpGen0/cosIdeal_0/N_1346
+CTOF_DEL    ---     0.234     R43C26A.D1 to     R43C26A.F1 loraModulator_0/chirpGen0/SLICE_631
+ROUTE         1     0.972     R43C26A.F1 to     R43C27C.A1 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_6[8]
+CTOF_DEL    ---     0.234     R43C27C.A1 to     R43C27C.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_679
+ROUTE         1     0.801     R43C27C.F1 to     R42C27A.A1 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_13[8]
+CTOF_DEL    ---     0.234     R42C27A.A1 to     R42C27A.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_349
+ROUTE         1     0.780     R42C27A.F1 to     R42C25D.B0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_21[8]
+CTOF_DEL    ---     0.234     R42C25D.B0 to     R42C25D.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_684
+ROUTE         2     0.867     R42C25D.F0 to     R40C28A.C0 loraModulator_0.chirpGen0.N_960
+CTOF_DEL    ---     0.234     R40C28A.C0 to     R40C28A.F0 SLICE_374
+ROUTE         1     0.414     R40C28A.F0 to     R41C28B.D1 IQSerializer_0/N_74
+CTOF_DEL    ---     0.234     R41C28B.D1 to     R41C28B.F1 IQSerializer_0/SLICE_372
+ROUTE         1     0.427     R41C28B.F1 to     R41C28B.D0 IQSerializer_0/N_50
+CTOF_DEL    ---     0.234     R41C28B.D0 to     R41C28B.F0 IQSerializer_0/SLICE_372
+ROUTE         1     0.793     R41C28B.F0 to     R41C28A.B0 IQSerializer_0/N_64
+CTOF_DEL    ---     0.234     R41C28A.B0 to     R41C28A.F0 IQSerializer_0/SLICE_187
+ROUTE         1     0.000     R41C28A.F0 to    R41C28A.DI0 IQSerializer_0/DEDFF_0/Q2 (to pll_clko_0)
+                  --------
+                   12.147   (25.5% logic, 74.5% route), 12 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/chirpGen0/SLICE_28:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R36C24C.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     2.141  PLL_BL0.CLKOP to    R41C28A.CLK pll_clko_0
+                  --------
+                    2.141   (0.0% logic, 100.0% route), 0 logic levels.
+
+Warning:  40.813MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "my_pll_instance/CLKIt" 32.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "pll_clko_0" 64.000000    |             |             |
+MHz ;                                   |   64.000 MHz|   40.813 MHz|  13 *
+                                        |             |             |
+FREQUENCY NET "my_pll_instance/CLKIt"   |             |             |
+32.000000 MHz ;                         |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+1 preference(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+IQSerializer_0/DEDFF_0/Q2               |       1|    3333|     81.37%
+                                        |        |        |
+IQSerializer_0/DEDFF_D1_iv_0_1_0        |       1|    1516|     37.01%
+                                        |        |        |
+IQSerializer_0/DEDFF_D1_iv_0_0_0        |       1|    1387|     33.86%
+                                        |        |        |
+IQSerializer_0/DEDFF_D1_iv_0_0_0_0      |       1|    1346|     32.86%
+                                        |        |        |
+IQSerializer_0/DEDFF_D1_iv_0_0_0_1      |       1|    1346|     32.86%
+                                        |        |        |
+IQSerializer_0/N_43                     |       1|    1292|     31.54%
+                                        |        |        |
+IQSerializer_0/DEDFF_D1_iv_0_m2_1_RNO   |       1|     932|     22.75%
+                                        |        |        |
+loraModulator_0.chirpGen0.cosIdeal_0.N_4|        |        |
+38                                      |       2|     932|     22.75%
+                                        |        |        |
+loraModulator_0.chirpGen0.N_504         |       2|     844|     20.61%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
+haseOut_1_cry_cry[32]                   |       1|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
+haseOut_1_cry[28]                       |       1|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/phase|        |        |
+Out_cry_22                              |       1|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/phase|        |        |
+Out_cry_20                              |       1|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/phase|        |        |
+Out_cry_18                              |       1|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/phase|        |        |
+Out_cry_16                              |       1|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/phase|        |        |
+Out_cry_14                              |       1|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/phase|        |        |
+Out_cry_12                              |       1|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/phase|        |        |
+Out_cry_10                              |       1|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
+haseOut30                               |      34|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
+haseOut_1_cry[32]                       |       1|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_3[24]   |       1|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/phase|        |        |
+NextOut[24]                             |       1|     763|     18.63%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
+W_SR_add_R11                            |       2|     762|     18.60%
+                                        |        |        |
+loraModulator_0/BW_SR[21]               |       7|     631|     15.41%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/phase|        |        |
+Out_cry_8                               |       1|     583|     14.23%
+                                        |        |        |
+IQSerializer_0/N_50                     |       1|     430|     10.50%
+                                        |        |        |
+IQSerializer_0/N_64                     |       1|     430|     10.50%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: my_pll_instance/CLKIt   Source: my_pll_instance/PLLRefcs_0.PLLCSOUT   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: pll_clko_0   Source: my_pll_instance/PLLInst_0.CLKOP   Loads: 195
+   Covered under: FREQUENCY NET "pll_clko_0" 64.000000 MHz ;
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 4096  Score: 20954135
+Cumulative negative slack: 12046442
+
+Constraints cover 21308118 paths, 2 nets, and 7857 connections (99.91% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.3.144
+Fri Apr 05 11:23:37 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o lora_tx_impl1.twr -gui -msgset C:/work/tinysdr_fpga_lora_tx/promote.xml lora_tx_impl1.ncd lora_tx_impl1.prf 
+Design file:     lora_tx_impl1.ncd
+Preference file: lora_tx_impl1.prf
+Device,speed:    LFE5U-25F,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "pll_clko_0" 64.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.168ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              IQSerializer_0/QCounter[0]  (from pll_clko_0 -)
+   Destination:    FF         Data in        IQSerializer_0/QCounter[0]  (to pll_clko_0 -)
+
+   Delay:               0.285ns  (79.6% logic, 20.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay IQSerializer_0/SLICE_192 to IQSerializer_0/SLICE_192 meets
+      0.117ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.117ns) by 0.168ns
+
+ Physical Path Details:
+
+      Data path IQSerializer_0/SLICE_192 to IQSerializer_0/SLICE_192:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.152    R42C28B.CLK to     R42C28B.Q0 IQSerializer_0/SLICE_192 (from pll_clko_0)
+ROUTE        11     0.058     R42C28B.Q0 to     R42C28B.D0 IQSerializer_0/QCounter[0]
+CTOF_DEL    ---     0.075     R42C28B.D0 to     R42C28B.F0 IQSerializer_0/SLICE_192
+ROUTE         1     0.000     R42C28B.F0 to    R42C28B.DI0 IQSerializer_0/QCounter_RNO[0] (to pll_clko_0)
+                  --------
+                    0.285   (79.6% logic, 20.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_192:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R42C28B.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_192:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R42C28B.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.168ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              IQSerializer_0/ICounter[3]  (from pll_clko_0 -)
+   Destination:    FF         Data in        IQSerializer_0/ICounter[3]  (to pll_clko_0 -)
+
+   Delay:               0.285ns  (79.6% logic, 20.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay IQSerializer_0/SLICE_191 to IQSerializer_0/SLICE_191 meets
+      0.117ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.117ns) by 0.168ns
+
+ Physical Path Details:
+
+      Data path IQSerializer_0/SLICE_191 to IQSerializer_0/SLICE_191:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.152    R40C29B.CLK to     R40C29B.Q0 IQSerializer_0/SLICE_191 (from pll_clko_0)
+ROUTE        10     0.058     R40C29B.Q0 to     R40C29B.D0 IQSerializer_0/ICounter[3]
+CTOF_DEL    ---     0.075     R40C29B.D0 to     R40C29B.F0 IQSerializer_0/SLICE_191
+ROUTE         1     0.000     R40C29B.F0 to    R40C29B.DI0 IQSerializer_0/N_17 (to pll_clko_0)
+                  --------
+                    0.285   (79.6% logic, 20.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_191:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R40C29B.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_191:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R40C29B.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.168ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              IQSerializer_0/QCounter[2]  (from pll_clko_0 -)
+   Destination:    FF         Data in        IQSerializer_0/QCounter[2]  (to pll_clko_0 -)
+
+   Delay:               0.285ns  (79.6% logic, 20.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay IQSerializer_0/SLICE_193 to IQSerializer_0/SLICE_193 meets
+      0.117ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.117ns) by 0.168ns
+
+ Physical Path Details:
+
+      Data path IQSerializer_0/SLICE_193 to IQSerializer_0/SLICE_193:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.152    R41C30A.CLK to     R41C30A.Q0 IQSerializer_0/SLICE_193 (from pll_clko_0)
+ROUTE         9     0.058     R41C30A.Q0 to     R41C30A.D0 IQSerializer_0/QCounter[2]
+CTOF_DEL    ---     0.075     R41C30A.D0 to     R41C30A.F0 IQSerializer_0/SLICE_193
+ROUTE         1     0.000     R41C30A.F0 to    R41C30A.DI0 IQSerializer_0/N_24_i (to pll_clko_0)
+                  --------
+                    0.285   (79.6% logic, 20.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_193:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R41C30A.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to IQSerializer_0/SLICE_193:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R41C30A.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.172ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/constant0/phaseInc_val[25]  (from pll_clko_0 +)
+   Destination:    FF         Data in        loraModulator_0/constant0/phaseInc_val[25]  (to pll_clko_0 +)
+
+   Delay:               0.289ns  (55.7% logic, 44.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.289ns physical path delay loraModulator_0/constant0/SLICE_254 to loraModulator_0/constant0/SLICE_254 meets
+      0.117ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.117ns) by 0.172ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/constant0/SLICE_254 to loraModulator_0/constant0/SLICE_254:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161    R19C25C.CLK to     R19C25C.Q1 loraModulator_0/constant0/SLICE_254 (from pll_clko_0)
+ROUTE         2     0.128     R19C25C.Q1 to     R19C25C.M1 loraModulator_0/phaseInc_val[25] (to pll_clko_0)
+                  --------
+                    0.289   (55.7% logic, 44.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_254:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R19C25C.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_254:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R19C25C.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.172ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/constant0/symbol_size[20]  (from pll_clko_0 +)
+   Destination:    FF         Data in        loraModulator_0/constant0/symbol_size[20]  (to pll_clko_0 +)
+
+   Delay:               0.289ns  (55.7% logic, 44.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.289ns physical path delay loraModulator_0/constant0/SLICE_270 to loraModulator_0/constant0/SLICE_270 meets
+      0.117ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.117ns) by 0.172ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/constant0/SLICE_270 to loraModulator_0/constant0/SLICE_270:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161    R31C29C.CLK to     R31C29C.Q1 loraModulator_0/constant0/SLICE_270 (from pll_clko_0)
+ROUTE         2     0.128     R31C29C.Q1 to     R31C29C.M1 loraModulator_0/symbol_size[20] (to pll_clko_0)
+                  --------
+                    0.289   (55.7% logic, 44.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_270:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R31C29C.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_270:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R31C29C.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.172ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/constant0/symbol_size[16]  (from pll_clko_0 +)
+   Destination:    FF         Data in        loraModulator_0/constant0/symbol_size[16]  (to pll_clko_0 +)
+
+   Delay:               0.289ns  (55.7% logic, 44.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.289ns physical path delay loraModulator_0/constant0/SLICE_268 to loraModulator_0/constant0/SLICE_268 meets
+      0.117ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.117ns) by 0.172ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/constant0/SLICE_268 to loraModulator_0/constant0/SLICE_268:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161    R29C30D.CLK to     R29C30D.Q1 loraModulator_0/constant0/SLICE_268 (from pll_clko_0)
+ROUTE         2     0.128     R29C30D.Q1 to     R29C30D.M1 loraModulator_0/symbol_size[16] (to pll_clko_0)
+                  --------
+                    0.289   (55.7% logic, 44.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_268:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R29C30D.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_268:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R29C30D.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.172ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/constant0/phaseInc_val[15]  (from pll_clko_0 +)
+   Destination:    FF         Data in        loraModulator_0/constant0/phaseInc_val[15]  (to pll_clko_0 +)
+
+   Delay:               0.289ns  (55.7% logic, 44.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.289ns physical path delay loraModulator_0/constant0/SLICE_249 to loraModulator_0/constant0/SLICE_249 meets
+      0.117ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.117ns) by 0.172ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/constant0/SLICE_249 to loraModulator_0/constant0/SLICE_249:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161    R19C23B.CLK to     R19C23B.Q1 loraModulator_0/constant0/SLICE_249 (from pll_clko_0)
+ROUTE         2     0.128     R19C23B.Q1 to     R19C23B.M1 loraModulator_0/phaseInc_val[15] (to pll_clko_0)
+                  --------
+                    0.289   (55.7% logic, 44.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_249:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R19C23B.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_249:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R19C23B.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.172ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/constant0/symbol_size[26]  (from pll_clko_0 +)
+   Destination:    FF         Data in        loraModulator_0/constant0/symbol_size[26]  (to pll_clko_0 +)
+
+   Delay:               0.289ns  (55.7% logic, 44.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.289ns physical path delay loraModulator_0/constant0/SLICE_273 to loraModulator_0/constant0/SLICE_273 meets
+      0.117ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.117ns) by 0.172ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/constant0/SLICE_273 to loraModulator_0/constant0/SLICE_273:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161    R30C29C.CLK to     R30C29C.Q1 loraModulator_0/constant0/SLICE_273 (from pll_clko_0)
+ROUTE         2     0.128     R30C29C.Q1 to     R30C29C.M1 loraModulator_0/symbol_size[26] (to pll_clko_0)
+                  --------
+                    0.289   (55.7% logic, 44.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_273:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R30C29C.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_273:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R30C29C.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.172ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/constant0/phaseInc_val[13]  (from pll_clko_0 +)
+   Destination:    FF         Data in        loraModulator_0/constant0/phaseInc_val[13]  (to pll_clko_0 +)
+
+   Delay:               0.289ns  (55.7% logic, 44.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.289ns physical path delay loraModulator_0/constant0/SLICE_248 to loraModulator_0/constant0/SLICE_248 meets
+      0.117ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.117ns) by 0.172ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/constant0/SLICE_248 to loraModulator_0/constant0/SLICE_248:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161    R19C23C.CLK to     R19C23C.Q1 loraModulator_0/constant0/SLICE_248 (from pll_clko_0)
+ROUTE         2     0.128     R19C23C.Q1 to     R19C23C.M1 loraModulator_0/phaseInc_val[13] (to pll_clko_0)
+                  --------
+                    0.289   (55.7% logic, 44.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_248:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R19C23C.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_248:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R19C23C.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.172ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              loraModulator_0/constant0/phaseInc_val[23]  (from pll_clko_0 +)
+   Destination:    FF         Data in        loraModulator_0/constant0/phaseInc_val[23]  (to pll_clko_0 +)
+
+   Delay:               0.289ns  (55.7% logic, 44.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.289ns physical path delay loraModulator_0/constant0/SLICE_253 to loraModulator_0/constant0/SLICE_253 meets
+      0.117ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.117ns) by 0.172ns
+
+ Physical Path Details:
+
+      Data path loraModulator_0/constant0/SLICE_253 to loraModulator_0/constant0/SLICE_253:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.161    R19C25A.CLK to     R19C25A.Q1 loraModulator_0/constant0/SLICE_253 (from pll_clko_0)
+ROUTE         2     0.128     R19C25A.Q1 to     R19C25A.M1 loraModulator_0/phaseInc_val[23] (to pll_clko_0)
+                  --------
+                    0.289   (55.7% logic, 44.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_253:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R19C25A.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path my_pll_instance/PLLInst_0 to loraModulator_0/constant0/SLICE_253:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       195     0.633  PLL_BL0.CLKOP to    R19C25A.CLK pll_clko_0
+                  --------
+                    0.633   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "my_pll_instance/CLKIt" 32.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "pll_clko_0" 64.000000    |             |             |
+MHz ;                                   |     0.000 ns|     0.168 ns|   2  
+                                        |             |             |
+FREQUENCY NET "my_pll_instance/CLKIt"   |             |             |
+32.000000 MHz ;                         |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: my_pll_instance/CLKIt   Source: my_pll_instance/PLLRefcs_0.PLLCSOUT   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: pll_clko_0   Source: my_pll_instance/PLLInst_0.CLKOP   Loads: 195
+   Covered under: FREQUENCY NET "pll_clko_0" 64.000000 MHz ;
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 21308118 paths, 2 nets, and 7857 connections (99.91% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 4096 (setup), 0 (hold)
+Score: 20954135 (setup), 0 (hold)
+Cumulative negative slack: 12046442 (12046442+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

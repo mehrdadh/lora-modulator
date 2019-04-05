@@ -9,11 +9,11 @@
 1 gated/generated clock tree(s) driving 344 clock pin(s) of sequential element(s)
 0 instances converted, 344 sequential instances remain driven by gated/generated clocks
 
-================================================================================================================= Gated/Generated Clocks ==================================================================================================================
-Clock Tree ID     Driving Element               Drive Element Type     Fanout     Sample Instance                            Explanation                                                                                                                   
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@K:CKID0001       my_pll_instance.PLLInst_0     EHXPLLL                344        loraPacketGenerator_0.current_state[5]     Gating structure creates improper gating logic. See the Gated Clocks description in the user guide for conversion requirements
-===========================================================================================================================================================================================================================================================
+========================================================================================================== Gated/Generated Clocks ==========================================================================================================
+Clock Tree ID     Driving Element               Drive Element Type     Fanout     Sample Instance             Explanation                                                                                                                   
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       my_pll_instance.PLLInst_0     EHXPLLL                344        loraModulator_0.IQStart     Gating structure creates improper gating logic. See the Gated Clocks description in the user guide for conversion requirements
+============================================================================================================================================================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######]

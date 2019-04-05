@@ -2,12 +2,12 @@
 -- Written by Synplicity
 -- Product Version "M-2017.03L-SP1-1"
 -- Program "Synplify Pro", Mapper "maplat, Build 1796R"
--- Sun Feb  3 19:55:53 2019
+-- Fri Apr  5 11:20:58 2019
 --
 
 --
 -- Written by Synplify Pro version Build 1796R
--- Sun Feb  3 19:55:53 2019
+-- Fri Apr  5 11:20:58 2019
 --
 
 --
@@ -26,6 +26,7 @@ port(
   CLKI :  in std_logic;
   CLKI2 :  in std_logic;
   SEL :  in std_logic;
+  RST :  in std_logic;
   CLKOP :  out std_logic;
   LOCK :  out std_logic);
 end my_pll_64mhz;
@@ -119,7 +120,7 @@ PLLINST_0: EHXPLLL
     PLL_LOCK_MODE => 0, 
     STDBY_ENABLE => "DISABLED", 
     DPHASE_SOURCE => "DISABLED", 
-    PLLRST_ENA => "DISABLED", 
+    PLLRST_ENA => "ENABLED", 
     INTFB_WAKE => "DISABLED"
   ) 
   port map (
@@ -132,7 +133,7 @@ PLLINST_0: EHXPLLL
     PHASELOADREG => GND,
     STDBY => GND,
     PLLWAKESYNC => GND,
-    RST => GND,
+    RST => RST,
     ENCLKOP => GND,
     ENCLKOS => GND,
     ENCLKOS2 => GND,

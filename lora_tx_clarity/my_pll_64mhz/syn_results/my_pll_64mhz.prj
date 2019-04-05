@@ -1,6 +1,6 @@
 #-- Lattice Semiconductor Corporation Ltd.
-#-- Synplify OEM project file C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/syn_results/my_pll_64mhz.prj
-#-- Written on Sun Feb 03 19:55:48 2019
+#-- Synplify OEM project file C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/syn_results/my_pll_64mhz.prj
+#-- Written on Fri Apr 05 11:20:52 2019
 
 
 #device options
@@ -32,8 +32,8 @@ set_option -write_apr_constraint 1
 #-- add_file options
 add_file -verilog -lib work "C:/lscc/diamond/3.10_x64/cae_library/synthesis/verilog/ecp5u.v"
 add_file -verilog -lib work "C:/lscc/diamond/3.10_x64/cae_library/synthesis/verilog/pmi_def.v"
-add_file -verilog -lib work "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.v"
-add_file -constraint {"C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.fdc"}
+add_file -verilog -lib work "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.v"
+add_file -constraint {"C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.fdc"}
 
 #-- top module name
 set_option -top_module my_pll_64mhz

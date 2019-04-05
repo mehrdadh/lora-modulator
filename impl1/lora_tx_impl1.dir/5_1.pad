@@ -6,30 +6,28 @@ Performance Grade:      6
 PACKAGE:          CABGA256
 Package Status:                     Final          Version 1.33
 
-Sun Feb 03 21:34:53 2019
+Fri Apr 05 11:22:46 2019
 
 Pinout by Port Name:
-+-------------------------+----------+--------------+-------+-----------+-----------------------------------+
-| Port Name               | Pin/Bank | Buffer Type  | Site  | BC Enable | Properties                        |
-+-------------------------+----------+--------------+-------+-----------+-----------------------------------+
-| IQSerializer_0_serial_N | L1/6     | LVDS_OUT     | PL26A |           | DIFFDRIVE:3.5 CLAMP:ON            |
-| POR_N                   | M9/8     | LVCMOS25_IN  | PB18A |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| clk_4M                  | D7/0     | LVCMOS18_OUT | PT24B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| clk_in                  | M2/6     | LVCMOS25_IN  | PL26D |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
-| countDone               | T7/8     | LVCMOS25_OUT | PB11A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| pll_clko                | J2/7     | LVCMOS18_OUT | PL23B |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| serial                  | M3/6     | LVCMOS25_OUT | PL32D |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
-| serial_clk              | N1/6     | LVDS_OUT     | PL32A |           | DIFFDRIVE:3.5 CLAMP:ON            |
-+-------------------------+----------+--------------+-------+-----------+-----------------------------------+
++------------+----------+--------------+-------+-----------+-----------------------------------+
+| Port Name  | Pin/Bank | Buffer Type  | Site  | BC Enable | Properties                        |
++------------+----------+--------------+-------+-----------+-----------------------------------+
+| LED        | B1/7     | LVCMOS18_OUT | PL2A  |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| clk_test   | G16/2    | LVCMOS18_OUT | PR20A |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| osc_en     | T2/6     | LVCMOS25_OUT | PL38D |           | DRIVE:8mA CLAMP:ON SLEW:SLOW      |
+| serial_clk | N1/6     | LVDS_OUT     | PL32A |           | DIFFDRIVE:3.5 CLAMP:ON            |
+| serial_iq  | L1/6     | LVDS_OUT     | PL26A |           | DIFFDRIVE:3.5 CLAMP:ON            |
+| top_clk    | M2/6     | LVCMOS25_IN  | PL26D |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
+| top_rst    | P5/6     | LVCMOS25_IN  | PL47D |           | PULL:DOWN CLAMP:ON HYSTERESIS:ON  |
++------------+----------+--------------+-------+-----------+-----------------------------------+
 
 Vccio by Bank:
 +------+-------+
 | Bank | Vccio |
 +------+-------+
-| 0    | 1.8V  |
+| 2    | 1.8V  |
 | 6    | 2.5V  |
 | 7    | 1.8V  |
-| 8    | 2.5V  |
 +------+-------+
 
 Vref by Bank:
@@ -39,227 +37,226 @@ Vref by Bank:
 +------+-----+-----------------+---------+
 
 Pinout by Pin Number:
-+----------+--------------------------+------------+--------------+-------+--------------------------+-----------+
-| Pin/Bank | Pin Info                 | Preference | Buffer Type  | Site  | Dual Function            | BC Enable |
-+----------+--------------------------+------------+--------------+-------+--------------------------+-----------+
-| A2/0     |     unused, PULL:DOWN    |            |              | PT4A  |                          |           |
-| A3/0     |     unused, PULL:DOWN    |            |              | PT6A  |                          |           |
-| A4/0     |     unused, PULL:DOWN    |            |              | PT6B  |                          |           |
-| A5/0     |     unused, PULL:DOWN    |            |              | PT18A |                          |           |
-| A6/0     |     unused, PULL:DOWN    |            |              | PT18B |                          |           |
-| A7/0     |     unused, PULL:DOWN    |            |              | PT29A | PCLKT0_0                 |           |
-| A8/0     |     unused, PULL:DOWN    |            |              | PT29B |                          |           |
-| A9/1     |     unused, PULL:DOWN    |            |              | PT42A |                          |           |
-| A10/1    |     unused, PULL:DOWN    |            |              | PT42B |                          |           |
-| A11/1    |     unused, PULL:DOWN    |            |              | PT53A |                          |           |
-| A12/1    |     unused, PULL:DOWN    |            |              | PT53B |                          |           |
-| A13/1    |     unused, PULL:DOWN    |            |              | PT65A |                          |           |
-| A14/1    |     unused, PULL:DOWN    |            |              | PT65B |                          |           |
-| A15/1    |     unused, PULL:DOWN    |            |              | PT67B |                          |           |
-| B1/7     |     unused, PULL:DOWN    |            |              | PL2A  | LDQ8                     |           |
-| B2/7     |     unused, PULL:DOWN    |            |              | PL2B  | LDQ8                     |           |
-| B3/0     |     unused, PULL:DOWN    |            |              | PT4B  |                          |           |
-| B4/0     |     unused, PULL:DOWN    |            |              | PT11B |                          |           |
-| B5/0     |     unused, PULL:DOWN    |            |              | PT15B |                          |           |
-| B6/0     |     unused, PULL:DOWN    |            |              | PT22B |                          |           |
-| B7/0     |     unused, PULL:DOWN    |            |              | PT27B |                          |           |
-| B8/1     |     unused, PULL:DOWN    |            |              | PT35B |                          |           |
-| B9/1     |     unused, PULL:DOWN    |            |              | PT38A | GR_PCLK1_0               |           |
-| B10/1    |     unused, PULL:DOWN    |            |              | PT44A |                          |           |
-| B11/1    |     unused, PULL:DOWN    |            |              | PT49A |                          |           |
-| B12/1    |     unused, PULL:DOWN    |            |              | PT56A |                          |           |
-| B13/1    |     unused, PULL:DOWN    |            |              | PT60A |                          |           |
-| B14/1    |     unused, PULL:DOWN    |            |              | PT67A |                          |           |
-| B15/2    |     unused, PULL:DOWN    |            |              | PR2B  | S0_IN/RDQ8               |           |
-| B16/2    |     unused, PULL:DOWN    |            |              | PR2A  | RDQ8                     |           |
-| C1/7     |     unused, PULL:DOWN    |            |              | PL5A  | LDQ8                     |           |
-| C2/7     |     unused, PULL:DOWN    |            |              | PL5B  | LDQ8                     |           |
-| C3/7     |     unused, PULL:DOWN    |            |              | PL2C  | LDQ8                     |           |
-| C4/0     |     unused, PULL:DOWN    |            |              | PT11A |                          |           |
-| C5/0     |     unused, PULL:DOWN    |            |              | PT15A |                          |           |
-| C6/0     |     unused, PULL:DOWN    |            |              | PT22A |                          |           |
-| C7/0     |     unused, PULL:DOWN    |            |              | PT27A | PCLKT0_1                 |           |
-| C8/1     |     unused, PULL:DOWN    |            |              | PT35A | PCLKT1_0                 |           |
-| C9/1     |     unused, PULL:DOWN    |            |              | PT38B | GR_PCLK1_1               |           |
-| C10/1    |     unused, PULL:DOWN    |            |              | PT44B |                          |           |
-| C11/1    |     unused, PULL:DOWN    |            |              | PT49B |                          |           |
-| C12/1    |     unused, PULL:DOWN    |            |              | PT56B |                          |           |
-| C13/1    |     unused, PULL:DOWN    |            |              | PT60B |                          |           |
-| C14/2    |     unused, PULL:DOWN    |            |              | PR2C  | RDQ8                     |           |
-| C15/2    |     unused, PULL:DOWN    |            |              | PR5B  | RDQ8                     |           |
-| C16/2    |     unused, PULL:DOWN    |            |              | PR5A  | RDQ8                     |           |
-| CCLK/8   |                          |            |              | CCLK  | MCLK/SCK                 |           |
-| D1/7     |     unused, PULL:DOWN    |            |              | PL8A  | LDQS8                    |           |
-| D3/7     |     unused, PULL:DOWN    |            |              | PL2D  | LDQ8                     |           |
-| D4/0     |     unused, PULL:DOWN    |            |              | PT9B  |                          |           |
-| D5/0     |     unused, PULL:DOWN    |            |              | PT13B |                          |           |
-| D6/0     |     unused, PULL:DOWN    |            |              | PT20B |                          |           |
-| D7/0     | clk_4M                   |            | LVCMOS18_OUT | PT24B | GR_PCLK0_0               |           |
-| D8/1     |     unused, PULL:DOWN    |            |              | PT33B |                          |           |
-| D9/1     |     unused, PULL:DOWN    |            |              | PT40A |                          |           |
-| D10/1    |     unused, PULL:DOWN    |            |              | PT47A |                          |           |
-| D11/1    |     unused, PULL:DOWN    |            |              | PT51A |                          |           |
-| D12/1    |     unused, PULL:DOWN    |            |              | PT58A |                          |           |
-| D13/1    |     unused, PULL:DOWN    |            |              | PT62A |                          |           |
-| D14/2    |     unused, PULL:DOWN    |            |              | PR2D  | RDQ8                     |           |
-| D16/2    |     unused, PULL:DOWN    |            |              | PR8A  | RDQS8                    |           |
-| E1/7     |     unused, PULL:DOWN    |            |              | PL11D | LDQ8                     |           |
-| E2/7     |     unused, PULL:DOWN    |            |              | PL8B  | LDQSN8                   |           |
-| E3/7     |     unused, PULL:DOWN    |            |              | PL5C  | LDQ8                     |           |
-| E4/0     |     unused, PULL:DOWN    |            |              | PT9A  |                          |           |
-| E5/0     |     unused, PULL:DOWN    |            |              | PT13A |                          |           |
-| E6/0     |     unused, PULL:DOWN    |            |              | PT20A |                          |           |
-| E7/0     |     unused, PULL:DOWN    |            |              | PT24A | GR_PCLK0_1               |           |
-| E8/1     |     unused, PULL:DOWN    |            |              | PT33A | PCLKT1_1                 |           |
-| E9/1     |     unused, PULL:DOWN    |            |              | PT40B |                          |           |
-| E10/1    |     unused, PULL:DOWN    |            |              | PT47B |                          |           |
-| E11/1    |     unused, PULL:DOWN    |            |              | PT51B |                          |           |
-| E12/1    |     unused, PULL:DOWN    |            |              | PT58B |                          |           |
-| E13/1    |     unused, PULL:DOWN    |            |              | PT62B |                          |           |
-| E14/2    |     unused, PULL:DOWN    |            |              | PR5C  | RDQ8                     |           |
-| E15/2    |     unused, PULL:DOWN    |            |              | PR8B  | RDQSN8                   |           |
-| E16/2    |     unused, PULL:DOWN    |            |              | PR11D | RDQ8                     |           |
-| F1/7     |     unused, PULL:DOWN    |            |              | PL14A | LDQ20                    |           |
-| F2/7     |     unused, PULL:DOWN    |            |              | PL11C | LDQ8                     |           |
-| F3/7     |     unused, PULL:DOWN    |            |              | PL5D  | LDQ8                     |           |
-| F4/7     |     unused, PULL:DOWN    |            |              | PL8C  | LDQ8                     |           |
-| F5/7     |     unused, PULL:DOWN    |            |              | PL8D  | LDQ8                     |           |
-| F12/2    |     unused, PULL:DOWN    |            |              | PR8D  | RDQ8                     |           |
-| F13/2    |     unused, PULL:DOWN    |            |              | PR8C  | RDQ8                     |           |
-| F14/2    |     unused, PULL:DOWN    |            |              | PR5D  | RDQ8                     |           |
-| F15/2    |     unused, PULL:DOWN    |            |              | PR11C | RDQ8                     |           |
-| F16/2    |     unused, PULL:DOWN    |            |              | PR14A | RDQ20                    |           |
-| G1/7     |     unused, PULL:DOWN    |            |              | PL20A | GR_PCLK7_1/LDQS20        |           |
-| G2/7     |     unused, PULL:DOWN    |            |              | PL14B | LDQ20                    |           |
-| G3/7     |     unused, PULL:DOWN    |            |              | PL14C | VREF1_7/LDQ20            |           |
-| G4/7     |     unused, PULL:DOWN    |            |              | PL11B | LDQ8                     |           |
-| G5/7     |     unused, PULL:DOWN    |            |              | PL11A | LDQ8                     |           |
-| G12/2    |     unused, PULL:DOWN    |            |              | PR11A | RDQ8                     |           |
-| G13/2    |     unused, PULL:DOWN    |            |              | PR11B | RDQ8                     |           |
-| G14/2    |     unused, PULL:DOWN    |            |              | PR14C | VREF1_2/RDQ20            |           |
-| G15/2    |     unused, PULL:DOWN    |            |              | PR14B | RDQ20                    |           |
-| G16/2    |     unused, PULL:DOWN    |            |              | PR20A | GR_PCLK2_1/RDQS20        |           |
-| H2/7     |     unused, PULL:DOWN    |            |              | PL20B | LDQSN20                  |           |
-| H3/7     |     unused, PULL:DOWN    |            |              | PL14D | LDQ20                    |           |
-| H4/7     |     unused, PULL:DOWN    |            |              | PL17B | LDQ20                    |           |
-| H5/7     |     unused, PULL:DOWN    |            |              | PL17A | LDQ20                    |           |
-| H12/2    |     unused, PULL:DOWN    |            |              | PR17A | RDQ20                    |           |
-| H13/2    |     unused, PULL:DOWN    |            |              | PR17B | RDQ20                    |           |
-| H14/2    |     unused, PULL:DOWN    |            |              | PR14D | RDQ20                    |           |
-| H15/2    |     unused, PULL:DOWN    |            |              | PR20B | RDQSN20                  |           |
-| J1/7     |     unused, PULL:DOWN    |            |              | PL23A | PCLKT7_1/LDQ20           |           |
-| J2/7     | pll_clko                 | LOCATED    | LVCMOS18_OUT | PL23B | PCLKC7_1/LDQ20           |           |
-| J3/7     |     unused, PULL:DOWN    |            |              | PL20C | GR_PCLK7_0/LDQ20         |           |
-| J4/7     |     unused, PULL:DOWN    |            |              | PL17C | LDQ20                    |           |
-| J5/7     |     unused, PULL:DOWN    |            |              | PL17D | LDQ20                    |           |
-| J12/2    |     unused, PULL:DOWN    |            |              | PR17D | RDQ20                    |           |
-| J13/2    |     unused, PULL:DOWN    |            |              | PR17C | RDQ20                    |           |
-| J14/2    |     unused, PULL:DOWN    |            |              | PR20C | GR_PCLK2_0/RDQ20         |           |
-| J15/2    |     unused, PULL:DOWN    |            |              | PR23B | PCLKC2_1/RDQ20           |           |
-| J16/2    |     unused, PULL:DOWN    |            |              | PR23A | PCLKT2_1/RDQ20           |           |
-| K1/7     |     unused, PULL:DOWN    |            |              | PL23C | PCLKT7_0/LDQ20           |           |
-| K2/7     |     unused, PULL:DOWN    |            |              | PL23D | PCLKC7_0/LDQ20           |           |
-| K3/7     |     unused, PULL:DOWN    |            |              | PL20D | LDQ20                    |           |
-| K4/6     |     unused, PULL:DOWN    |            |              | PL29A | GR_PCLK6_0/LDQ32         |           |
-| K5/6     |     unused, PULL:DOWN    |            |              | PL29B | LDQ32                    |           |
-| K12/3    |     unused, PULL:DOWN    |            |              | PR29B | RDQ32                    |           |
-| K13/3    |     unused, PULL:DOWN    |            |              | PR29A | GR_PCLK3_0/RDQ32         |           |
-| K14/2    |     unused, PULL:DOWN    |            |              | PR20D | RDQ20                    |           |
-| K15/2    |     unused, PULL:DOWN    |            |              | PR23D | PCLKC2_0/RDQ20           |           |
-| K16/2    |     unused, PULL:DOWN    |            |              | PR23C | PCLKT2_0/RDQ20           |           |
-| L1/6     | IQSerializer_0_serial_N+ | LOCATED    | LVDS_OUT     | PL26A | PCLKT6_1/LDQ32           |           |
-| L2/6     | IQSerializer_0_serial_N- |            | LVDS_OUT     | PL26B | PCLKC6_1/LDQ32           |           |
-| L3/6     |     unused, PULL:DOWN    |            |              | PL32C | LDQ32                    |           |
-| L4/6     |     unused, PULL:DOWN    |            |              | PL29C | GR_PCLK6_1/LDQ32         |           |
-| L5/6     |     unused, PULL:DOWN    |            |              | PL29D | LDQ32                    |           |
-| L12/3    |     unused, PULL:DOWN    |            |              | PR29D | RDQ32                    |           |
-| L13/3    |     unused, PULL:DOWN    |            |              | PR29C | GR_PCLK3_1/RDQ32         |           |
-| L14/3    |     unused, PULL:DOWN    |            |              | PR32C | RDQ32                    |           |
-| L15/3    |     unused, PULL:DOWN    |            |              | PR26B | PCLKC3_1/RDQ32           |           |
-| L16/3    |     unused, PULL:DOWN    |            |              | PR26A | PCLKT3_1/RDQ32           |           |
-| M1/6     |     unused, PULL:DOWN    |            |              | PL26C | PCLKT6_0/LDQ32           |           |
-| M2/6     | clk_in                   | LOCATED    | LVCMOS25_IN  | PL26D | PCLKC6_0/LDQ32           |           |
-| M3/6     | serial                   |            | LVCMOS25_OUT | PL32D | LDQ32                    |           |
-| M4/6     |     unused, PULL:DOWN    |            |              | PL35C | LDQ32                    |           |
-| M5/6     |     unused, PULL:DOWN    |            |              | PL44C | LDQ44                    |           |
-| M6/6     |     unused, PULL:DOWN    |            |              | PL47A | LDQ44                    |           |
-| M7/8     |     unused, PULL:DOWN    |            |              | PB9B  | D2/IO2                   |           |
-| M8/8     |     unused, PULL:DOWN    |            |              | PB15B | DOUT/CSON                |           |
-| M9/8     | POR_N                    |            | LVCMOS25_IN  | PB18A | WRITEN                   |           |
-| M11/3    |     unused, PULL:DOWN    |            |              | PR47A | RDQ44                    |           |
-| M12/3    |     unused, PULL:DOWN    |            |              | PR44C | RDQ44                    |           |
-| M13/3    |     unused, PULL:DOWN    |            |              | PR35C | RDQ32                    |           |
-| M14/3    |     unused, PULL:DOWN    |            |              | PR32D | RDQ32                    |           |
-| M15/3    |     unused, PULL:DOWN    |            |              | PR26D | PCLKC3_0/RDQ32           |           |
-| M16/3    |     unused, PULL:DOWN    |            |              | PR26C | PCLKT3_0/RDQ32           |           |
-| N1/6     | serial_clk+              | LOCATED    | LVDS_OUT     | PL32A | LDQS32                   |           |
-| N3/6     |     unused, PULL:DOWN    |            |              | PL35D | LDQ32                    |           |
-| N4/6     |     unused, PULL:DOWN    |            |              | PL38A | LDQ44                    |           |
-| N5/6     |     unused, PULL:DOWN    |            |              | PL44D | LDQ44                    |           |
-| N6/6     |     unused, PULL:DOWN    |            |              | PL47B | LDQ44                    |           |
-| N7/8     |     unused, PULL:DOWN    |            |              | PB9A  | D3/IO3                   |           |
-| N8/8     |     unused, PULL:DOWN    |            |              | PB15A | HOLDN/DI/BUSY/CSSPIN/CEN |           |
-| N11/3    |     unused, PULL:DOWN    |            |              | PR47B | RDQ44                    |           |
-| N12/3    |     unused, PULL:DOWN    |            |              | PR44D | RDQ44                    |           |
-| N13/3    |     unused, PULL:DOWN    |            |              | PR38A | RDQ44                    |           |
-| N14/3    |     unused, PULL:DOWN    |            |              | PR35D | RDQ32                    |           |
-| N16/3    |     unused, PULL:DOWN    |            |              | PR32A | RDQS32                   |           |
-| P1/6     |     unused, PULL:DOWN    |            |              | PL35A | LDQ32                    |           |
-| P2/6     | serial_clk-              |            | LVDS_OUT     | PL32B | LDQSN32                  |           |
-| P3/6     |     unused, PULL:DOWN    |            |              | PL38B | LDQ44                    |           |
-| P4/6     |     unused, PULL:DOWN    |            |              | PL41A | LDQ44                    |           |
-| P5/6     |     unused, PULL:DOWN    |            |              | PL47D | LLC_GPLL0C_IN/LDQ44      |           |
-| P6/6     |     unused, PULL:DOWN    |            |              | PL47C | LLC_GPLL0T_IN/LDQ44      |           |
-| P7/8     |     unused, PULL:DOWN    |            |              | PB6B  | D4/MOSI2/IO4             |           |
-| P8/8     |     unused, PULL:DOWN    |            |              | PB13B | CS1N                     |           |
-| P11/3    |     unused, PULL:DOWN    |            |              | PR47C | LRC_GPLL0T_IN/RDQ44      |           |
-| P12/3    |     unused, PULL:DOWN    |            |              | PR47D | LRC_GPLL0C_IN/RDQ44      |           |
-| P13/3    |     unused, PULL:DOWN    |            |              | PR41A | RDQ44                    |           |
-| P14/3    |     unused, PULL:DOWN    |            |              | PR38B | RDQ44                    |           |
-| P15/3    |     unused, PULL:DOWN    |            |              | PR32B | RDQSN32                  |           |
-| P16/3    |     unused, PULL:DOWN    |            |              | PR35A | RDQ32                    |           |
-| PT31A/0  |     unused, PULL:DOWN    |            |              |       |                          |           |
-| PT31B/0  |     unused, PULL:DOWN    |            |              |       |                          |           |
-| R1/6     |     unused, PULL:DOWN    |            |              | PL35B | VREF1_6/LDQ32            |           |
-| R2/6     |     unused, PULL:DOWN    |            |              | PL38C | LDQ44                    |           |
-| R3/6     |     unused, PULL:DOWN    |            |              | PL41B | LDQ44                    |           |
-| R4/6     |     unused, PULL:DOWN    |            |              | PL41C | LDQ44                    |           |
-| R5/6     |     unused, PULL:DOWN    |            |              | PL44A | LDQS44                   |           |
-| R6/8     |     unused, PULL:DOWN    |            |              | PB4B  | D6/IO6                   |           |
-| R7/8     |     unused, PULL:DOWN    |            |              | PB6A  | D5/MISO2/IO5             |           |
-| R8/8     |     unused, PULL:DOWN    |            |              | PB13A | SN/CSN                   |           |
-| R12/3    |     unused, PULL:DOWN    |            |              | PR44A | RDQS44                   |           |
-| R13/3    |     unused, PULL:DOWN    |            |              | PR41C | RDQ44                    |           |
-| R14/3    |     unused, PULL:DOWN    |            |              | PR41B | RDQ44                    |           |
-| R15/3    |     unused, PULL:DOWN    |            |              | PR38C | RDQ44                    |           |
-| R16/3    |     unused, PULL:DOWN    |            |              | PR35B | VREF1_3/RDQ32            |           |
-| T2/6     |     unused, PULL:DOWN    |            |              | PL38D | LDQ44                    |           |
-| T3/6     |     unused, PULL:DOWN    |            |              | PL41D | LDQ44                    |           |
-| T4/6     |     unused, PULL:DOWN    |            |              | PL44B | LDQSN44                  |           |
-| T6/8     |     unused, PULL:DOWN    |            |              | PB4A  | D7/IO7                   |           |
-| T7/8     | countDone                |            | LVCMOS25_OUT | PB11A | D1/MISO/IO1              |           |
-| T8/8     |     unused, PULL:DOWN    |            |              | PB11B | D0/MOSI/IO0              |           |
-| T13/3    |     unused, PULL:DOWN    |            |              | PR44B | RDQSN44                  |           |
-| T14/3    |     unused, PULL:DOWN    |            |              | PR41D | RDQ44                    |           |
-| T15/3    |     unused, PULL:DOWN    |            |              | PR38D | RDQ44                    |           |
-| TCK/40   |                          |            |              | TCK   |                          |           |
-| TDI/40   |                          |            |              | TDI   |                          |           |
-| TDO/40   |                          |            |              | TDO   |                          |           |
-| TMS/40   |                          |            |              | TMS   |                          |           |
-+----------+--------------------------+------------+--------------+-------+--------------------------+-----------+
++----------+-----------------------+------------+--------------+-------+--------------------------+-----------+
+| Pin/Bank | Pin Info              | Preference | Buffer Type  | Site  | Dual Function            | BC Enable |
++----------+-----------------------+------------+--------------+-------+--------------------------+-----------+
+| A2/0     |     unused, PULL:DOWN |            |              | PT4A  |                          |           |
+| A3/0     |     unused, PULL:DOWN |            |              | PT6A  |                          |           |
+| A4/0     |     unused, PULL:DOWN |            |              | PT6B  |                          |           |
+| A5/0     |     unused, PULL:DOWN |            |              | PT18A |                          |           |
+| A6/0     |     unused, PULL:DOWN |            |              | PT18B |                          |           |
+| A7/0     |     unused, PULL:DOWN |            |              | PT29A | PCLKT0_0                 |           |
+| A8/0     |     unused, PULL:DOWN |            |              | PT29B |                          |           |
+| A9/1     |     unused, PULL:DOWN |            |              | PT42A |                          |           |
+| A10/1    |     unused, PULL:DOWN |            |              | PT42B |                          |           |
+| A11/1    |     unused, PULL:DOWN |            |              | PT53A |                          |           |
+| A12/1    |     unused, PULL:DOWN |            |              | PT53B |                          |           |
+| A13/1    |     unused, PULL:DOWN |            |              | PT65A |                          |           |
+| A14/1    |     unused, PULL:DOWN |            |              | PT65B |                          |           |
+| A15/1    |     unused, PULL:DOWN |            |              | PT67B |                          |           |
+| B1/7     | LED                   | LOCATED    | LVCMOS18_OUT | PL2A  | LDQ8                     |           |
+| B2/7     |     unused, PULL:DOWN |            |              | PL2B  | LDQ8                     |           |
+| B3/0     |     unused, PULL:DOWN |            |              | PT4B  |                          |           |
+| B4/0     |     unused, PULL:DOWN |            |              | PT11B |                          |           |
+| B5/0     |     unused, PULL:DOWN |            |              | PT15B |                          |           |
+| B6/0     |     unused, PULL:DOWN |            |              | PT22B |                          |           |
+| B7/0     |     unused, PULL:DOWN |            |              | PT27B |                          |           |
+| B8/1     |     unused, PULL:DOWN |            |              | PT35B |                          |           |
+| B9/1     |     unused, PULL:DOWN |            |              | PT38A | GR_PCLK1_0               |           |
+| B10/1    |     unused, PULL:DOWN |            |              | PT44A |                          |           |
+| B11/1    |     unused, PULL:DOWN |            |              | PT49A |                          |           |
+| B12/1    |     unused, PULL:DOWN |            |              | PT56A |                          |           |
+| B13/1    |     unused, PULL:DOWN |            |              | PT60A |                          |           |
+| B14/1    |     unused, PULL:DOWN |            |              | PT67A |                          |           |
+| B15/2    |     unused, PULL:DOWN |            |              | PR2B  | S0_IN/RDQ8               |           |
+| B16/2    |     unused, PULL:DOWN |            |              | PR2A  | RDQ8                     |           |
+| C1/7     |     unused, PULL:DOWN |            |              | PL5A  | LDQ8                     |           |
+| C2/7     |     unused, PULL:DOWN |            |              | PL5B  | LDQ8                     |           |
+| C3/7     |     unused, PULL:DOWN |            |              | PL2C  | LDQ8                     |           |
+| C4/0     |     unused, PULL:DOWN |            |              | PT11A |                          |           |
+| C5/0     |     unused, PULL:DOWN |            |              | PT15A |                          |           |
+| C6/0     |     unused, PULL:DOWN |            |              | PT22A |                          |           |
+| C7/0     |     unused, PULL:DOWN |            |              | PT27A | PCLKT0_1                 |           |
+| C8/1     |     unused, PULL:DOWN |            |              | PT35A | PCLKT1_0                 |           |
+| C9/1     |     unused, PULL:DOWN |            |              | PT38B | GR_PCLK1_1               |           |
+| C10/1    |     unused, PULL:DOWN |            |              | PT44B |                          |           |
+| C11/1    |     unused, PULL:DOWN |            |              | PT49B |                          |           |
+| C12/1    |     unused, PULL:DOWN |            |              | PT56B |                          |           |
+| C13/1    |     unused, PULL:DOWN |            |              | PT60B |                          |           |
+| C14/2    |     unused, PULL:DOWN |            |              | PR2C  | RDQ8                     |           |
+| C15/2    |     unused, PULL:DOWN |            |              | PR5B  | RDQ8                     |           |
+| C16/2    |     unused, PULL:DOWN |            |              | PR5A  | RDQ8                     |           |
+| CCLK/8   |                       |            |              | CCLK  | MCLK/SCK                 |           |
+| D1/7     |     unused, PULL:DOWN |            |              | PL8A  | LDQS8                    |           |
+| D3/7     |     unused, PULL:DOWN |            |              | PL2D  | LDQ8                     |           |
+| D4/0     |     unused, PULL:DOWN |            |              | PT9B  |                          |           |
+| D5/0     |     unused, PULL:DOWN |            |              | PT13B |                          |           |
+| D6/0     |     unused, PULL:DOWN |            |              | PT20B |                          |           |
+| D7/0     |     unused, PULL:DOWN |            |              | PT24B | GR_PCLK0_0               |           |
+| D8/1     |     unused, PULL:DOWN |            |              | PT33B |                          |           |
+| D9/1     |     unused, PULL:DOWN |            |              | PT40A |                          |           |
+| D10/1    |     unused, PULL:DOWN |            |              | PT47A |                          |           |
+| D11/1    |     unused, PULL:DOWN |            |              | PT51A |                          |           |
+| D12/1    |     unused, PULL:DOWN |            |              | PT58A |                          |           |
+| D13/1    |     unused, PULL:DOWN |            |              | PT62A |                          |           |
+| D14/2    |     unused, PULL:DOWN |            |              | PR2D  | RDQ8                     |           |
+| D16/2    |     unused, PULL:DOWN |            |              | PR8A  | RDQS8                    |           |
+| E1/7     |     unused, PULL:DOWN |            |              | PL11D | LDQ8                     |           |
+| E2/7     |     unused, PULL:DOWN |            |              | PL8B  | LDQSN8                   |           |
+| E3/7     |     unused, PULL:DOWN |            |              | PL5C  | LDQ8                     |           |
+| E4/0     |     unused, PULL:DOWN |            |              | PT9A  |                          |           |
+| E5/0     |     unused, PULL:DOWN |            |              | PT13A |                          |           |
+| E6/0     |     unused, PULL:DOWN |            |              | PT20A |                          |           |
+| E7/0     |     unused, PULL:DOWN |            |              | PT24A | GR_PCLK0_1               |           |
+| E8/1     |     unused, PULL:DOWN |            |              | PT33A | PCLKT1_1                 |           |
+| E9/1     |     unused, PULL:DOWN |            |              | PT40B |                          |           |
+| E10/1    |     unused, PULL:DOWN |            |              | PT47B |                          |           |
+| E11/1    |     unused, PULL:DOWN |            |              | PT51B |                          |           |
+| E12/1    |     unused, PULL:DOWN |            |              | PT58B |                          |           |
+| E13/1    |     unused, PULL:DOWN |            |              | PT62B |                          |           |
+| E14/2    |     unused, PULL:DOWN |            |              | PR5C  | RDQ8                     |           |
+| E15/2    |     unused, PULL:DOWN |            |              | PR8B  | RDQSN8                   |           |
+| E16/2    |     unused, PULL:DOWN |            |              | PR11D | RDQ8                     |           |
+| F1/7     |     unused, PULL:DOWN |            |              | PL14A | LDQ20                    |           |
+| F2/7     |     unused, PULL:DOWN |            |              | PL11C | LDQ8                     |           |
+| F3/7     |     unused, PULL:DOWN |            |              | PL5D  | LDQ8                     |           |
+| F4/7     |     unused, PULL:DOWN |            |              | PL8C  | LDQ8                     |           |
+| F5/7     |     unused, PULL:DOWN |            |              | PL8D  | LDQ8                     |           |
+| F12/2    |     unused, PULL:DOWN |            |              | PR8D  | RDQ8                     |           |
+| F13/2    |     unused, PULL:DOWN |            |              | PR8C  | RDQ8                     |           |
+| F14/2    |     unused, PULL:DOWN |            |              | PR5D  | RDQ8                     |           |
+| F15/2    |     unused, PULL:DOWN |            |              | PR11C | RDQ8                     |           |
+| F16/2    |     unused, PULL:DOWN |            |              | PR14A | RDQ20                    |           |
+| G1/7     |     unused, PULL:DOWN |            |              | PL20A | GR_PCLK7_1/LDQS20        |           |
+| G2/7     |     unused, PULL:DOWN |            |              | PL14B | LDQ20                    |           |
+| G3/7     |     unused, PULL:DOWN |            |              | PL14C | VREF1_7/LDQ20            |           |
+| G4/7     |     unused, PULL:DOWN |            |              | PL11B | LDQ8                     |           |
+| G5/7     |     unused, PULL:DOWN |            |              | PL11A | LDQ8                     |           |
+| G12/2    |     unused, PULL:DOWN |            |              | PR11A | RDQ8                     |           |
+| G13/2    |     unused, PULL:DOWN |            |              | PR11B | RDQ8                     |           |
+| G14/2    |     unused, PULL:DOWN |            |              | PR14C | VREF1_2/RDQ20            |           |
+| G15/2    |     unused, PULL:DOWN |            |              | PR14B | RDQ20                    |           |
+| G16/2    | clk_test              | LOCATED    | LVCMOS18_OUT | PR20A | GR_PCLK2_1/RDQS20        |           |
+| H2/7     |     unused, PULL:DOWN |            |              | PL20B | LDQSN20                  |           |
+| H3/7     |     unused, PULL:DOWN |            |              | PL14D | LDQ20                    |           |
+| H4/7     |     unused, PULL:DOWN |            |              | PL17B | LDQ20                    |           |
+| H5/7     |     unused, PULL:DOWN |            |              | PL17A | LDQ20                    |           |
+| H12/2    |     unused, PULL:DOWN |            |              | PR17A | RDQ20                    |           |
+| H13/2    |     unused, PULL:DOWN |            |              | PR17B | RDQ20                    |           |
+| H14/2    |     unused, PULL:DOWN |            |              | PR14D | RDQ20                    |           |
+| H15/2    |     unused, PULL:DOWN |            |              | PR20B | RDQSN20                  |           |
+| J1/7     |     unused, PULL:DOWN |            |              | PL23A | PCLKT7_1/LDQ20           |           |
+| J2/7     |     unused, PULL:DOWN |            |              | PL23B | PCLKC7_1/LDQ20           |           |
+| J3/7     |     unused, PULL:DOWN |            |              | PL20C | GR_PCLK7_0/LDQ20         |           |
+| J4/7     |     unused, PULL:DOWN |            |              | PL17C | LDQ20                    |           |
+| J5/7     |     unused, PULL:DOWN |            |              | PL17D | LDQ20                    |           |
+| J12/2    |     unused, PULL:DOWN |            |              | PR17D | RDQ20                    |           |
+| J13/2    |     unused, PULL:DOWN |            |              | PR17C | RDQ20                    |           |
+| J14/2    |     unused, PULL:DOWN |            |              | PR20C | GR_PCLK2_0/RDQ20         |           |
+| J15/2    |     unused, PULL:DOWN |            |              | PR23B | PCLKC2_1/RDQ20           |           |
+| J16/2    |     unused, PULL:DOWN |            |              | PR23A | PCLKT2_1/RDQ20           |           |
+| K1/7     |     unused, PULL:DOWN |            |              | PL23C | PCLKT7_0/LDQ20           |           |
+| K2/7     |     unused, PULL:DOWN |            |              | PL23D | PCLKC7_0/LDQ20           |           |
+| K3/7     |     unused, PULL:DOWN |            |              | PL20D | LDQ20                    |           |
+| K4/6     |     unused, PULL:DOWN |            |              | PL29A | GR_PCLK6_0/LDQ32         |           |
+| K5/6     |     unused, PULL:DOWN |            |              | PL29B | LDQ32                    |           |
+| K12/3    |     unused, PULL:DOWN |            |              | PR29B | RDQ32                    |           |
+| K13/3    |     unused, PULL:DOWN |            |              | PR29A | GR_PCLK3_0/RDQ32         |           |
+| K14/2    |     unused, PULL:DOWN |            |              | PR20D | RDQ20                    |           |
+| K15/2    |     unused, PULL:DOWN |            |              | PR23D | PCLKC2_0/RDQ20           |           |
+| K16/2    |     unused, PULL:DOWN |            |              | PR23C | PCLKT2_0/RDQ20           |           |
+| L1/6     | serial_iq+            | LOCATED    | LVDS_OUT     | PL26A | PCLKT6_1/LDQ32           |           |
+| L2/6     | serial_iq-            |            | LVDS_OUT     | PL26B | PCLKC6_1/LDQ32           |           |
+| L3/6     |     unused, PULL:DOWN |            |              | PL32C | LDQ32                    |           |
+| L4/6     |     unused, PULL:DOWN |            |              | PL29C | GR_PCLK6_1/LDQ32         |           |
+| L5/6     |     unused, PULL:DOWN |            |              | PL29D | LDQ32                    |           |
+| L12/3    |     unused, PULL:DOWN |            |              | PR29D | RDQ32                    |           |
+| L13/3    |     unused, PULL:DOWN |            |              | PR29C | GR_PCLK3_1/RDQ32         |           |
+| L14/3    |     unused, PULL:DOWN |            |              | PR32C | RDQ32                    |           |
+| L15/3    |     unused, PULL:DOWN |            |              | PR26B | PCLKC3_1/RDQ32           |           |
+| L16/3    |     unused, PULL:DOWN |            |              | PR26A | PCLKT3_1/RDQ32           |           |
+| M1/6     |     unused, PULL:DOWN |            |              | PL26C | PCLKT6_0/LDQ32           |           |
+| M2/6     | top_clk               | LOCATED    | LVCMOS25_IN  | PL26D | PCLKC6_0/LDQ32           |           |
+| M3/6     |     unused, PULL:DOWN |            |              | PL32D | LDQ32                    |           |
+| M4/6     |     unused, PULL:DOWN |            |              | PL35C | LDQ32                    |           |
+| M5/6     |     unused, PULL:DOWN |            |              | PL44C | LDQ44                    |           |
+| M6/6     |     unused, PULL:DOWN |            |              | PL47A | LDQ44                    |           |
+| M7/8     |     unused, PULL:DOWN |            |              | PB9B  | D2/IO2                   |           |
+| M8/8     |     unused, PULL:DOWN |            |              | PB15B | DOUT/CSON                |           |
+| M9/8     |     unused, PULL:DOWN |            |              | PB18A | WRITEN                   |           |
+| M11/3    |     unused, PULL:DOWN |            |              | PR47A | RDQ44                    |           |
+| M12/3    |     unused, PULL:DOWN |            |              | PR44C | RDQ44                    |           |
+| M13/3    |     unused, PULL:DOWN |            |              | PR35C | RDQ32                    |           |
+| M14/3    |     unused, PULL:DOWN |            |              | PR32D | RDQ32                    |           |
+| M15/3    |     unused, PULL:DOWN |            |              | PR26D | PCLKC3_0/RDQ32           |           |
+| M16/3    |     unused, PULL:DOWN |            |              | PR26C | PCLKT3_0/RDQ32           |           |
+| N1/6     | serial_clk+           | LOCATED    | LVDS_OUT     | PL32A | LDQS32                   |           |
+| N3/6     |     unused, PULL:DOWN |            |              | PL35D | LDQ32                    |           |
+| N4/6     |     unused, PULL:DOWN |            |              | PL38A | LDQ44                    |           |
+| N5/6     |     unused, PULL:DOWN |            |              | PL44D | LDQ44                    |           |
+| N6/6     |     unused, PULL:DOWN |            |              | PL47B | LDQ44                    |           |
+| N7/8     |     unused, PULL:DOWN |            |              | PB9A  | D3/IO3                   |           |
+| N8/8     |     unused, PULL:DOWN |            |              | PB15A | HOLDN/DI/BUSY/CSSPIN/CEN |           |
+| N11/3    |     unused, PULL:DOWN |            |              | PR47B | RDQ44                    |           |
+| N12/3    |     unused, PULL:DOWN |            |              | PR44D | RDQ44                    |           |
+| N13/3    |     unused, PULL:DOWN |            |              | PR38A | RDQ44                    |           |
+| N14/3    |     unused, PULL:DOWN |            |              | PR35D | RDQ32                    |           |
+| N16/3    |     unused, PULL:DOWN |            |              | PR32A | RDQS32                   |           |
+| P1/6     |     unused, PULL:DOWN |            |              | PL35A | LDQ32                    |           |
+| P2/6     | serial_clk-           |            | LVDS_OUT     | PL32B | LDQSN32                  |           |
+| P3/6     |     unused, PULL:DOWN |            |              | PL38B | LDQ44                    |           |
+| P4/6     |     unused, PULL:DOWN |            |              | PL41A | LDQ44                    |           |
+| P5/6     | top_rst               |            | LVCMOS25_IN  | PL47D | LLC_GPLL0C_IN/LDQ44      |           |
+| P6/6     |     unused, PULL:DOWN |            |              | PL47C | LLC_GPLL0T_IN/LDQ44      |           |
+| P7/8     |     unused, PULL:DOWN |            |              | PB6B  | D4/MOSI2/IO4             |           |
+| P8/8     |     unused, PULL:DOWN |            |              | PB13B | CS1N                     |           |
+| P11/3    |     unused, PULL:DOWN |            |              | PR47C | LRC_GPLL0T_IN/RDQ44      |           |
+| P12/3    |     unused, PULL:DOWN |            |              | PR47D | LRC_GPLL0C_IN/RDQ44      |           |
+| P13/3    |     unused, PULL:DOWN |            |              | PR41A | RDQ44                    |           |
+| P14/3    |     unused, PULL:DOWN |            |              | PR38B | RDQ44                    |           |
+| P15/3    |     unused, PULL:DOWN |            |              | PR32B | RDQSN32                  |           |
+| P16/3    |     unused, PULL:DOWN |            |              | PR35A | RDQ32                    |           |
+| PT31A/0  |     unused, PULL:DOWN |            |              |       |                          |           |
+| PT31B/0  |     unused, PULL:DOWN |            |              |       |                          |           |
+| R1/6     |     unused, PULL:DOWN |            |              | PL35B | VREF1_6/LDQ32            |           |
+| R2/6     |     unused, PULL:DOWN |            |              | PL38C | LDQ44                    |           |
+| R3/6     |     unused, PULL:DOWN |            |              | PL41B | LDQ44                    |           |
+| R4/6     |     unused, PULL:DOWN |            |              | PL41C | LDQ44                    |           |
+| R5/6     |     unused, PULL:DOWN |            |              | PL44A | LDQS44                   |           |
+| R6/8     |     unused, PULL:DOWN |            |              | PB4B  | D6/IO6                   |           |
+| R7/8     |     unused, PULL:DOWN |            |              | PB6A  | D5/MISO2/IO5             |           |
+| R8/8     |     unused, PULL:DOWN |            |              | PB13A | SN/CSN                   |           |
+| R12/3    |     unused, PULL:DOWN |            |              | PR44A | RDQS44                   |           |
+| R13/3    |     unused, PULL:DOWN |            |              | PR41C | RDQ44                    |           |
+| R14/3    |     unused, PULL:DOWN |            |              | PR41B | RDQ44                    |           |
+| R15/3    |     unused, PULL:DOWN |            |              | PR38C | RDQ44                    |           |
+| R16/3    |     unused, PULL:DOWN |            |              | PR35B | VREF1_3/RDQ32            |           |
+| T2/6     | osc_en                | LOCATED    | LVCMOS25_OUT | PL38D | LDQ44                    |           |
+| T3/6     |     unused, PULL:DOWN |            |              | PL41D | LDQ44                    |           |
+| T4/6     |     unused, PULL:DOWN |            |              | PL44B | LDQSN44                  |           |
+| T6/8     |     unused, PULL:DOWN |            |              | PB4A  | D7/IO7                   |           |
+| T7/8     |     unused, PULL:DOWN |            |              | PB11A | D1/MISO/IO1              |           |
+| T8/8     |     unused, PULL:DOWN |            |              | PB11B | D0/MOSI/IO0              |           |
+| T13/3    |     unused, PULL:DOWN |            |              | PR44B | RDQSN44                  |           |
+| T14/3    |     unused, PULL:DOWN |            |              | PR41D | RDQ44                    |           |
+| T15/3    |     unused, PULL:DOWN |            |              | PR38D | RDQ44                    |           |
+| TCK/40   |                       |            |              | TCK   |                          |           |
+| TDI/40   |                       |            |              | TDI   |                          |           |
+| TDO/40   |                       |            |              | TDO   |                          |           |
+| TMS/40   |                       |            |              | TMS   |                          |           |
++----------+-----------------------+------------+--------------+-------+--------------------------+-----------+
 
 
 List of All Pins' Locate Preferences Based on Final Placement After PAR 
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
-LOCATE  COMP  "IQSerializer_0_serial_N"  SITE  "L1";
-LOCATE  COMP  "POR_N"  SITE  "M9";
-LOCATE  COMP  "clk_4M"  SITE  "D7";
-LOCATE  COMP  "clk_in"  SITE  "M2";
-LOCATE  COMP  "countDone"  SITE  "T7";
-LOCATE  COMP  "pll_clko"  SITE  "J2";
-LOCATE  COMP  "serial"  SITE  "M3";
+LOCATE  COMP  "LED"  SITE  "B1";
+LOCATE  COMP  "clk_test"  SITE  "G16";
+LOCATE  COMP  "osc_en"  SITE  "T2";
 LOCATE  COMP  "serial_clk"  SITE  "N1";
+LOCATE  COMP  "serial_iq"  SITE  "L1";
+LOCATE  COMP  "top_clk"  SITE  "M2";
+LOCATE  COMP  "top_rst"  SITE  "P5";
 
 #PLL
 LOCATE  COMP  "my_pll_instance/PLLInst_0"  SITE  "PLL_BL0" ;
@@ -273,5 +270,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Feb 03 21:34:53 2019
+Fri Apr 05 11:22:46 2019
 

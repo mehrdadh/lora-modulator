@@ -2,7 +2,7 @@
 <BaliProject version="3.2" title="lora_tx" device="LFE5U-25F-6BG256I" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
-        <Options def_top="LoRaTransmitter"/>
+        <Options def_top="topModule" top="topModule"/>
         <Source name="impl1/source/accInc.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
@@ -48,16 +48,16 @@
         <Source name="impl1/source/sinIdeal.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/squareCos.v" type="Verilog" type_short="Verilog">
-            <Options top_module="squareCos"/>
+        <Source name="lora_tx_clarity/lora_tx_clarity.sbx" type="sbx" type_short="SBX">
+            <Options/>
         </Source>
-        <Source name="impl1/source/squareSin.v" type="Verilog" type_short="Verilog">
-            <Options top_module="squareSin"/>
+        <Source name="impl1/source/topModule.v" type="Verilog" type_short="Verilog">
+            <Options top_module="topModule"/>
         </Source>
-        <Source name="impl1/source/LoRaTransmitter.v" type="Verilog" type_short="Verilog">
-            <Options top_module="LoRaTransmitter"/>
+        <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
         </Source>
-        <Source name="lora_tx.lpf" type="Logic Preference" type_short="LPF">
+        <Source name="impl1/source/xsdr_fpga_lora_tx.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
         </Source>
     </Implementation>

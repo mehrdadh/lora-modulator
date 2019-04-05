@@ -1,16 +1,15 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Sun Feb 03 21:31:45 2019 *
-NOTE DESIGN NAME: LoRaTransmitter *
+NOTE DATE CREATED: Fri Apr 05 11:23:44 2019 *
+NOTE DESIGN NAME: topModule *
 NOTE DEVICE NAME: LFE5U-25F-6CABGA256 *
 NOTE PIN ASSIGNMENTS *
-NOTE PINS pll_clko : J2 : out *
-NOTE PINS POR_N : M9 : in *
-NOTE PINS IQSerializer_0_serial_N : L1 : out *
-NOTE PINS serial : M3 : out *
-NOTE PINS countDone : T7 : out *
-NOTE PINS clk_4M : D7 : out *
+NOTE PINS osc_en : T2 : out *
+NOTE PINS top_rst : P5 : in *
+NOTE PINS clk_test : G16 : out *
+NOTE PINS LED : B1 : out *
 NOTE PINS serial_clk : N1 : out *
-NOTE PINS clk_in : M2 : in *
+NOTE PINS serial_iq : L1 : out *
+NOTE PINS top_clk : M2 : in *
 NOTE CONFIGURATION MODE: JTAG *
 NOTE COMPRESSION: off *

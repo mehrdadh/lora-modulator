@@ -16,8 +16,8 @@ CoreRevision=5.8
 ModuleName=my_pll_64mhz
 SourceFormat=verilog
 ParameterFileVersion=1.0
-Date=02/03/2019
-Time=19:55:46
+Date=04/05/2019
+Time=11:20:50
 
 [Parameters]
 Verilog=1
@@ -84,10 +84,10 @@ ENABLE_CLKOS=DISABLED
 ENABLE_CLKOS2=DISABLED
 ENABLE_CLKOS3=DISABLED
 STDBY_ENABLE=DISABLED
-PLLRST_ENA=DISABLED
+PLLRST_ENA=ENABLED
 PLL_LOCK_MODE=ENABLED
 PLL_LOCK_STK=DISABLED
 PLL_USE_SMI=DISABLED
 
 [Command]
-cmd_line= -w -n my_pll_64mhz -lang verilog -synth synplify -bus_exp 7 -bb -arch sa5p00 -type pll -fin 32 -fclkop 64 -fclkop_tol 0.0 -enable_sel -phase_cntl STATIC -lock -fb_mode 1
+cmd_line= -w -n my_pll_64mhz -lang verilog -synth synplify -bus_exp 7 -bb -arch sa5p00 -type pll -fin 32 -fclkop 64 -fclkop_tol 0.0 -enable_sel -phase_cntl STATIC -rst -lock -fb_mode 1

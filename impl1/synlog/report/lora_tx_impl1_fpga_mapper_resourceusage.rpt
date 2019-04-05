@@ -3,7 +3,7 @@ Part: lfe5u_25f-6
 
 Register bits: 344 of 24288 (1%)
 PIC Latch:       0
-I/O cells:       8
+I/O cells:       7
 
 Details:
 ALU54B:         3
@@ -17,12 +17,12 @@ FD1S3IX:        135
 FD1S3JX:        3
 GSR:            1
 IB:             2
-INV:            5
-L6MUX21:        3
+INV:            6
+L6MUX21:        1
 MULT18X18D:     6
-OB:             6
-ORCALUT4:       1586
-PFUMX:          22
+OB:             5
+ORCALUT4:       1577
+PFUMX:          23
 PLLREFCS:       1
 PUR:            1
 VHI:            15

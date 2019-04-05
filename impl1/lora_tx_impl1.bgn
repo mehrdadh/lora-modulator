@@ -5,10 +5,10 @@ Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
 
-Command: bitgen -w -g CfgMode:Disable -g RamCfg:Reset -g DisableUES:FALSE -g ES:No -e -s C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx.sec -k C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx.bek -gui lora_tx_impl1.ncd lora_tx_impl1.prf 
+Command: bitgen -w -g CfgMode:Disable -g RamCfg:Reset -g DisableUES:FALSE -g ES:No -e -s C:/work/tinysdr_fpga_lora_tx/lora_tx.sec -k C:/work/tinysdr_fpga_lora_tx/lora_tx.bek -gui -msgset C:/work/tinysdr_fpga_lora_tx/promote.xml lora_tx_impl1.ncd lora_tx_impl1.prf 
 
 Loading design for application Bitgen from file lora_tx_impl1.ncd.
-Design name: LoRaTransmitter
+Design name: topModule
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LFE5U-25F
@@ -60,7 +60,7 @@ Preference Summary:
 +---------------------------------+---------------------------------+
 |                      DONE_PULL  |                           ON**  |
 +---------------------------------+---------------------------------+
-|               CONFIG_IOVOLTAGE  |                          2.5**  |
+|               CONFIG_IOVOLTAGE  |                            1.8  |
 +---------------------------------+---------------------------------+
 |                        TRANSFR  |                          OFF**  |
 +---------------------------------+---------------------------------+

@@ -4,9 +4,9 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timestamp 2019 2 3 19 55 48)
+      (timestamp 2019 4 5 11 20 51)
       (program "SCUBA" (version "Diamond (64-bit) 3.10.3.144"))))
-      (comment "C:\lscc\diamond\3.10_x64\ispfpga\bin\nt64\scuba.exe -w -n my_pll_64mhz -lang verilog -synth synplify -bus_exp 7 -bb -arch sa5p00 -type pll -fin 32 -fclkop 64 -fclkop_tol 0.0 -enable_sel -phase_cntl STATIC -lock -fb_mode 1 -fdc C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.fdc ")
+      (comment "C:\lscc\diamond\3.10_x64\ispfpga\bin\nt64\scuba.exe -w -n my_pll_64mhz -lang verilog -synth synplify -bus_exp 7 -bb -arch sa5p00 -type pll -fin 32 -fclkop 64 -fclkop_tol 0.0 -enable_sel -phase_cntl STATIC -rst -lock -fb_mode 1 -fdc C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.fdc ")
   (library ORCLIB
     (edifLevel 0)
     (technology
@@ -98,6 +98,8 @@
             (direction INPUT))
           (port SEL
             (direction INPUT))
+          (port RST
+            (direction INPUT))
           (port CLKOP
             (direction OUTPUT))
           (port LOCK
@@ -114,7 +116,7 @@
             (viewRef view1 
               (cellRef EHXPLLL))
             (property PLLRST_ENA
-              (string "DISABLED"))
+              (string "ENABLED"))
             (property INTFB_WAKE
               (string "DISABLED"))
             (property STDBY_ENABLE
@@ -201,7 +203,6 @@
               (portRef ENCLKOS2 (instanceRef PLLInst_0))
               (portRef ENCLKOS (instanceRef PLLInst_0))
               (portRef ENCLKOP (instanceRef PLLInst_0))
-              (portRef RST (instanceRef PLLInst_0))
               (portRef PLLWAKESYNC (instanceRef PLLInst_0))
               (portRef STDBY (instanceRef PLLInst_0))
               (portRef PHASELOADREG (instanceRef PLLInst_0))
@@ -222,6 +223,10 @@
               (portRef CLKOP)
               (portRef CLKFB (instanceRef PLLInst_0))
               (portRef CLKOP (instanceRef PLLInst_0))))
+          (net RST
+            (joined
+              (portRef RST)
+              (portRef RST (instanceRef PLLInst_0))))
           (net SEL
             (joined
               (portRef SEL)

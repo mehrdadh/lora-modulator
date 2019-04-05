@@ -1,6 +1,6 @@
 
 Loading design for application trce from file lora_tx_impl1_map.ncd.
-Design name: LoRaTransmitter
+Design name: topModule
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LFE5U-25F
@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.3.144
-Sun Feb 03 20:59:48 2019
+Fri Apr 05 11:22:23 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -23,7 +23,7 @@ Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o lora_tx_impl1.tw1 -gui lora_tx_impl1_map.ncd lora_tx_impl1.prf 
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o lora_tx_impl1.tw1 -gui -msgset C:/work/tinysdr_fpga_lora_tx/promote.xml lora_tx_impl1_map.ncd lora_tx_impl1.prf 
 Design file:     lora_tx_impl1_map.ncd
 Preference file: lora_tx_impl1.prf
 Device,speed:    LFE5U-25F,6
@@ -31,16 +31,8 @@ Report level:    verbose report, limited to 1 item per preference
 --------------------------------------------------------------------------------
 
 BLOCK ASYNCPATHS
-BLOCK RESETPATHS
-BLOCK JTAG PATHS
 --------------------------------------------------------------------------------
 
-
-
-================================================================================
-Preference: FREQUENCY NET "my_pll_instance/CLKIt" 32.000000 MHz ;
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
 
 
 ================================================================================
@@ -49,111 +41,64 @@ Preference: FREQUENCY NET "pll_clko_0" 64.000000 MHz ;
 --------------------------------------------------------------------------------
 
 
-Error: The following path exceeds requirements by 1.797ns (weighted slack = -3.594ns)
+Error: The following path exceeds requirements by 1.871ns (weighted slack = -3.742ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              loraModulator_0/chirpGen0/acc[15]  (from pll_clko_0 +)
+   Source:         FF         Q              loraModulator_0/chirpGen0/acc[20]  (from pll_clko_0 +)
    Destination:    FF         Data in        IQSerializer_0/DEDFF_0/neg_edge  (to pll_clko_0 -)
 
-   Delay:               9.842ns  (33.8% logic, 66.2% route), 13 logic levels.
+   Delay:               9.916ns  (35.9% logic, 64.1% route), 14 logic levels.
 
  Constraint Details:
 
-      9.842ns physical path delay loraModulator_0/chirpGen0/SLICE_46 to IQSerializer_0/SLICE_187 exceeds
+      9.916ns physical path delay loraModulator_0/chirpGen0/SLICE_28 to IQSerializer_0/SLICE_187 exceeds
       7.813ns delay constraint less
-     -0.232ns DIN_SET requirement (totaling 8.045ns) by 1.797ns
+     -0.232ns DIN_SET requirement (totaling 8.045ns) by 1.871ns
 
  Physical Path Details:
 
-      Data path loraModulator_0/chirpGen0/SLICE_46 to IQSerializer_0/SLICE_187:
+      Data path loraModulator_0/chirpGen0/SLICE_28 to IQSerializer_0/SLICE_187:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.522 */SLICE_46.CLK to *0/SLICE_46.Q0 loraModulator_0/chirpGen0/SLICE_46 (from pll_clko_0)
-ROUTE       102   e 0.573 *0/SLICE_46.Q0 to */SLICE_502.A1 loraModulator_0/chirpGen0/acc[15]
-CTOF_DEL    ---     0.234 */SLICE_502.A1 to */SLICE_502.F1 loraModulator_0/chirpGen0/SLICE_502
-ROUTE        32   e 0.573 */SLICE_502.F1 to */SLICE_325.C0 loraModulator_0/chirpGen0/un1_angle_54lt4
-CTOF_DEL    ---     0.234 */SLICE_325.C0 to */SLICE_325.F0 loraModulator_0/chirpGen0/sinIdeal_0/SLICE_325
-ROUTE         3   e 0.573 */SLICE_325.F0 to *SLICE_1020.D0 loraModulator_0/chirpGen0/un1_angle_7_1
-CTOF_DEL    ---     0.234 *SLICE_1020.D0 to *SLICE_1020.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_1020
-ROUTE         1   e 0.573 *SLICE_1020.F0 to */SLICE_725.D0 loraModulator_0/chirpGen0/cosIdeal_0/N_1348
-CTOF_DEL    ---     0.234 */SLICE_725.D0 to */SLICE_725.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_725
-ROUTE         1   e 0.573 */SLICE_725.F0 to */SLICE_671.D1 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_10[8]
-CTOF_DEL    ---     0.234 */SLICE_671.D1 to */SLICE_671.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_671
-ROUTE         1   e 0.573 */SLICE_671.F1 to */SLICE_494.B1 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_19_0_1[8]
-CTOF_DEL    ---     0.234 */SLICE_494.B1 to */SLICE_494.F1 loraModulator_0/chirpGen0/SLICE_494
-ROUTE         1   e 0.573 */SLICE_494.F1 to */SLICE_663.D1 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_19[8]
-CTOF_DEL    ---     0.234 */SLICE_663.D1 to */SLICE_663.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_663
-ROUTE         2   e 0.573 */SLICE_663.F1 to   SLICE_680.B0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_24[8]
-CTOF_DEL    ---     0.234   SLICE_680.B0 to   SLICE_680.F0 SLICE_680
-ROUTE         1   e 0.208   SLICE_680.F0 to   SLICE_680.D1 loraModulator_0.chirpGen0.cosIdeal_0.cosOut_0_i_a2_26[8]
-CTOF_DEL    ---     0.234   SLICE_680.D1 to   SLICE_680.F1 SLICE_680
-ROUTE         1   e 0.573   SLICE_680.F1 to */SLICE_367.C0 IQSerializer_0/N_74
-CTOF_DEL    ---     0.234 */SLICE_367.C0 to */SLICE_367.F0 IQSerializer_0/SLICE_367
-ROUTE         1   e 0.573 */SLICE_367.F0 to */SLICE_369.D1 IQSerializer_0/N_50
-CTOF_DEL    ---     0.234 */SLICE_369.D1 to */SLICE_369.F1 IQSerializer_0/SLICE_369
-ROUTE         1   e 0.573 */SLICE_369.F1 to */SLICE_187.C0 IQSerializer_0/DEDFF_D1_iv_0_3
+REG_DEL     ---     0.519 */SLICE_28.CLK to *0/SLICE_28.Q1 loraModulator_0/chirpGen0/SLICE_28 (from pll_clko_0)
+ROUTE       191   e 0.573 *0/SLICE_28.Q1 to */SLICE_792.A1 loraModulator_0/chirpGen0/acc[20]
+CTOF_DEL    ---     0.234 */SLICE_792.A1 to */SLICE_792.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_792
+ROUTE        10   e 0.573 */SLICE_792.F1 to *SLICE_1053.D0 loraModulator_0/chirpGen0/cosIdeal_0/N_317
+CTOF_DEL    ---     0.234 *SLICE_1053.D0 to *SLICE_1053.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_1053
+ROUTE         1   e 0.573 *SLICE_1053.F0 to */SLICE_358.D1 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_o65_430_3_tz
+CTOF_DEL    ---     0.234 */SLICE_358.D1 to */SLICE_358.F1 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_358
+ROUTE         1   e 0.208 */SLICE_358.F1 to */SLICE_358.D0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_o65_430_3
+CTOF_DEL    ---     0.234 */SLICE_358.D0 to */SLICE_358.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_358
+ROUTE         1   e 0.573 */SLICE_358.F0 to */SLICE_752.C0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_o65_430_6_0
+CTOF_DEL    ---     0.234 */SLICE_752.C0 to */SLICE_752.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_752
+ROUTE         1   e 0.573 */SLICE_752.F0 to */SLICE_727.D0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_o65_430_15
+CTOF_DEL    ---     0.234 */SLICE_727.D0 to */SLICE_727.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_727
+ROUTE         1   e 0.573 */SLICE_727.F0 to */SLICE_691.C0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_o65_430_21
+CTOF_DEL    ---     0.234 */SLICE_691.C0 to */SLICE_691.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_691
+ROUTE         1   e 0.573 */SLICE_691.F0 to */SLICE_687.A0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_RNO_0[6]
+CTOF_DEL    ---     0.234 */SLICE_687.A0 to */SLICE_687.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_687
+ROUTE         1   e 0.573 */SLICE_687.F0 to */SLICE_683.A0 loraModulator_0/chirpGen0/cosIdeal_0/cosOut_0_i_a2_RNO[6]
+CTOF_DEL    ---     0.234 */SLICE_683.A0 to */SLICE_683.F0 loraModulator_0/chirpGen0/cosIdeal_0/SLICE_683
+ROUTE         2   e 0.573 */SLICE_683.F0 to */SLICE_315.A0 loraModulator_0.chirpGen0.cosIdeal_0.N_438
+CTOF_DEL    ---     0.234 */SLICE_315.A0 to */SLICE_315.F0 IQSerializer_0/SLICE_315
+ROUTE         1   e 0.208 */SLICE_315.F0 to */SLICE_315.D1 IQSerializer_0/DEDFF_D1_iv_0_m2_1_RNO
+CTOF_DEL    ---     0.234 */SLICE_315.D1 to */SLICE_315.F1 IQSerializer_0/SLICE_315
+ROUTE         1   e 0.573 */SLICE_315.F1 to */SLICE_187.C1 IQSerializer_0/N_43
+CTOF_DEL    ---     0.234 */SLICE_187.C1 to */SLICE_187.F1 IQSerializer_0/SLICE_187
+ROUTE         1   e 0.208 */SLICE_187.F1 to */SLICE_187.C0 IQSerializer_0/DEDFF_D1_iv_0_1_0
 CTOF_DEL    ---     0.234 */SLICE_187.C0 to */SLICE_187.F0 IQSerializer_0/SLICE_187
 ROUTE         1   e 0.001 */SLICE_187.F0 to *SLICE_187.DI0 IQSerializer_0/DEDFF_0/Q2 (to pll_clko_0)
                   --------
-                    9.842   (33.8% logic, 66.2% route), 13 logic levels.
+                    9.916   (35.9% logic, 64.1% route), 14 logic levels.
 
-Warning:  52.035MHz is the maximum frequency for this preference.
+Warning:  51.637MHz is the maximum frequency for this preference.
 
 
 ================================================================================
-Preference: INPUT_SETUP ALLPORTS 16.000000 ns CLKNET "pll_clko_0" ;
+Preference: FREQUENCY NET "my_pll_instance/CLKIt" 32.000000 MHz ;
             0 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
-
-
-================================================================================
-Preference: INPUT_SETUP PORT "POR_N" 16.000000 ns CLKNET "pll_clko_0" ;
-            269 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed:  The following path meets requirements by 12.949ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         Port       Pad            POR_N
-   Destination:    FF         Data in        counter_0/waitcount[18]  (to pll_clko_0 +)
-                   FF                        counter_0/waitcount[17]
-
-   Max Data Path Delay:     3.203ns  (46.3% logic, 53.7% route), 3 logic levels.
-
-   Min Clock Path Delay:    0.573ns  (0.0% logic, 100.0% route), 0 logic levels.
-
- Constraint Details:
-
-      3.203ns delay POR_N to counter_0/SLICE_175 less
-     16.000ns offset POR_N to my_pll_instance/PLLInst_0 (totaling -12.797ns) meets
-      0.573ns delay my_pll_instance/PLLInst_0 to counter_0/SLICE_175 less
-      0.421ns LSR_SET requirement (totaling 0.152ns) by 12.949ns
-
- Physical Path Details:
-
-      Data path POR_N to counter_0/SLICE_175:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.016      POR_N.PAD to    POR_N.PADDI POR_N
-ROUTE         3   e 0.573    POR_N.PADDI to   SLICE_370.D1 POR_N_c
-CTOF_DEL    ---     0.234   SLICE_370.D1 to   SLICE_370.F1 SLICE_370
-ROUTE       176   e 0.573   SLICE_370.F1 to */SLICE_842.B0 clkOut4_RNIEVSP
-CTOF_DEL    ---     0.234 */SLICE_842.B0 to */SLICE_842.F0 counter_0/SLICE_842
-ROUTE        11   e 0.573 */SLICE_842.F0 to *SLICE_175.LSR counter_0/un3_waitcountlto19_0_a2_RNIADFG4 (to pll_clko_0)
-                  --------
-                    3.203   (46.3% logic, 53.7% route), 3 logic levels.
-
-      Clock path my_pll_instance/PLLInst_0 to counter_0/SLICE_175:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       196   e 0.573 *LInst_0.CLKOP to *SLICE_175.CLK pll_clko_0
-                  --------
-                    0.573   (0.0% logic, 100.0% route), 0 logic levels.
-
-Report:    3.051ns is the minimum offset for this preference.
 
 Report Summary
 --------------
@@ -161,17 +106,11 @@ Report Summary
 Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
+FREQUENCY NET "pll_clko_0" 64.000000    |             |             |
+MHz ;                                   |   64.000 MHz|   51.637 MHz|  14 *
+                                        |             |             |
 FREQUENCY NET "my_pll_instance/CLKIt"   |             |             |
 32.000000 MHz ;                         |            -|            -|   0  
-                                        |             |             |
-FREQUENCY NET "pll_clko_0" 64.000000    |             |             |
-MHz ;                                   |   64.000 MHz|   52.035 MHz|  13 *
-                                        |             |             |
-INPUT_SETUP ALLPORTS 16.000000 ns       |             |             |
-CLKNET "pll_clko_0" ;                   |            -|            -|   0  
-                                        |             |             |
-INPUT_SETUP PORT "POR_N" 16.000000 ns   |             |             |
-CLKNET "pll_clko_0" ;                   |    16.000 ns|     3.051 ns|   3  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -182,75 +121,75 @@ CLKNET "pll_clko_0" ;                   |    16.000 ns|     3.051 ns|   3
 Critical Nets                           |   Loads|  Errors| % of total
 ----------------------------------------------------------------------------
 loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
-haseOut_1_cry_cry[32]                   |       1|    3882|     94.78%
+haseOut_1_cry_cry[32]                   |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
-haseOut_1_cry[28]                       |       1|    3882|     94.78%
+haseOut_1_cry[28]                       |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_28                              |       1|    3882|     94.78%
+Out_cry_28                              |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_26                              |       1|    3882|     94.78%
+Out_cry_26                              |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_24                              |       1|    3882|     94.78%
+Out_cry_24                              |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_22                              |       1|    3882|     94.78%
+Out_cry_22                              |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_20                              |       1|    3882|     94.78%
+Out_cry_20                              |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_18                              |       1|    3882|     94.78%
+Out_cry_18                              |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_16                              |       1|    3882|     94.78%
+Out_cry_16                              |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_14                              |       1|    3882|     94.78%
+Out_cry_14                              |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_12                              |       1|    3882|     94.78%
+Out_cry_12                              |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_10                              |       1|    3882|     94.78%
+Out_cry_10                              |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_8                               |       1|    3882|     94.78%
+Out_cry_8                               |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_6                               |       1|    3882|     94.78%
+Out_cry_6                               |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_4                               |       1|    3882|     94.78%
+Out_cry_4                               |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
-haseOut30                               |      34|    3882|     94.78%
+haseOut30                               |      34|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
-haseOut_1_cry[32]                       |       1|    3882|     94.78%
+haseOut_1_cry[32]                       |       1|    3811|     93.04%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_2                               |       1|    3729|     91.04%
+Out_cry_2                               |       1|    3697|     90.26%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
-haseOut_1_cry[24]                       |       1|    3710|     90.58%
+haseOut_1_cry[24]                       |       1|    3651|     89.14%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_30                              |       1|    3665|     89.48%
+Out_cry_30                              |       1|    3614|     88.23%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_0                               |       1|    3169|     77.37%
+Out_cry_0                               |       1|    3137|     76.59%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-Out_cry_32                              |       1|    1925|     47.00%
+Out_cry_32                              |       1|    1874|     45.75%
                                         |        |        |
-loraModulator_0/chirpGen0/phase_3[33]   |       1|    1925|     47.00%
+loraModulator_0/chirpGen0/phase_3[33]   |       1|    1874|     45.75%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/phase|        |        |
-NextOut[33]                             |       1|    1925|     47.00%
+NextOut[33]                             |       1|    1874|     45.75%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_3[32]   |       1|    1600|     39.06%
                                         |        |        |
@@ -258,14 +197,14 @@ loraModulator_0/chirpGen0/phase_u1/phase|        |        |
 NextOut[32]                             |       1|    1600|     39.06%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
-haseOut_1_cry[20]                       |       1|    1350|     32.96%
+haseOut_1_cry[20]                       |       1|    1291|     31.52%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
 W_SR_add_R7                             |       2|     960|     23.44%
                                         |        |        |
-loraModulator_0/BW_SR[0]                |       7|     888|     21.68%
+loraModulator_0/BW_SR[0]                |       7|     849|     20.73%
                                         |        |        |
-loraModulator_0/BW_SR[18]               |       7|     854|     20.85%
+loraModulator_0/BW_SR[18]               |       7|     825|     20.14%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
 haseOut_1_lt24                          |       1|     816|     19.92%
@@ -274,22 +213,22 @@ loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
 haseOut_1_df24                          |       1|     816|     19.92%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
-W_SR_add_R3                             |       2|     787|     19.21%
+W_SR_add_R3                             |       2|     766|     18.70%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
-W_SR_add_R3_0                           |       2|     760|     18.55%
-                                        |        |        |
-loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
-W_SR_add_R2_0                           |       2|     677|     16.53%
+W_SR_add_R3_0                           |       2|     754|     18.41%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
 W_SR_add_R6                             |       2|     672|     16.41%
                                         |        |        |
-loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
-haseOut_1_df20                          |       1|     591|     14.43%
+loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
+W_SR_add_R2_0                           |       2|     645|     15.75%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
-haseOut_1_lt20                          |       1|     564|     13.77%
+haseOut_1_df20                          |       1|     576|     14.06%
+                                        |        |        |
+loraModulator_0/chirpGen0/phase_u1/un1_p|        |        |
+haseOut_1_lt20                          |       1|     537|     13.11%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
 W_SR_add_R5_0                           |       2|     504|     12.30%
@@ -308,16 +247,10 @@ loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
 W_SR_add_R5                             |       2|     448|     10.94%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
-W_SR_add_R1_0                           |       2|     445|     10.86%
+W_SR_add_R1_0                           |       2|     426|     10.40%
                                         |        |        |
 loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
-W_SR_0[2]                               |       1|     417|     10.18%
-                                        |        |        |
-loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
-W_SR_0_0[2]                             |       1|     411|     10.03%
-                                        |        |        |
-loraModulator_0/chirpGen0/phase_u1/un1_B|        |        |
-W_SR_0[1]                               |       1|     411|     10.03%
+W_SR_0[2]                               |       1|     411|     10.03%
                                         |        |        |
 ----------------------------------------------------------------------------
 
@@ -330,21 +263,21 @@ Found 2 clocks:
 Clock Domain: my_pll_instance/CLKIt   Source: my_pll_instance/PLLRefcs_0.PLLCSOUT   Loads: 1
    No transfer within this clock domain is found
 
-Clock Domain: pll_clko_0   Source: my_pll_instance/PLLInst_0.CLKOP   Loads: 196
+Clock Domain: pll_clko_0   Source: my_pll_instance/PLLInst_0.CLKOP   Loads: 195
    Covered under: FREQUENCY NET "pll_clko_0" 64.000000 MHz ;
 
 
 Timing summary (Setup):
 ---------------
 
-Timing errors: 4096  Score: 5938920
-Cumulative negative slack: 5716987
+Timing errors: 4096  Score: 6010311
+Cumulative negative slack: 5704296
 
-Constraints cover 21308266 paths, 2 nets, and 7890 connections (99.85% coverage)
+Constraints cover 21308118 paths, 2 nets, and 7691 connections (97.80% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.3.144
-Sun Feb 03 20:59:49 2019
+Fri Apr 05 11:22:24 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -354,7 +287,7 @@ Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o lora_tx_impl1.tw1 -gui lora_tx_impl1_map.ncd lora_tx_impl1.prf 
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o lora_tx_impl1.tw1 -gui -msgset C:/work/tinysdr_fpga_lora_tx/promote.xml lora_tx_impl1_map.ncd lora_tx_impl1.prf 
 Design file:     lora_tx_impl1_map.ncd
 Preference file: lora_tx_impl1.prf
 Device,speed:    LFE5U-25F,M
@@ -362,16 +295,8 @@ Report level:    verbose report, limited to 1 item per preference
 --------------------------------------------------------------------------------
 
 BLOCK ASYNCPATHS
-BLOCK RESETPATHS
-BLOCK JTAG PATHS
 --------------------------------------------------------------------------------
 
-
-
-================================================================================
-Preference: FREQUENCY NET "my_pll_instance/CLKIt" 32.000000 MHz ;
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
 
 
 ================================================================================
@@ -407,55 +332,9 @@ ROUTE         2   e 0.058 */SLICE_276.Q1 to */SLICE_276.M1 loraModulator_0/symbo
 
 
 ================================================================================
-Preference: INPUT_SETUP ALLPORTS 16.000000 ns CLKNET "pll_clko_0" ;
+Preference: FREQUENCY NET "my_pll_instance/CLKIt" 32.000000 MHz ;
             0 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
-
-
-================================================================================
-Preference: INPUT_SETUP PORT "POR_N" 16.000000 ns CLKNET "pll_clko_0" ;
-            269 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed:  The following path meets requirements by 0.493ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         Port       Pad            POR_N
-   Destination:    FF         Data in        clockDivider_0/clkOut  (to pll_clko_0 +)
-
-   Min Data Path Delay:     0.810ns  (75.3% logic, 24.7% route), 2 logic levels.
-
-   Max Clock Path Delay:    0.199ns  (0.0% logic, 100.0% route), 0 logic levels.
-
- Constraint Details:
-
-      0.810ns delay POR_N to clockDivider_0/SLICE_197 plus
-      0.000ns hold offset POR_N to my_pll_instance/PLLInst_0 (totaling 0.810ns) meets
-      0.199ns delay my_pll_instance/PLLInst_0 to clockDivider_0/SLICE_197 plus
-      0.118ns DIN_HLD requirement (totaling 0.317ns) by 0.493ns
-
- Physical Path Details:
-
-      Data path POR_N to clockDivider_0/SLICE_197:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     0.535      POR_N.PAD to    POR_N.PADDI POR_N
-ROUTE         3   e 0.199    POR_N.PADDI to */SLICE_197.A0 POR_N_c
-CTOF_DEL    ---     0.075 */SLICE_197.A0 to */SLICE_197.F0 clockDivider_0/SLICE_197
-ROUTE         1   e 0.001 */SLICE_197.F0 to *SLICE_197.DI0 clockDivider_0/clkOutand (to pll_clko_0)
-                  --------
-                    0.810   (75.3% logic, 24.7% route), 2 logic levels.
-
-      Clock path my_pll_instance/PLLInst_0 to clockDivider_0/SLICE_197:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       196   e 0.199 *LInst_0.CLKOP to *SLICE_197.CLK pll_clko_0
-                  --------
-                    0.199   (0.0% logic, 100.0% route), 0 logic levels.
-
-Report: There is no minimum offset greater than zero for this preference.
 
 Report Summary
 --------------
@@ -463,17 +342,11 @@ Report Summary
 Preference(MIN Delays)                  |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY NET "my_pll_instance/CLKIt"   |             |             |
-32.000000 MHz ;                         |            -|            -|   0  
-                                        |             |             |
 FREQUENCY NET "pll_clko_0" 64.000000    |             |             |
 MHz ;                                   |     0.000 ns|     0.102 ns|   1  
                                         |             |             |
-INPUT_SETUP ALLPORTS 16.000000 ns       |             |             |
-CLKNET "pll_clko_0" ;                   |            -|            -|   0  
-                                        |             |             |
-INPUT_SETUP PORT "POR_N" 16.000000 ns   |             |             |
-CLKNET "pll_clko_0" ;                   |     0.000 ns|    -0.493 ns|   2  
+FREQUENCY NET "my_pll_instance/CLKIt"   |             |             |
+32.000000 MHz ;                         |            -|            -|   0  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -489,7 +362,7 @@ Found 2 clocks:
 Clock Domain: my_pll_instance/CLKIt   Source: my_pll_instance/PLLRefcs_0.PLLCSOUT   Loads: 1
    No transfer within this clock domain is found
 
-Clock Domain: pll_clko_0   Source: my_pll_instance/PLLInst_0.CLKOP   Loads: 196
+Clock Domain: pll_clko_0   Source: my_pll_instance/PLLInst_0.CLKOP   Loads: 195
    Covered under: FREQUENCY NET "pll_clko_0" 64.000000 MHz ;
 
 
@@ -499,7 +372,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 21308266 paths, 2 nets, and 7890 connections (99.85% coverage)
+Constraints cover 21308118 paths, 2 nets, and 7857 connections (99.91% coverage)
 
 
 
@@ -507,8 +380,8 @@ Timing summary (Setup and Hold):
 ---------------
 
 Timing errors: 4096 (setup), 0 (hold)
-Score: 5938920 (setup), 0 (hold)
-Cumulative negative slack: 5716987 (5716987+0)
+Score: 6010311 (setup), 0 (hold)
+Cumulative negative slack: 5704296 (5704296+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------

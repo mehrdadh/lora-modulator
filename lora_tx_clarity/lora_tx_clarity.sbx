@@ -20,18 +20,6 @@
             <spirit:views/>
             <spirit:ports>
                 <spirit:port>
-                    <spirit:name>my_pll_64mhz_CLKI</spirit:name>
-                    <spirit:displayName>my_pll_64mhz_CLKI</spirit:displayName>
-                    <spirit:wire>
-                        <spirit:direction>in</spirit:direction>
-                    </spirit:wire>
-                    <spirit:vendorExtensions>
-                        <lattice:attributes>
-                            <lattice:attribute lattice:name="exportFrom">my_pll_64mhz.CLKI</lattice:attribute>
-                        </lattice:attributes>
-                    </spirit:vendorExtensions>
-                </spirit:port>
-                <spirit:port>
                     <spirit:name>my_pll_64mhz_CLKI2</spirit:name>
                     <spirit:displayName>my_pll_64mhz_CLKI2</spirit:displayName>
                     <spirit:wire>
@@ -68,6 +56,18 @@
                     </spirit:vendorExtensions>
                 </spirit:port>
                 <spirit:port>
+                    <spirit:name>my_pll_64mhz_RST</spirit:name>
+                    <spirit:displayName>my_pll_64mhz_RST</spirit:displayName>
+                    <spirit:wire>
+                        <spirit:direction>in</spirit:direction>
+                    </spirit:wire>
+                    <spirit:vendorExtensions>
+                        <lattice:attributes>
+                            <lattice:attribute lattice:name="exportFrom">my_pll_64mhz.RST</lattice:attribute>
+                        </lattice:attributes>
+                    </spirit:vendorExtensions>
+                </spirit:port>
+                <spirit:port>
                     <spirit:name>my_pll_64mhz_SEL</spirit:name>
                     <spirit:displayName>my_pll_64mhz_SEL</spirit:displayName>
                     <spirit:wire>
@@ -85,7 +85,7 @@
             <lattice:device>LFE5U-25F-6BG256I</lattice:device>
             <lattice:synthesis>synplify</lattice:synthesis>
             <lattice:date>2019-02-03.19:55:00</lattice:date>
-            <lattice:modified>2019-02-03.19:56:21</lattice:modified>
+            <lattice:modified>2019-04-05.11:21:07</lattice:modified>
             <lattice:diamond>3.10.3.144</lattice:diamond>
             <lattice:language>Verilog</lattice:language>
             <lattice:attributes>
@@ -189,6 +189,13 @@
                                 </spirit:wire>
                             </spirit:port>
                             <spirit:port>
+                                <spirit:name>RST</spirit:name>
+                                <spirit:displayName>RST</spirit:displayName>
+                                <spirit:wire>
+                                    <spirit:direction>in</spirit:direction>
+                                </spirit:wire>
+                            </spirit:port>
+                            <spirit:port>
                                 <spirit:name>SEL</spirit:name>
                                 <spirit:displayName>SEL</spirit:displayName>
                                 <spirit:wire>
@@ -199,12 +206,12 @@
                     </spirit:model>
                     <spirit:vendorExtensions>
                         <lattice:synthesis>synplify</lattice:synthesis>
-                        <lattice:modified>2019-02-03.19:56:21</lattice:modified>
+                        <lattice:modified>2019-04-05.11:21:07</lattice:modified>
                         <lattice:attributes>
                             <lattice:attribute lattice:name="AddComponent">false</lattice:attribute>
                             <lattice:attribute lattice:name="BBox">false</lattice:attribute>
                             <lattice:attribute lattice:name="Change4to5">false</lattice:attribute>
-                            <lattice:attribute lattice:name="ChangeConfig">false</lattice:attribute>
+                            <lattice:attribute lattice:name="ChangeConfig">true</lattice:attribute>
                             <lattice:attribute lattice:name="ChangeConnect">false</lattice:attribute>
                             <lattice:attribute lattice:name="ChangeDevice">false</lattice:attribute>
                             <lattice:attribute lattice:name="ChangeLocate">false</lattice:attribute>
@@ -267,7 +274,7 @@
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>Date</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">02/03/2019</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">04/05/2019</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>ModuleName</lattice:lpckey>
@@ -283,7 +290,7 @@
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>Time</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">19:55:46</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">11:20:50</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>VendorName</lattice:lpckey>
@@ -524,7 +531,7 @@
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>PLLRST_ENA</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">DISABLED</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">ENABLED</lattice:lpcvalue>
                             </lattice:lpcentry>
                             <lattice:lpcentry>
                                 <lattice:lpckey>PLL_BW</lattice:lpckey>
@@ -565,7 +572,7 @@
                             <lattice:lpcsection lattice:name="Command"/>
                             <lattice:lpcentry>
                                 <lattice:lpckey>cmd_line</lattice:lpckey>
-                                <lattice:lpcvalue lattice:resolve="constant">-w -n my_pll_64mhz -lang verilog -synth synplify -bus_exp 7 -bb -arch sa5p00 -type pll -fin 32 -fclkop 64 -fclkop_tol 0.0 -enable_sel -phase_cntl STATIC -lock -fb_mode 1</lattice:lpcvalue>
+                                <lattice:lpcvalue lattice:resolve="constant">-w -n my_pll_64mhz -lang verilog -synth synplify -bus_exp 7 -bb -arch sa5p00 -type pll -fin 32 -fclkop 64 -fclkop_tol 0.0 -enable_sel -phase_cntl STATIC -rst -lock -fb_mode 1</lattice:lpcvalue>
                             </lattice:lpcentry>
                         </lattice:lpc>
                         <lattice:groups/>
@@ -574,12 +581,6 @@
             </spirit:componentInstance>
         </spirit:componentInstances>
         <spirit:adHocConnections>
-            <spirit:adHocConnection>
-                <spirit:name>my_pll_64mhz_CLKI</spirit:name>
-                <spirit:displayName>my_pll_64mhz_CLKI</spirit:displayName>
-                <spirit:internalPortReference spirit:portRef="CLKI" spirit:componentRef="my_pll_64mhz"/>
-                <spirit:externalPortReference spirit:portRef="my_pll_64mhz_CLKI"/>
-            </spirit:adHocConnection>
             <spirit:adHocConnection>
                 <spirit:name>my_pll_64mhz_CLKI2</spirit:name>
                 <spirit:displayName>my_pll_64mhz_CLKI2</spirit:displayName>
@@ -597,6 +598,12 @@
                 <spirit:displayName>my_pll_64mhz_LOCK</spirit:displayName>
                 <spirit:internalPortReference spirit:portRef="LOCK" spirit:componentRef="my_pll_64mhz"/>
                 <spirit:externalPortReference spirit:portRef="my_pll_64mhz_LOCK"/>
+            </spirit:adHocConnection>
+            <spirit:adHocConnection>
+                <spirit:name>my_pll_64mhz_RST</spirit:name>
+                <spirit:displayName>my_pll_64mhz_RST</spirit:displayName>
+                <spirit:internalPortReference spirit:portRef="RST" spirit:componentRef="my_pll_64mhz"/>
+                <spirit:externalPortReference spirit:portRef="my_pll_64mhz_RST"/>
             </spirit:adHocConnection>
             <spirit:adHocConnection>
                 <spirit:name>my_pll_64mhz_SEL</spirit:name>

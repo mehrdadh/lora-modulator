@@ -1,14 +1,14 @@
 #--  Synopsys, Inc.
 #--  Version M-2017.03L-SP1-1
-#--  Project file C:\lscc\lattice_projects\xsdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\syn_results\run_options.txt
-#--  Written on Sun Feb  3 19:55:49 2019
+#--  Project file C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\syn_results\run_options.txt
+#--  Written on Fri Apr  5 11:20:52 2019
 
 
 #project files
 add_file -verilog "C:/lscc/diamond/3.10_x64/cae_library/synthesis/verilog/ecp5u.v"
 add_file -verilog "C:/lscc/diamond/3.10_x64/cae_library/synthesis/verilog/pmi_def.v"
-add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.v"
-add_file -fpga_constraint "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.fdc"
+add_file -verilog "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.v"
+add_file -fpga_constraint "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.fdc"
 
 
 
@@ -73,5 +73,5 @@ set_option -write_apr_constraint 1
 project -result_file "./my_pll_64mhz.edn"
 
 #set log file 
-set_option log_file "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/syn_results/my_pll_64mhz.srf" 
+set_option log_file "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/syn_results/my_pll_64mhz.srf" 
 impl -active "syn_results"

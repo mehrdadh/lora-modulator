@@ -1,0 +1,5 @@
+#Start recording tcl command: 2/4/2019 16:20:20
+#Project Location: C:/work/tinysdr_fpga_lora_tx; Project name: lora_tx
+prj_project open "C:/work/tinysdr_fpga_lora_tx/lora_tx.ldf"
+prj_project close
+#Stop recording: 2/4/2019 16:20:58

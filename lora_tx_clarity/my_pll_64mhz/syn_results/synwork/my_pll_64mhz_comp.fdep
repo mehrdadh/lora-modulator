@@ -1,4 +1,4 @@
-#OPTIONS:"|-layerid|0|-orig_srs|C:\\lscc\\lattice_projects\\xsdr_fpga_lora_tx\\lora_tx_clarity\\my_pll_64mhz\\syn_results\\synwork\\my_pll_64mhz_comp.srs|-top|my_pll_64mhz|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-I|C:\\lscc\\lattice_projects\\xsdr_fpga_lora_tx\\lora_tx_clarity\\my_pll_64mhz\\syn_results\\|-I|C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib|-v2001|-devicelib|C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib\\lucent\\ecp5u.v|-devicelib|C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib\\lucent\\pmi_def.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work"
+#OPTIONS:"|-layerid|0|-orig_srs|C:\\work\\tinysdr_fpga_lora_tx\\lora_tx_clarity\\my_pll_64mhz\\syn_results\\synwork\\my_pll_64mhz_comp.srs|-top|my_pll_64mhz|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-I|C:\\work\\tinysdr_fpga_lora_tx\\lora_tx_clarity\\my_pll_64mhz\\syn_results\\|-I|C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib|-v2001|-devicelib|C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib\\lucent\\ecp5u.v|-devicelib|C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib\\lucent\\pmi_def.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-lib|work|-lib|work|-lib|work"
 #CUR:"C:\\lscc\\diamond\\3.10_x64\\synpbase\\bin64\\c_ver.exe":1501917216
 #CUR:"C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib\\lucent\\ecp5u.v":1501921416
 #CUR:"C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib\\lucent\\pmi_def.v":1501921416
@@ -8,10 +8,10 @@
 #CUR:"C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib\\vlog\\scemi_pipes.svh":1501916624
 #CUR:"C:\\lscc\\diamond\\3.10_x64\\cae_library\\synthesis\\verilog\\ecp5u.v":1493338302
 #CUR:"C:\\lscc\\diamond\\3.10_x64\\cae_library\\synthesis\\verilog\\pmi_def.v":1505285366
-#CUR:"C:\\lscc\\lattice_projects\\xsdr_fpga_lora_tx\\lora_tx_clarity\\my_pll_64mhz\\my_pll_64mhz.v":1549252548
+#CUR:"C:\\work\\tinysdr_fpga_lora_tx\\lora_tx_clarity\\my_pll_64mhz\\my_pll_64mhz.v":1554488451
 0			"C:\lscc\diamond\3.10_x64\cae_library\synthesis\verilog\ecp5u.v" verilog
 1			"C:\lscc\diamond\3.10_x64\cae_library\synthesis\verilog\pmi_def.v" verilog
-2			"C:\lscc\lattice_projects\xsdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v" verilog
+2			"C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v" verilog
 #Dependency Lists(Uses List)
 0 -1
 1 -1

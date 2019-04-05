@@ -1,17 +1,17 @@
 #--  Synopsys, Inc.
 #--  Version M-2017.03L-SP1-1
-#--  Project file C:\lscc\lattice_projects\xsdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\syn_results\scratchproject.prs
+#--  Project file C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\syn_results\scratchproject.prs
 
 #project files
 add_file -verilog "C:/lscc/diamond/3.10_x64/cae_library/synthesis/verilog/ecp5u.v"
 add_file -verilog "C:/lscc/diamond/3.10_x64/cae_library/synthesis/verilog/pmi_def.v"
-add_file -verilog "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.v"
-add_file -fpga_constraint "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.fdc"
+add_file -verilog "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.v"
+add_file -fpga_constraint "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.fdc"
 
 
 
 #implementation: "syn_results"
-impl -add C:\lscc\lattice_projects\xsdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\syn_results -type fpga
+impl -add C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\syn_results -type fpga
 
 #
 #implementation attributes
@@ -68,8 +68,8 @@ set_option -auto_infer_blackbox 0
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/syn_results/my_pll_64mhz.edn"
+project -result_file "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/syn_results/my_pll_64mhz.edn"
 
 #set log file 
-set_option log_file "C:/lscc/lattice_projects/xsdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/syn_results/my_pll_64mhz.srf" 
+set_option log_file "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/syn_results/my_pll_64mhz.srf" 
 impl -active "syn_results"

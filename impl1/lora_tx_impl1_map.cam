@@ -1,33 +1,48 @@
 [ START MERGED ]
 IQSerializer_0/CN pll_clko_0
+pll_lock_i pll_lock
 [ END MERGED ]
 [ START CLIPPED ]
+VCC
+my_pll_instance/VCC
 clockDivider_0/VCC
 counter_0/VCC
+loraPacketGenerator_0/VCC
 loraModulator_0/initPhase0/GND
 loraModulator_0/initPhase0/VCC
 loraModulator_0/chirpGen0/VCC
 loraModulator_0/chirpGen0/phase_u1/GND
 loraModulator_0/chirpGen0/phase_u1/VCC
 loraModulator_0/chirpGen0/accInc_u1/VCC
-loraPacketGenerator_0/VCC
-my_pll_instance/VCC
-VCC
-clockDivider_0/un2_counter_cry_0_0_S1
-clockDivider_0/un2_counter_cry_0_0_S0
-clockDivider_0/N_1
-clockDivider_0/un1_lockCounter_s_7_0_S1
-clockDivider_0/un1_lockCounter_s_7_0_COUT
+my_pll_instance/CLKINTFB
+my_pll_instance/REFCLK
+my_pll_instance/INTLOCK
+my_pll_instance/CLKOS3
+my_pll_instance/CLKOS2
+my_pll_instance/CLKOS
 clockDivider_0/un1_lockCounter_cry_0_0_S1
 clockDivider_0/un1_lockCounter_cry_0_0_S0
-clockDivider_0/N_2
+clockDivider_0/N_1
 clockDivider_0/un2_counter_s_7_0_S1
 clockDivider_0/un2_counter_s_7_0_COUT
+clockDivider_0/un2_counter_cry_0_0_S1
+clockDivider_0/un2_counter_cry_0_0_S0
+clockDivider_0/N_2
+clockDivider_0/un1_lockCounter_s_7_0_S1
+clockDivider_0/un1_lockCounter_s_7_0_COUT
 counter_0/un5_waitcount_s_19_0_S1
 counter_0/un5_waitcount_s_19_0_COUT
 counter_0/un5_waitcount_cry_0_0_S1
 counter_0/un5_waitcount_cry_0_0_S0
 counter_0/N_1
+loraPacketGenerator_0/un1_payloadCounter_14_s_13_0_S1
+loraPacketGenerator_0/un1_payloadCounter_14_s_13_0_COUT
+loraPacketGenerator_0/un1_payloadCounter_14_cry_0_0_S0
+loraPacketGenerator_0/N_1
+loraPacketGenerator_0/un1_preambleCounter_s_13_0_S1
+loraPacketGenerator_0/un1_preambleCounter_s_13_0_COUT
+loraPacketGenerator_0/un1_preambleCounter_cry_0_0_S0
+loraPacketGenerator_0/N_10
 loraModulator_0/initPhase0/phaseOut0_3_ROC0
 loraModulator_0/initPhase0/phaseOut0_3_ROC1
 loraModulator_0/initPhase0/phaseOut0_3_ROC2
@@ -694,6 +709,10 @@ loraModulator_0/chirpGen0/phase_u1/phaseOut_s_33_0_S1
 loraModulator_0/chirpGen0/phase_u1/phaseOut_s_33_0_COUT
 loraModulator_0/chirpGen0/phase_u1/phaseOut_cry_0_0_S0
 loraModulator_0/chirpGen0/phase_u1/N_4
+loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_5_0_COUT
+loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_0_0_S1
+loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_0_0_S0
+loraModulator_0/chirpGen0/accInc_u1/N_1
 loraModulator_0/chirpGen0/accInc_u1/accOut_4_s_33_0_S1
 loraModulator_0/chirpGen0/accInc_u1/accOut_4_s_33_0_COUT
 loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_5_0_S1
@@ -704,41 +723,25 @@ loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_1_0_S1
 loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_1_0_S0
 loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_0_0_S1
 loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_0_0_S0
-loraModulator_0/chirpGen0/accInc_u1/N_1
-loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_5_0_COUT
-loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_0_0_S1
-loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_0_0_S0
 loraModulator_0/chirpGen0/accInc_u1/N_2
 loraModulator_0/chirpGen0/accInc_u1/accOut_1_s_33_0_S1
 loraModulator_0/chirpGen0/accInc_u1/accOut_1_s_33_0_COUT
 loraModulator_0/chirpGen0/accInc_u1/accOut_1_cry_0_0_S1
 loraModulator_0/chirpGen0/accInc_u1/accOut_1_cry_0_0_S0
 loraModulator_0/chirpGen0/accInc_u1/N_3
-loraPacketGenerator_0/un1_payloadCounter_14_s_13_0_S1
-loraPacketGenerator_0/un1_payloadCounter_14_s_13_0_COUT
-loraPacketGenerator_0/un1_payloadCounter_14_cry_0_0_S0
-loraPacketGenerator_0/N_1
-loraPacketGenerator_0/un1_preambleCounter_s_13_0_S1
-loraPacketGenerator_0/un1_preambleCounter_s_13_0_COUT
-loraPacketGenerator_0/un1_preambleCounter_cry_0_0_S0
-loraPacketGenerator_0/N_10
-my_pll_instance/CLKINTFB
-my_pll_instance/REFCLK
-my_pll_instance/INTLOCK
-my_pll_instance/CLKOS3
-my_pll_instance/CLKOS2
-my_pll_instance/CLKOS
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.10.3.144 -- WARNING: Map write only section -- Sun Feb 03 21:34:34 2019
+# map:  version Diamond (64-bit) 3.10.3.144 -- WARNING: Map write only section -- Fri Apr 05 11:22:21 2019
 
-SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=2.5 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
-LOCATE COMP "pll_clko" SITE "J2" ;
-LOCATE COMP "IQSerializer_0_serial_N" SITE "L1" ;
+SYSCONFIG SLAVE_SPI_PORT=DISABLE MASTER_SPI_PORT=DISABLE SLAVE_PARALLEL_PORT=DISABLE BACKGROUND_RECONFIG=OFF DONE_EX=OFF DONE_OD=ON DONE_PULL=ON MCCLK_FREQ=2.4 TRANSFR=OFF CONFIG_IOVOLTAGE=1.8 CONFIG_SECURE=OFF WAKE_UP=21 COMPRESS_CONFIG=OFF CONFIG_MODE=JTAG INBUF=OFF ;
+LOCATE COMP "osc_en" SITE "T2" ;
+LOCATE COMP "clk_test" SITE "G16" ;
+LOCATE COMP "LED" SITE "B1" ;
 LOCATE COMP "serial_clk" SITE "N1" ;
-LOCATE COMP "clk_in" SITE "M2" ;
-FREQUENCY NET "my_pll_instance/CLKIt" 32.000000 MHz ;
+LOCATE COMP "serial_iq" SITE "L1" ;
+LOCATE COMP "top_clk" SITE "M2" ;
 FREQUENCY NET "pll_clko_0" 64.000000 MHz ;
+FREQUENCY NET "my_pll_instance/CLKIt" 32.000000 MHz ;
 SCHEMATIC END ;
 [ END DESIGN PREFS ]

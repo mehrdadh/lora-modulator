@@ -1,13 +1,13 @@
 # Synopsys Constraint Checker, version maplat, Build 1796R, built Aug  4 2017
 # Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
 
-# Written on Sun Feb  3 19:55:51 2019
+# Written on Fri Apr  5 11:20:57 2019
 
 
 ##### DESIGN INFO #######################################################
 
 Top View:                "my_pll_64mhz"
-Constraint File(s):      "C:\lscc\lattice_projects\xsdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.fdc"
+Constraint File(s):      "C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.fdc"
 
 
 
@@ -39,6 +39,7 @@ p:CLKI
 p:CLKI2
 p:CLKOP
 p:LOCK
+p:RST
 p:SEL
 
 
