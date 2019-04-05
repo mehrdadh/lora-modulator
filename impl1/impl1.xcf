@@ -19,7 +19,7 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/work/tinysdr_fpga_lora_tx/impl1/lora_tx_impl1.bit</File>
-			<FileTime>04/05/19 10:25:54</FileTime>
+			<FileTime>04/05/19 11:23:44</FileTime>
 			<Operation>Fast Program</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

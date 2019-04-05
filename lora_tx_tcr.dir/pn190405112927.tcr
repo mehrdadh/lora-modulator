@@ -1,0 +1,46 @@
+#Start recording tcl command: 4/5/2019 09:25:30
+#Project Location: C:/work/tinysdr_fpga_lora_tx; Project name: lora_tx
+prj_project open "C:/work/tinysdr_fpga_lora_tx/lora_tx.ldf"
+prj_src remove "C:/work/tinysdr_fpga_lora_tx/impl1/source/top.v"
+prj_src add "C:/work/tinysdr_fpga_lora_tx/impl1/source/topModule.v"
+sbp_design open -dsgn "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/lora_tx_clarity.sbx"
+set currentPath [pwd];set tmp_autopath $auto_path
+cd "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz"
+source "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/generate_core.tcl"
+set auto_path $tmp_autopath;cd $currentPath
+set currentPath [pwd];set tmp_autopath $auto_path
+cd "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz"
+source "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/generate_ngd.tcl"
+set auto_path $tmp_autopath;cd $currentPath
+prj_src add -exclude "C:/work/tinysdr_fpga_lora_tx/impl1/source/xsdr_fpga_lora_tx.lpf"
+prj_src enable "C:/work/tinysdr_fpga_lora_tx/impl1/source/xsdr_fpga_lora_tx.lpf"
+prj_src remove "C:/work/tinysdr_fpga_lora_tx/impl1/source/xsdr_fpga_singletone_tx_lattice.lpf"
+sbp_design save
+prj_run Synthesis -impl impl1 -task Synplify_Synthesis
+prj_run PAR -impl impl1 -task PARTrace
+prj_run Export -impl impl1 -task Bitgen
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_program run
+pgr_program run
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+prj_run Export -impl impl1 -task Bitgen
+pgr_program run
+sbp_design open -dsgn "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/lora_tx_clarity.sbx"
+set currentPath [pwd];set tmp_autopath $auto_path
+cd "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz"
+source "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/generate_core.tcl"
+set auto_path $tmp_autopath;cd $currentPath
+set currentPath [pwd];set tmp_autopath $auto_path
+cd "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz"
+source "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/generate_ngd.tcl"
+set auto_path $tmp_autopath;cd $currentPath
+sbp_builder export_rem -port {lora_tx_clarity/my_pll_64mhz/CLKI}
+sbp_builder export_add -port {lora_tx_clarity/my_pll_64mhz/RST}
+sbp_design save
+prj_run Export -impl impl1 -task Bitgen
+pgr_program run
+prj_project save
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_project close
+prj_project close
+#Stop recording: 4/5/2019 11:29:27
