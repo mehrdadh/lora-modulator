@@ -1,0 +1,88 @@
+#Start recording tcl command: 6/24/2019 14:19:59
+#Project Location: C:/work/tinysdr_fpga_lora_tx; Project name: lora_tx
+prj_project open "C:/work/tinysdr_fpga_lora_tx/lora_tx.ldf"
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+pgr_program run
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+pgr_program run
+pgr_program run
+prj_run Export -impl impl1 -task Bitgen
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+prj_run Export -impl impl1 -task Bitgen
+pgr_program run
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+pgr_program run
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+prj_project save
+prj_project close
+#Stop recording: 6/25/2019 15:34:11

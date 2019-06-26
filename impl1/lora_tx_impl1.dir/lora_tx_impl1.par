@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Apr 05 11:22:26 2019
+Wed Jun 26 13:43:09 2019
 
 C:/lscc/diamond/3.10_x64/ispfpga\bin\nt64\par -f lora_tx_impl1.p2t
 lora_tx_impl1_map.ncd lora_tx_impl1.dir lora_tx_impl1.prf -gui -msgset
@@ -16,10 +16,10 @@ Preference file: lora_tx_impl1.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            -8.878       20954135     0.168        0            01:08        Success
+5_1   *      0            -6.860       16288153     0.168        0            01:12        Success
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 1 mins 8 secs 
+Total (real) run time for 1-seed: 1 mins 12 secs 
 
 par done!

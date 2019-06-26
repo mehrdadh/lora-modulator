@@ -3,27 +3,27 @@ Report for cell topModule
    Instance path: topModule
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	    1125.00        100.0
-                                  LUT4	    1581.00        100.0
+                                  SLIC	    1193.00        100.0
+                                  LUT4	    1597.00        100.0
                                  IOBUF	          7        100.0
-                                PFUREG	        344        100.0
+                                PFUREG	        386        100.0
                                 RIPPLE	        187        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                         loraModulator	          1        89.6
                           my_pll_64mhz	          1         0.1
-                   loraPacketGenerator	          1         4.1
-                               counter	          1         1.7
+                   loraPacketGenerator	          1         3.8
+                         loraModulator	          1        90.6
+                               counter	          1         1.6
                           clockDivider	          1         1.3
-                          IQSerializer	          1         3.1
+                          IQSerializer	          1         2.5
 ---------------------------------------------------
 Report for cell IQSerializer
    Instance path: topModule/IQSerializer_0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      35.17         3.1
-                                  LUT4	      65.67         4.2
-                                PFUREG	         15         4.4
+                                  SLIC	      29.50         2.5
+                                  LUT4	      57.00         3.6
+                                PFUREG	         15         3.9
 SUB MODULES
                                   cell	      count    SLC Usage(%)
                                  DEDFF	          1         0.2
@@ -32,58 +32,58 @@ Report for cell DEDFF
    Instance path: topModule/IQSerializer_0/DEDFF_0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       2.33         0.2
-                                  LUT4	       3.00         0.2
-                                PFUREG	          2         0.6
+                                  SLIC	       2.67         0.2
+                                  LUT4	       4.00         0.3
+                                PFUREG	          2         0.5
 ---------------------------------------------------
 Report for cell loraModulator
    Instance path: topModule/loraModulator_0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	    1008.50        89.6
-                                  LUT4	    1443.33        91.3
-                                PFUREG	        240        69.8
+                                  SLIC	    1081.17        90.6
+                                  LUT4	    1467.00        91.9
+                                PFUREG	        282        73.1
                                 RIPPLE	        150        80.2
 SUB MODULES
                                   cell	      count    SLC Usage(%)
                           initialPhase	          1         1.7
-                              constant	          1         4.7
-                        chirpGenerator	          1        83.2
+                              constant	          1         4.4
+                        chirpGenerator	          1        84.4
 ---------------------------------------------------
 Report for cell chirpGenerator
    Instance path: topModule/loraModulator_0/chirpGen0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     935.67        83.2
-                                  LUT4	    1439.33        91.0
-                                PFUREG	        103        29.9
+                                  SLIC	    1007.33        84.4
+                                  LUT4	    1462.00        91.5
+                                PFUREG	        145        37.6
                                 RIPPLE	        132        70.6
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                              phaseInc	          1        11.1
-                              sinIdeal	          1        30.2
-                              cosIdeal	          1        33.8
-                                accInc	          1         3.1
+                              sinIdeal	          1        31.0
+                              phaseInc	          1        10.4
+                              cosIdeal	          1        33.6
+                                accInc	          1         3.0
 ---------------------------------------------------
 Report for cell sinIdeal
    Instance path: topModule/loraModulator_0/chirpGen0/sinIdeal_0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     339.83        30.2
-                                  LUT4	     622.83        39.4
+                                  SLIC	     370.17        31.0
+                                  LUT4	     644.50        40.4
 ---------------------------------------------------
 Report for cell cosIdeal
    Instance path: topModule/loraModulator_0/chirpGen0/cosIdeal_0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     380.50        33.8
-                                  LUT4	     687.50        43.5
+                                  SLIC	     401.08        33.6
+                                  LUT4	     688.50        43.1
 ---------------------------------------------------
 Report for cell accInc
    Instance path: topModule/loraModulator_0/chirpGen0/accInc_u1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      35.00         3.1
+                                  SLIC	      35.50         3.0
                                   LUT4	      11.00         0.7
                                 RIPPLE	         40        21.4
 ---------------------------------------------------
@@ -91,43 +91,43 @@ Report for cell phaseInc
    Instance path: topModule/loraModulator_0/chirpGen0/phase_u1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     124.50        11.1
-                                  LUT4	     104.00         6.6
+                                  SLIC	     124.50        10.4
+                                  LUT4	     104.00         6.5
                                 RIPPLE	         64        34.2
 ---------------------------------------------------
 Report for cell initialPhase
    Instance path: topModule/loraModulator_0/initPhase0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      19.00         1.7
-                                  LUT4	       1.00         0.1
-                                PFUREG	         34         9.9
+                                  SLIC	      20.00         1.7
+                                  LUT4	       2.00         0.1
+                                PFUREG	         34         8.8
                                 RIPPLE	         18         9.6
 ---------------------------------------------------
 Report for cell constant
    Instance path: topModule/loraModulator_0/constant0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      53.00         4.7
+                                  SLIC	      53.00         4.4
                                   LUT4	       2.00         0.1
-                                PFUREG	        102        29.7
+                                PFUREG	        102        26.4
 ---------------------------------------------------
 Report for cell loraPacketGenerator
    Instance path: topModule/loraPacketGenerator_0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      45.83         4.1
+                                  SLIC	      45.83         3.8
                                   LUT4	      49.00         3.1
-                                PFUREG	         50        14.5
+                                PFUREG	         50        13.0
                                 RIPPLE	         16         8.6
 ---------------------------------------------------
 Report for cell counter
    Instance path: topModule/counter_0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      19.50         1.7
+                                  SLIC	      19.50         1.6
                                   LUT4	      14.00         0.9
-                                PFUREG	         21         6.1
+                                PFUREG	         21         5.4
                                 RIPPLE	         11         5.9
 ---------------------------------------------------
 Report for cell clockDivider
@@ -136,7 +136,7 @@ Report for cell clockDivider
                                   cell	      count    Res Usage(%)
                                   SLIC	      15.00         1.3
                                   LUT4	       8.00         0.5
-                                PFUREG	         18         5.2
+                                PFUREG	         18         4.7
                                 RIPPLE	         10         5.3
 ---------------------------------------------------
 Report for cell my_pll_64mhz

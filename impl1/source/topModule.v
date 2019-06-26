@@ -7,7 +7,7 @@
 
 module topModule(
     // Inputs
-	top_rst,
+	top_rst_n,
 	top_clk,
     // Outputs
 	osc_en,
@@ -21,7 +21,7 @@ module topModule(
 // Input
 //--------------------------------------------------------------------
 input         top_clk;
-input         top_rst;
+input         top_rst_n;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
@@ -66,7 +66,7 @@ assign clk_test = clockDivider_0_clk_4M;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign LED = 1'b1;
+assign LED = 1'b0;
 
 //--------------------------------------------------------------------
 // Component instances
@@ -76,7 +76,7 @@ my_pll_64mhz my_pll_instance (
 	.SEL	(1'b1),
 	.CLKI	(), 
 	.CLKI2	(pll_clki),
-	.RST	(top_rst),
+	.RST	(~top_rst_n),
 	// Outputs
 	.CLKOP	(pll_clko),
 	.LOCK	(pll_lock)

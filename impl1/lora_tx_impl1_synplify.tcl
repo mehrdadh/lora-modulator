@@ -15,7 +15,7 @@ set_option -resource_sharing true
 set_option -vlog_std v2001
 
 #map options
-set_option -frequency 64
+set_option -frequency auto
 set_option -maxfan 1000
 set_option -auto_constrain_io 0
 set_option -disable_io_insertion false
@@ -30,7 +30,7 @@ set_option -default_enum_encoding default
 
 
 #timing analysis options
-set_option -num_critical_paths 20
+
 
 
 #automatic place and route (vendor) options

@@ -118,4 +118,4 @@
 @W: FX528 :"c:\work\tinysdr_fpga_lora_tx\impl1\source\constant.v":74:0:74:5|Found syn_preserve on register loraModulator_0.constant0.BW_SR[18] which prevents the register from being packed into DSP
 @W: MT246 :"c:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":69:13:69:22|Blackbox PLLREFCS is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 @W: MT246 :"c:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":58:12:58:20|Blackbox EHXPLLL is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
-@W: MT420 |Found inferred clock my_pll_64mhz|CLKOP_inferred_clock with period 15.63ns. Please declare a user-defined clock on object "n:my_pll_instance.CLKOP"
+@W: MT420 |Found inferred clock my_pll_64mhz|CLKOP_inferred_clock with period 9.34ns. Please declare a user-defined clock on object "n:my_pll_instance.CLKOP"

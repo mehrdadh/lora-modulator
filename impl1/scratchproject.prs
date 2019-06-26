@@ -30,7 +30,6 @@ impl -add C:\work\tinysdr_fpga_lora_tx\impl1 -type fpga
 #implementation attributes
 
 set_option -vlog_std v2001
-set_option -num_critical_paths 20
 set_option -project_relative_includes 1
 set_option -hdl_define -set SBP_SYNTHESIS
 set_option -include_path {C:/work/tinysdr_fpga_lora_tx/impl1/}
@@ -50,7 +49,7 @@ set_option -top_module "topModule"
 set_option -distributed_compile 0
 
 # mapper_without_write_options
-set_option -frequency 64
+set_option -frequency auto
 set_option -srs_instrumentation 1
 
 # mapper_options

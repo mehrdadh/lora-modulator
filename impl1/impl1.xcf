@@ -19,8 +19,9 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/work/tinysdr_fpga_lora_tx/impl1/lora_tx_impl1.bit</File>
-			<FileTime>04/05/19 11:23:44</FileTime>
-			<Operation>Fast Program</Operation>
+			<FileTime>06/26/19 13:14:56</FileTime>
+			<JedecChecksum>N/A</JedecChecksum>
+			<Operation>Erase Only</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
 				<IOState>HighZ</IOState>

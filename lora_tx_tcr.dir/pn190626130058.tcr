@@ -1,0 +1,34 @@
+#Start recording tcl command: 6/26/2019 12:49:32
+#Project Location: C:/work/tinysdr_fpga_lora_tx; Project name: lora_tx
+prj_project open "C:/work/tinysdr_fpga_lora_tx/lora_tx.ldf"
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+prj_run Export -impl impl1 -task Bitgen
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_program run
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_program run
+prj_run Export -impl impl1 -task Bitgen -forceOne
+prj_src remove "C:/work/tinysdr_fpga_lora_tx/flash.xcf"
+pgr_project close
+prj_src add "C:/work/tinysdr_fpga_lora_tx/impl1/flash.xcf"
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/flash.xcf"
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/impl1/flash.xcf"
+prj_strgy set_value -strategy Strategy1 syn_critical_path_num= syn_frequency=
+prj_run Export -impl impl1 -task Bitgen
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/impl1/flash.xcf"
+pgr_project close
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/flash.xcf"
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/impl1/flash.xcf"
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_project save "C:/work/tinysdr_fpga_lora_tx/impl1/flash.xcf"
+pgr_program run
+prj_project save
+prj_project close
+#Stop recording: 6/26/2019 13:00:58
