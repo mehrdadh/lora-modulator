@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version M-2017.03L-SP1-1
 #--  Project file C:\work\tinysdr_fpga_lora_tx\impl1\run_options.txt
-#--  Written on Wed Jun 26 13:12:51 2019
+#--  Written on Fri Jun 28 11:18:38 2019
 
 
 #project files

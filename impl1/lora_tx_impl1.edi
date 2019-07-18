@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timeStamp 2019 6 26 13 13 21)
+      (timeStamp 2019 6 28 11 19 11)
       (author "Synopsys, Inc.")
       (program "Synplify Pro" (version "M-2017.03L-SP1-1, mapper maplat, Build 1796R"))
      )
@@ -36003,11 +36003,8 @@
           (net VCC (joined
            (portRef Z (instanceRef VCC))
            (portRef I (instanceRef osc_en_pad))
-           (portRef GSR (instanceRef GSR_INST))
-          ))
-          (net GND (joined
-           (portRef Z (instanceRef GND))
            (portRef I (instanceRef LED_pad))
+           (portRef GSR (instanceRef GSR_INST))
           ))
           (net top_rst_n_c (joined
            (portRef O (instanceRef top_rst_n_pad))

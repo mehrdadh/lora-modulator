@@ -3,7 +3,7 @@
 #OS: Windows 8 6.2
 #Hostname: MEHRDAD-HP-WIN
 
-# Wed Jun 26 13:12:52 2019
+# Fri Jun 28 11:18:38 2019
 
 #Implementation: impl1
 
@@ -142,7 +142,7 @@ At c_ver Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed Jun 26 13:12:53 2019
+# Fri Jun 28 11:18:40 2019
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2017q2p1, Build 190R, built Aug  4 2017
@@ -154,17 +154,17 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed Jun 26 13:12:53 2019
+# Fri Jun 28 11:18:41 2019
 
 ###########################################################]
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 3MB peak: 4MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 3MB peak: 4MB)
 
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+Process took 0h:00m:02s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed Jun 26 13:12:53 2019
+# Fri Jun 28 11:18:41 2019
 
 ###########################################################]
 Synopsys Netlist Linker, version comp2017q2p1, Build 190R, built Aug  4 2017
@@ -176,10 +176,10 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed Jun 26 13:12:55 2019
+# Fri Jun 28 11:18:43 2019
 
 ###########################################################]
-# Wed Jun 26 13:12:55 2019
+# Fri Jun 28 11:18:43 2019
 
 Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1796R, Built Aug  4 2017 11:10:16
 Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -261,10 +261,10 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 61MB peak: 148MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Jun 26 13:12:56 2019
+# Fri Jun 28 11:18:45 2019
 
 ###########################################################]
-# Wed Jun 26 13:12:57 2019
+# Fri Jun 28 11:18:45 2019
 
 Synopsys Lattice Technology Mapper, Version maplat, Build 1796R, Built Aug  4 2017 11:10:16
 Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -320,16 +320,16 @@ original code -> new code
 Starting factoring (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 188MB peak: 249MB)
 
 
-Finished factoring (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 210MB peak: 249MB)
+Finished factoring (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:09s; Memory used current: 210MB peak: 249MB)
 
 
-Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 194MB peak: 249MB)
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:09s; Memory used current: 194MB peak: 249MB)
 
 
-Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 194MB peak: 249MB)
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:09s; Memory used current: 194MB peak: 249MB)
 
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:10s; Memory used current: 185MB peak: 249MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:10s; Memory used current: 185MB peak: 249MB)
 
 @W: FX528 :"c:\work\tinysdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
 @W: FX528 :"c:\work\tinysdr_fpga_lora_tx\impl1\source\lorapacketgenerator.v":112:0:112:5|Found syn_preserve on register loraPacketGenerator_0.symVal[0] which prevents the register from being packed into DSP
@@ -434,19 +434,19 @@ Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:10s; CP
 
 Only the first 100 messages of id 'FX528' are reported. To see all messages use 'report_messages -log C:\work\tinysdr_fpga_lora_tx\impl1\synlog\lora_tx_impl1_fpga_mapper.srr -id FX528' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {FX528} -count unlimited' in the Tcl shell.
 
-Starting Early Timing Optimization (Real Time elapsed 0h:00m:14s; CPU Time elapsed 0h:00m:12s; Memory used current: 188MB peak: 249MB)
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:13s; Memory used current: 188MB peak: 249MB)
 
 
-Finished Early Timing Optimization (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:14s; Memory used current: 194MB peak: 249MB)
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:14s; Memory used current: 194MB peak: 249MB)
 
 
-Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:14s; Memory used current: 193MB peak: 249MB)
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:14s; Memory used current: 193MB peak: 249MB)
 
 
-Finished preparing to map (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:15s; Memory used current: 192MB peak: 249MB)
+Finished preparing to map (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:15s; Memory used current: 192MB peak: 249MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:16s; Memory used current: 229MB peak: 249MB)
+Finished technology mapping (Real Time elapsed 0h:00m:19s; CPU Time elapsed 0h:00m:16s; Memory used current: 229MB peak: 249MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
@@ -478,11 +478,11 @@ Added 0 LUTs via timing driven replication
 
    5		0h:00m:16s		    -3.65ns		1610 /       386
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:18s; CPU Time elapsed 0h:00m:16s; Memory used current: 230MB peak: 249MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:20s; CPU Time elapsed 0h:00m:17s; Memory used current: 230MB peak: 249MB)
 
 @N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:19s; CPU Time elapsed 0h:00m:17s; Memory used current: 231MB peak: 249MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:21s; CPU Time elapsed 0h:00m:17s; Memory used current: 231MB peak: 249MB)
 
 @N: MT611 :|Automatically generated clock clockDivider|clkOut_derived_clock is not used and is being removed
 
@@ -506,21 +506,21 @@ Clock Tree ID     Driving Element               Drive Element Type     Fanout   
 ##### END OF CLOCK OPTIMIZATION REPORT ######]
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:19s; CPU Time elapsed 0h:00m:17s; Memory used current: 191MB peak: 249MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:21s; CPU Time elapsed 0h:00m:18s; Memory used current: 191MB peak: 249MB)
 
 Writing Analyst data base C:\work\tinysdr_fpga_lora_tx\impl1\synwork\lora_tx_impl1_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:19s; Memory used current: 234MB peak: 249MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:20s; Memory used current: 234MB peak: 249MB)
 
 Writing EDIF Netlist and constraint files
 @N: FX1056 |Writing EDF file: C:\work\tinysdr_fpga_lora_tx\impl1\lora_tx_impl1.edi
 M-2017.03L-SP1-1
 @N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:23s; CPU Time elapsed 0h:00m:20s; Memory used current: 238MB peak: 249MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:20s; Memory used current: 238MB peak: 249MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:24s; CPU Time elapsed 0h:00m:20s; Memory used current: 230MB peak: 249MB)
+Start final timing analysis (Real Time elapsed 0h:00m:26s; CPU Time elapsed 0h:00m:21s; Memory used current: 230MB peak: 249MB)
 
 @W: MT246 :"c:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":69:13:69:22|Blackbox PLLREFCS is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 @W: MT246 :"c:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":58:12:58:20|Blackbox EHXPLLL is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
@@ -528,7 +528,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:24s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Wed Jun 26 13:13:21 2019
+# Timing Report written on Fri Jun 28 11:19:11 2019
 #
 
 
@@ -1107,10 +1107,10 @@ loraModulator_0.chirpGen0.phase[33]                             FD1P3IX      D  
 Timing exceptions that could not be applied
 None
 
-Finished final timing analysis (Real Time elapsed 0h:00m:24s; CPU Time elapsed 0h:00m:20s; Memory used current: 231MB peak: 249MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:26s; CPU Time elapsed 0h:00m:21s; Memory used current: 231MB peak: 249MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:24s; CPU Time elapsed 0h:00m:20s; Memory used current: 231MB peak: 249MB)
+Finished timing report (Real Time elapsed 0h:00m:26s; CPU Time elapsed 0h:00m:21s; Memory used current: 231MB peak: 249MB)
 
 ---------------------------------------
 Resource Usage Report
@@ -1146,9 +1146,9 @@ VHI:            15
 VLO:            15
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:24s; CPU Time elapsed 0h:00m:20s; Memory used current: 41MB peak: 249MB)
+At Mapper Exit (Real Time elapsed 0h:00m:26s; CPU Time elapsed 0h:00m:21s; Memory used current: 41MB peak: 249MB)
 
-Process took 0h:00m:24s realtime, 0h:00m:20s cputime
-# Wed Jun 26 13:13:21 2019
+Process took 0h:00m:26s realtime, 0h:00m:21s cputime
+# Fri Jun 28 11:19:11 2019
 
 ###########################################################]

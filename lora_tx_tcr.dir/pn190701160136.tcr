@@ -1,0 +1,14 @@
+#Start recording tcl command: 6/28/2019 10:13:29
+#Project Location: C:/work/tinysdr_fpga_lora_tx; Project name: lora_tx
+prj_project open "C:/work/tinysdr_fpga_lora_tx/lora_tx.ldf"
+pwc_command new
+pwc_command save -project "C:/work/tinysdr_fpga_lora_tx/impl1/Untitled.pcf"
+prj_src add -exclude "C:/work/tinysdr_fpga_lora_tx/impl1/Untitled.pcf"
+pwc_command exit
+prj_run Export -impl impl1 -task Bitgen
+pgr_project open "C:/work/tinysdr_fpga_lora_tx/impl1/impl1.xcf"
+pgr_program run
+pwc_command new
+prj_project save
+prj_project close
+#Stop recording: 7/1/2019 16:01:36

@@ -18,10 +18,13 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/work/tinysdr_fpga_lora_tx/impl1/lora_tx_impl1.bit</File>
-			<FileTime>06/26/19 13:44:30</FileTime>
+			<FileTime>06/27/19 17:52:18</FileTime>
+			<JedecChecksum>N/A</JedecChecksum>
 			<Operation>SPI Flash Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
+				<SVFProcessor>SVF Processor</SVFProcessor>
+				<Usercode>0x00000000</Usercode>
 				<AccessMode>SPI Flash Background Programming</AccessMode>
 			</Option>
 			<FPGALoader>
@@ -46,6 +49,7 @@
 						<IOState>HighZ</IOState>
 						<PreloadLength>409</PreloadLength>
 						<IOVectorData>0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</IOVectorData>
+						<SVFProcessor>SVF Processor</SVFProcessor>
 						<AccessMode>JTAG</AccessMode>
 					</Option>
 				</Device>
@@ -61,9 +65,9 @@
 					<Operation>SPI Flash Erase,Program,Verify</Operation>
 					<File>C:/work/tinysdr_fpga_lora_tx/impl1/lora_tx_impl1.bit</File>
 					<AddressBase>0x00000000</AddressBase>
-					<EndAddress>0x00080000</EndAddress>
+					<EndAddress>0x00020000</EndAddress>
 					<DeviceSize>64</DeviceSize>
-					<DataSize>582672</DataSize>
+					<DataSize>131558</DataSize>
 					<NumberOfDevices>1</NumberOfDevices>
 					<ReInitialize value="FALSE"/>
 				</Device>
@@ -80,6 +84,7 @@
 					</LocalChainList>
 					<Option>
 						<SVFVendor>JTAG STANDARD</SVFVendor>
+						<SVFProcessor>SVF Processor</SVFProcessor>
 					</Option>
 				</Device>
 			</FPGADevice>
