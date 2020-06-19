@@ -1,15 +1,3 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////
-// Company: <Name>
-//
-// File: counter.v
-// File history:
-//      <Revision number>: <Date>: <Comments>
-//      <Revision number>: <Date>: <Comments>
-//      <Revision number>: <Date>: <Comments>
-//
-// Description: 
-// Author: <Mehrdad Hessar>
-///////////////////////////////////////////////////////////////////////////////////////////////////
 `include "LoRaTXDefines.v"
 
 `define maxWait     `WAIT_SIZE'd1_000_000

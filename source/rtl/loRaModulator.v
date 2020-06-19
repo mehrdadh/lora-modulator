@@ -1,18 +1,3 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////
-// Company: <Name>
-//
-// File: loraTop.v
-// File history:
-//      <Revision number>: <Date>: <Comments>
-//      <Revision number>: <Date>: <Comments>
-//      <Revision number>: <Date>: <Comments>
-//
-// Description: 
-//
-// <Description here>
-// Author: <Mehrdad Hessar>
-//
-/////////////////////////////////////////////////////////////////////////////////////////////////// 
 `include "LoRaTXDefines.v"
 `include "RadioDefines.v"
 

@@ -1,21 +1,3 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////
-// Company: <Name>
-//
-// File: squareSin.v
-// File history:
-//      <Revision number>: <Date>: <Comments>
-//      <Revision number>: <Date>: <Comments>
-//      <Revision number>: <Date>: <Comments>
-//
-// Description: 
-//  Produces a square wave based on the sin or cos function
-//  and factors out pi for ease of implementation.
-//
-//  For sin: returns 1 if (0 < angle < 1), and 0 else.
-//  For cos: returns 0 if (1/2 < angle < 3/2), and 1 else.
-//
-// Author: <Mehrdad Hessar>
-/////////////////////////////////////////////////////////////////////////////////////////////////// 
 `include "LoRaTXDefines.v"
 `include "RadioDefines.v"
 

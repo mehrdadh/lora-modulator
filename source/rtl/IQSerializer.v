@@ -1,20 +1,3 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////
-// Company: <Name>
-//
-// File: IQSerializer.v
-// File history:
-//      <Revision number>: <Date>: <Comments>
-//      <Revision number>: <Date>: <Comments>
-//      <Revision number>: <Date>: <Comments>
-//
-// Description: 
-//  IQ Serializer gets I/Q samples and serialize it based on the sampling rate.
-//  For sampling rates less than 4MHz, it will add dummy data between the samples.
-//
-// Targeted device: <Family::IGLOO2> <Die::M2GL010> <Package::484 FBGA>
-// Author: <Name>
-//
-/////////////////////////////////////////////////////////////////////////////////////////////////// 
 `include "RadioDefines.v"
 
 module IQSerializer(

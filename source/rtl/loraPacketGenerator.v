@@ -1,15 +1,3 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////
-// Company: <Name>
-//
-// File: loraPacketGenerator.v
-// File history:
-//      <Revision number>: <Date>: <Comments>
-//      <Revision number>: <Date>: <Comments>
-//      <Revision number>: <Date>: <Comments>
-//
-// Description: 
-// Author: <Mehrdad Hessar>
-///////////////////////////////////////////////////////////////////////////////////////////////////
 `include "LoRaTXDefines.v"
 `include "RadioDefines.v"
 

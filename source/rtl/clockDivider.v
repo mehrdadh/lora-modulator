@@ -1,16 +1,3 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////
-// Company: <Name>
-//
-// File: clockDivider.v
-// File history:
-//      <Revision number>: <Date>: <Comments>
-//      <Revision number>: <Date>: <Comments>
-//      <Revision number>: <Date>: <Comments>
-//
-// Description: 
-// Author: <Mehrdad Hessar>
-///////////////////////////////////////////////////////////////////////////////////////////////////
-
 module clockDivider(
 input       clk,
 input	    pll_lock,
