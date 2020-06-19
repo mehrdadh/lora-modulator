@@ -1,0 +1,7 @@
+#Start recording tcl command: 6/18/2020 22:20:41
+#Project Location: Z:/tmp/lora-modulator; Project name: lora_tx
+prj_project open "Z:/tmp/lora-modulator/lora_tx.ldf"
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen
+prj_project close
+#Stop recording: 6/18/2020 22:31:43

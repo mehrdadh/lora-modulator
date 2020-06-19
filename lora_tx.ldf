@@ -3,67 +3,64 @@
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
         <Options def_top="topModule" top="topModule"/>
-        <Source name="impl1/source/accInc.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/accInc.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/chirpGenerator.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/chirpGenerator.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/clockDivider.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/clockDivider.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/constant.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/constant.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/cosIdeal.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/cosIdeal.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/counter.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/counter.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/DEDFF.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/DEDFF.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/initialPhase.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/initialPhase.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/IQSerializer.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/IQSerializer.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/loRaModulator.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/loRaModulator.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/loraPacketGenerator.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/loraPacketGenerator.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/LoRaTXDefines.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/LoRaTXDefines.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/phaseInc.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/phaseInc.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/radioDefines.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/radioDefines.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="impl1/source/sinIdeal.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/sinIdeal.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="lora_tx_clarity/lora_tx_clarity.sbx" type="sbx" type_short="SBX">
-            <Options/>
-        </Source>
-        <Source name="impl1/source/topModule.v" type="Verilog" type_short="Verilog">
+        <Source name="source/rtl/topModule.v" type="Verilog" type_short="Verilog">
             <Options top_module="topModule"/>
         </Source>
-        <Source name="impl1/flash.xcf" type="Programming Project File" type_short="Programming">
-            <Options/>
-        </Source>
-        <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming" excluded="TRUE">
-            <Options/>
-        </Source>
-        <Source name="impl1/source/xsdr_fpga_lora_tx.lpf" type="Logic Preference" type_short="LPF">
+        <Source name="project/lora_tx_clarity/lora_tx_clarity.sbx" type="sbx" type_short="SBX">
             <Options/>
         </Source>
         <Source name="impl1/Untitled.pcf" type="Power Calculator" type_short="PCF" excluded="TRUE">
+            <Options/>
+        </Source>
+        <Source name="project/flash.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="source/lora_modulator.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
         </Source>
     </Implementation>

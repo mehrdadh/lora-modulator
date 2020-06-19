@@ -1,4 +1,0 @@
-#Start recording tcl command: 6/18/2020 22:13:45
-#Project Location: Z:/tmp/lora-modulator; Project name: lora_tx
-prj_project open "Z:/tmp/lora-modulator/lora_tx.ldf"
-#Stop recording: 6/18/2020 21:25:24
