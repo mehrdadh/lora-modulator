@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------
 Report for cell topModule.verilog
 
-Register bits: 386 of 24288 (2%)
+Register bits: 344 of 24288 (1%)
 PIC Latch:       0
 I/O cells:       7
                                           Cell usage:
@@ -9,24 +9,21 @@ I/O cells:       7
                              ALU54B        3       100.0
                               CCU2C      187       100.0
                             EHXPLLL        1       100.0
-                            FD1P3AX       49       100.0
-                            FD1P3IX      197       100.0
-                            FD1S3AX        1       100.0
+                            FD1S3AX      159       100.0
                             FD1S3AY        1       100.0
-                            FD1S3IX      135       100.0
-                            FD1S3JX        3       100.0
+                            FD1S3IX      184       100.0
                                 GSR        1       100.0
                                  IB        2       100.0
-                                INV        6       100.0
-                            L6MUX21        2       100.0
+                                INV        9       100.0
+                            L6MUX21        3       100.0
                          MULT18X18D        6       100.0
                                  OB        5       100.0
-                           ORCALUT4     1593       100.0
-                              PFUMX       29       100.0
+                           ORCALUT4     1491       100.0
+                              PFUMX       24       100.0
                            PLLREFCS        1       100.0
                                 PUR        1       100.0
                                 VHI       15       100.0
-                                VLO       15       100.0
+                                VLO        6       100.0
 SUB MODULES 
                               DEDFF        1       100.0
                        IQSerializer        1       100.0
@@ -43,35 +40,33 @@ SUB MODULES
                            phaseInc        1       100.0
                            sinIdeal        1       100.0
                             
-                         TOTAL          2267           
+                         TOTAL          2113           
 ----------------------------------------------------------------------
 Report for cell IQSerializer.netlist
      Instance path:  IQSerializer_0
                                           Cell usage:
                                cell       count    Res Usage(%)
-                            FD1S3AY        1       100.0
-                            FD1S3IX       14        10.4
-                                INV        1        16.7
-                            L6MUX21        2       100.0
-                           ORCALUT4       57         3.6
-                              PFUMX        8        27.6
+                            FD1S3AX        4         2.5
+                            FD1S3IX       10         5.4
+                                INV        1        11.1
+                            L6MUX21        3       100.0
+                           ORCALUT4       53         3.6
+                              PFUMX       13        54.2
                                 VHI        2        13.3
-                                VLO        2        13.3
 SUB MODULES 
                               DEDFF        1       100.0
                             
-                         TOTAL            88           
+                         TOTAL            87           
 ----------------------------------------------------------------------
 Report for cell DEDFF.netlist
      Instance path:  IQSerializer_0.DEDFF_0
                                           Cell usage:
                                cell       count    Res Usage(%)
-                            FD1S3IX        2         1.5
-                           ORCALUT4        4         0.3
+                            FD1S3IX        2         1.1
+                           ORCALUT4        3         0.2
                                 VHI        1         6.7
-                                VLO        1         6.7
                             
-                         TOTAL             8           
+                         TOTAL             6           
 ----------------------------------------------------------------------
 Report for cell loraModulator.netlist
      Instance path:  loraModulator_0
@@ -79,16 +74,14 @@ Report for cell loraModulator.netlist
                                cell       count    Res Usage(%)
                              ALU54B        3       100.0
                               CCU2C      150        80.2
-                            FD1P3AX       38        77.6
-                            FD1P3IX      143        72.6
-                            FD1S3IX       99        73.3
-                            FD1S3JX        2        66.7
-                                INV        1        16.7
+                            FD1S3AX      136        85.5
+                            FD1S3IX      104        56.5
+                                INV        2        22.2
                          MULT18X18D        6       100.0
-                           ORCALUT4     1466        92.0
-                              PFUMX       14        48.3
+                           ORCALUT4     1370        91.9
+                              PFUMX        3        12.5
                                 VHI        8        53.3
-                                VLO        8        53.3
+                                VLO        3        50.0
 SUB MODULES 
                              accInc        1       100.0
                      chirpGenerator        1       100.0
@@ -98,7 +91,7 @@ SUB MODULES
                            phaseInc        1       100.0
                            sinIdeal        1       100.0
                             
-                         TOTAL          1945           
+                         TOTAL          1792           
 ----------------------------------------------------------------------
 Report for cell chirpGenerator.netlist
      Instance path:  loraModulator_0.chirpGen0
@@ -106,43 +99,39 @@ Report for cell chirpGenerator.netlist
                                cell       count    Res Usage(%)
                              ALU54B        2        66.7
                               CCU2C      132        70.6
-                            FD1P3AX        1         2.0
-                            FD1P3IX      143        72.6
-                            FD1S3IX        1         0.7
+                            FD1S3IX      103        56.0
+                                INV        1        11.1
                          MULT18X18D        4        66.7
-                           ORCALUT4     1462        91.8
-                              PFUMX       14        48.3
+                           ORCALUT4     1366        91.6
+                              PFUMX        3        12.5
                                 VHI        5        33.3
-                                VLO        5        33.3
+                                VLO        1        16.7
 SUB MODULES 
                              accInc        1       100.0
                            cosIdeal        1       100.0
                            phaseInc        1       100.0
                            sinIdeal        1       100.0
                             
-                         TOTAL          1773           
+                         TOTAL          1621           
 ----------------------------------------------------------------------
 Report for cell sinIdeal.netlist
      Instance path:  loraModulator_0.chirpGen0.sinIdeal_0
                                           Cell usage:
                                cell       count    Res Usage(%)
-                           ORCALUT4      645        40.5
-                              PFUMX        5        17.2
+                           ORCALUT4      582        39.0
+                              PFUMX        3        12.5
                                 VHI        1         6.7
-                                VLO        1         6.7
                             
-                         TOTAL           652           
+                         TOTAL           586           
 ----------------------------------------------------------------------
 Report for cell cosIdeal.netlist
      Instance path:  loraModulator_0.chirpGen0.cosIdeal_0
                                           Cell usage:
                                cell       count    Res Usage(%)
-                           ORCALUT4      688        43.2
-                              PFUMX        9        31.0
+                           ORCALUT4      655        43.9
                                 VHI        1         6.7
-                                VLO        1         6.7
                             
-                         TOTAL           699           
+                         TOTAL           656           
 ----------------------------------------------------------------------
 Report for cell accInc.netlist
      Instance path:  loraModulator_0.chirpGen0.accInc_u1
@@ -151,9 +140,8 @@ Report for cell accInc.netlist
                               CCU2C       40        21.4
                            ORCALUT4       11         0.7
                                 VHI        1         6.7
-                                VLO        1         6.7
                             
-                         TOTAL            53           
+                         TOTAL            52           
 ----------------------------------------------------------------------
 Report for cell phaseInc.netlist
      Instance path:  loraModulator_0.chirpGen0.phase_u1
@@ -162,11 +150,11 @@ Report for cell phaseInc.netlist
                              ALU54B        2        66.7
                               CCU2C       64        34.2
                          MULT18X18D        4        66.7
-                           ORCALUT4      104         6.5
+                           ORCALUT4      105         7.0
                                 VHI        1         6.7
-                                VLO        1         6.7
+                                VLO        1        16.7
                             
-                         TOTAL           176           
+                         TOTAL           177           
 ----------------------------------------------------------------------
 Report for cell initialPhase.netlist
      Instance path:  loraModulator_0.initPhase0
@@ -174,24 +162,22 @@ Report for cell initialPhase.netlist
                                cell       count    Res Usage(%)
                              ALU54B        1        33.3
                               CCU2C       18         9.6
-                            FD1P3AX       34        69.4
+                            FD1S3AX       34        21.4
                          MULT18X18D        2        33.3
-                           ORCALUT4        2         0.1
+                           ORCALUT4        1         0.1
                                 VHI        1         6.7
-                                VLO        1         6.7
+                                VLO        1        16.7
                             
-                         TOTAL            59           
+                         TOTAL            58           
 ----------------------------------------------------------------------
 Report for cell constant.netlist
      Instance path:  loraModulator_0.constant0
                                           Cell usage:
                                cell       count    Res Usage(%)
-                            FD1P3AX        2         4.1
-                            FD1S3IX       98        72.6
-                            FD1S3JX        2        66.7
+                            FD1S3AX      102        64.2
                            ORCALUT4        2         0.1
                                 VHI        1         6.7
-                                VLO        1         6.7
+                                VLO        1        16.7
                             
                          TOTAL           106           
 ----------------------------------------------------------------------
@@ -200,27 +186,25 @@ Report for cell loraPacketGenerator.netlist
                                           Cell usage:
                                cell       count    Res Usage(%)
                               CCU2C       16         8.6
-                            FD1P3AX       11        22.4
-                            FD1P3IX       34        17.3
-                            FD1S3IX        4         3.0
-                            FD1S3JX        1        33.3
-                           ORCALUT4       50         3.1
-                              PFUMX        7        24.1
+                            FD1S3AX       19        11.9
+                            FD1S3AY        1       100.0
+                            FD1S3IX       31        16.8
+                           ORCALUT4       49         3.3
+                              PFUMX        8        33.3
                                 VHI        1         6.7
-                                VLO        1         6.7
+                                VLO        1        16.7
                             
-                         TOTAL           125           
+                         TOTAL           126           
 ----------------------------------------------------------------------
 Report for cell counter.netlist
      Instance path:  counter_0
                                           Cell usage:
                                cell       count    Res Usage(%)
                               CCU2C       11         5.9
-                            FD1P3IX       20        10.2
-                            FD1S3IX        1         0.7
-                           ORCALUT4       14         0.9
+                            FD1S3IX       21        11.4
+                                INV        2        22.2
+                           ORCALUT4       13         0.9
                                 VHI        1         6.7
-                                VLO        1         6.7
                             
                          TOTAL            48           
 ----------------------------------------------------------------------
@@ -229,23 +213,21 @@ Report for cell clockDivider.netlist
                                           Cell usage:
                                cell       count    Res Usage(%)
                               CCU2C       10         5.3
-                            FD1S3AX        1       100.0
-                            FD1S3IX       17        12.6
-                                INV        2        33.3
+                            FD1S3IX       18         9.8
+                                INV        2        22.2
                            ORCALUT4        6         0.4
                                 VHI        1         6.7
-                                VLO        1         6.7
                             
-                         TOTAL            38           
+                         TOTAL            37           
 ----------------------------------------------------------------------
 Report for cell my_pll_64mhz.netlist
      Instance path:  my_pll_instance
                                           Cell usage:
                                cell       count    Res Usage(%)
                             EHXPLLL        1       100.0
-                                INV        1        16.7
+                                INV        1        11.1
                            PLLREFCS        1       100.0
                                 VHI        1         6.7
-                                VLO        1         6.7
+                                VLO        1        16.7
                             
                          TOTAL             5           

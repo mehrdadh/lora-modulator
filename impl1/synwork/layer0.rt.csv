@@ -1,0 +1,20 @@
+Library, Design Unit, compile Time, Peak Mem Usage
+work, topModule, 0h:00m:00s,     80 MB
+work, IQSerializer, 0h:00m:00s,     80 MB
+work, DEDFF, 0h:00m:00s,     80 MB
+work, loraModulator, 0h:00m:00s,     80 MB
+work, chirpGenerator, 0h:00m:00s,     80 MB
+work, sinIdeal, 0h:00m:00s,     80 MB
+work, cosIdeal, 0h:00m:00s,     80 MB
+work, accInc, 0h:00m:00s,     80 MB
+work, phaseInc, 0h:00m:00s,     80 MB
+work, initialPhase, 0h:00m:00s,     80 MB
+work, constant, 0h:00m:00s,     80 MB
+work, loraPacketGenerator, 0h:00m:00s,     81 MB
+work, counter, 0h:00m:00s,     81 MB
+work, clockDivider, 0h:00m:00s,     81 MB
+work, my_pll_64mhz, 0h:00m:00s,     81 MB
+work, PLLREFCS, 0h:00m:00s,     81 MB
+work, EHXPLLL, 0h:00m:00s,     81 MB
+work, VLO, 0h:00m:00s,     81 MB
+work, VHI, 0h:00m:00s,     81 MB

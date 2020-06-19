@@ -1,0 +1,129 @@
+//
+// Written by Synplify Pro 
+// Product Version "M-2017.03L-SP1-1"
+// Program "Synplify Pro", Mapper "maplat, Build 1796R"
+// Fri Apr  5 11:20:58 2019
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "\c:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v "
+// file 1 "\c:\lscc\diamond\3.10_x64\synpbase\lib\lucent\pmi_def.v "
+// file 2 "\c:\lscc\diamond\3.10_x64\synpbase\lib\vlog\hypermods.v "
+// file 3 "\c:\lscc\diamond\3.10_x64\synpbase\lib\vlog\umr_capim.v "
+// file 4 "\c:\lscc\diamond\3.10_x64\synpbase\lib\vlog\scemi_objects.v "
+// file 5 "\c:\lscc\diamond\3.10_x64\synpbase\lib\vlog\scemi_pipes.svh "
+// file 6 "\c:\lscc\diamond\3.10_x64\cae_library\synthesis\verilog\ecp5u.v "
+// file 7 "\c:\lscc\diamond\3.10_x64\cae_library\synthesis\verilog\pmi_def.v "
+// file 8 "\c:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v "
+// file 9 "\c:\lscc\diamond\3.10_x64\synpbase\lib\nlconst.dat "
+// file 10 "\c:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.fdc "
+
+`timescale 100 ps/100 ps
+(* NGD_DRC_MASK=1 *)module my_pll_64mhz (
+  CLKI,
+  CLKI2,
+  SEL,
+  RST,
+  CLKOP,
+  LOCK
+)
+;
+input CLKI ;
+input CLKI2 ;
+input SEL ;
+input RST ;
+output CLKOP ;
+output LOCK ;
+wire CLKI ;
+wire CLKI2 ;
+wire SEL ;
+wire RST ;
+wire CLKOP ;
+wire LOCK ;
+wire CLKOS ;
+wire CLKOS2 ;
+wire CLKOS3 ;
+wire INTLOCK ;
+wire CLKINTFB ;
+wire CLKIt ;
+wire REFCLK ;
+wire GND ;
+wire VCC ;
+  VLO GND_0 (
+	.Z(GND)
+);
+  VHI VCC_0 (
+	.Z(VCC)
+);
+  PUR PUR_INST (
+	.PUR(VCC)
+);
+  GSR GSR_INST (
+	.GSR(VCC)
+);
+// @8:69
+  PLLREFCS PLLRefcs_0 (
+	.CLK0(CLKI),
+	.CLK1(CLKI2),
+	.SEL(SEL),
+	.PLLCSOUT(CLKIt)
+);
+// @8:58
+(* FREQUENCY_PIN_CLKOP="64.000000" , FREQUENCY_PIN_CLKI="32.000000" , ICP_CURRENT="5" , LPF_RESISTOR="16" *)  EHXPLLL PLLInst_0 (
+	.CLKI(CLKIt),
+	.CLKFB(CLKOP),
+	.PHASESEL1(GND),
+	.PHASESEL0(GND),
+	.PHASEDIR(GND),
+	.PHASESTEP(GND),
+	.PHASELOADREG(GND),
+	.STDBY(GND),
+	.PLLWAKESYNC(GND),
+	.RST(RST),
+	.ENCLKOP(GND),
+	.ENCLKOS(GND),
+	.ENCLKOS2(GND),
+	.ENCLKOS3(GND),
+	.CLKOP(CLKOP),
+	.CLKOS(CLKOS),
+	.CLKOS2(CLKOS2),
+	.CLKOS3(CLKOS3),
+	.LOCK(LOCK),
+	.INTLOCK(INTLOCK),
+	.REFCLK(REFCLK),
+	.CLKINTFB(CLKINTFB)
+);
+defparam PLLInst_0.CLKI_DIV = 1;
+defparam PLLInst_0.CLKFB_DIV = 2;
+defparam PLLInst_0.CLKOP_DIV = 9;
+defparam PLLInst_0.CLKOS_DIV = 1;
+defparam PLLInst_0.CLKOS2_DIV = 1;
+defparam PLLInst_0.CLKOS3_DIV = 1;
+defparam PLLInst_0.CLKOP_ENABLE = "ENABLED";
+defparam PLLInst_0.CLKOS_ENABLE = "DISABLED";
+defparam PLLInst_0.CLKOS2_ENABLE = "DISABLED";
+defparam PLLInst_0.CLKOS3_ENABLE = "DISABLED";
+defparam PLLInst_0.CLKOP_CPHASE = 8;
+defparam PLLInst_0.CLKOS_CPHASE = 0;
+defparam PLLInst_0.CLKOS2_CPHASE = 0;
+defparam PLLInst_0.CLKOS3_CPHASE = 0;
+defparam PLLInst_0.CLKOP_FPHASE = 0;
+defparam PLLInst_0.CLKOS_FPHASE = 0;
+defparam PLLInst_0.CLKOS2_FPHASE = 0;
+defparam PLLInst_0.CLKOS3_FPHASE = 0;
+defparam PLLInst_0.FEEDBK_PATH = "CLKOP";
+defparam PLLInst_0.CLKOP_TRIM_POL = "FALLING";
+defparam PLLInst_0.CLKOP_TRIM_DELAY = 0;
+defparam PLLInst_0.CLKOS_TRIM_POL = "FALLING";
+defparam PLLInst_0.CLKOS_TRIM_DELAY = 0;
+defparam PLLInst_0.OUTDIVIDER_MUXA = "DIVA";
+defparam PLLInst_0.OUTDIVIDER_MUXB = "DIVB";
+defparam PLLInst_0.OUTDIVIDER_MUXC = "DIVC";
+defparam PLLInst_0.OUTDIVIDER_MUXD = "DIVD";
+defparam PLLInst_0.PLL_LOCK_MODE = 0;
+defparam PLLInst_0.STDBY_ENABLE = "DISABLED";
+defparam PLLInst_0.DPHASE_SOURCE = "DISABLED";
+defparam PLLInst_0.PLLRST_ENA = "ENABLED";
+defparam PLLInst_0.INTFB_WAKE = "DISABLED";
+endmodule /* my_pll_64mhz */
+

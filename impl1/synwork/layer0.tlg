@@ -1,69 +1,90 @@
 Selecting top level module topModule
-@N: CG364 :"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v":757:7:757:9|Synthesizing module VHI in library work.
-@N: CG364 :"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v":761:7:761:9|Synthesizing module VLO in library work.
-@N: CG364 :"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
-@N: CG364 :"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v":1568:7:1568:14|Synthesizing module PLLREFCS in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":8:7:8:18|Synthesizing module my_pll_64mhz in library work.
-@W: CL168 :"C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":22:8:22:21|Removing instance scuba_vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\clockDivider.v":14:7:14:18|Synthesizing module clockDivider in library work.
-@N: CG179 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\clockDivider.v":43:23:43:28|Removing redundant assignment.
-@N: CG179 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\clockDivider.v":50:23:50:29|Removing redundant assignment.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":17:7:17:13|Synthesizing module counter in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":16:7:16:25|Synthesizing module loraPacketGenerator in library work.
-@N: CG179 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":137:39:137:53|Removing redundant assignment.
-@N: CG179 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":138:39:138:52|Removing redundant assignment.
-@N: CG179 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":361:26:361:36|Removing redundant assignment.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit BW_select[0] is always 1.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit BW_select[1] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit BW_select[2] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit SF_select[0] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit SF_select[1] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit SF_select[2] is always 1.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[0] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[1] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[2] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[3] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[4] is always 1.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[5] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[6] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[7] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[8] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[9] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[10] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[11] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[12] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[13] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[0] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[1] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[2] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[3] is always 1.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[4] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[5] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[6] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[7] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[8] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[9] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[10] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[11] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[12] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[13] is always 0.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\constant.v":15:7:15:14|Synthesizing module constant in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\initialPhase.v":15:7:15:18|Synthesizing module initialPhase in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\phaseInc.v":16:7:16:14|Synthesizing module phaseInc in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\accInc.v":15:7:15:12|Synthesizing module accInc in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\cosIdeal.v":4:7:4:14|Synthesizing module cosIdeal in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\sinIdeal.v":4:7:4:14|Synthesizing module sinIdeal in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\chirpGenerator.v":22:7:22:20|Synthesizing module chirpGenerator in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loRaModulator.v":19:7:19:19|Synthesizing module loraModulator in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\DEDFF.v":21:7:21:11|Synthesizing module DEDFF in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v":20:7:20:18|Synthesizing module IQSerializer in library work.
-@W:"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v":71:33:71:44|Index into variable I could be out of range - a simulation mismatch is possible
-@W:"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v":72:33:72:44|Index into variable I could be out of range - a simulation mismatch is possible
-@W:"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v":79:33:79:44|Index into variable Q could be out of range - a simulation mismatch is possible
-@W:"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v":80:33:80:44|Index into variable Q could be out of range - a simulation mismatch is possible
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\topModule.v":8:7:8:15|Synthesizing module topModule in library work.
-@W: CG781 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\topModule.v":77:7:77:7|Input CLKI on instance my_pll_instance is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@N: CL201 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v":121:0:121:5|Trying to extract state machine for register current_state.
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\ecp5u.v":757:7:757:9|Synthesizing module VHI in library work.
+Running optimization stage 1 on VHI .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\ecp5u.v":761:7:761:9|Synthesizing module VLO in library work.
+Running optimization stage 1 on VLO .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+Running optimization stage 1 on EHXPLLL .......
+@N: CG364 :"C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\ecp5u.v":1568:7:1568:14|Synthesizing module PLLREFCS in library work.
+Running optimization stage 1 on PLLREFCS .......
+@N: CG364 :"Z:\tmp\lora-modulator\project\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":8:7:8:18|Synthesizing module my_pll_64mhz in library work.
+Running optimization stage 1 on my_pll_64mhz .......
+@W: CL168 :"Z:\tmp\lora-modulator\project\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":22:8:22:21|Removing instance scuba_vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\clockDivider.v":14:7:14:18|Synthesizing module clockDivider in library work.
+@N: CG179 :"Z:\tmp\lora-modulator\source\rtl\clockDivider.v":43:23:43:28|Removing redundant assignment.
+@N: CG179 :"Z:\tmp\lora-modulator\source\rtl\clockDivider.v":50:23:50:29|Removing redundant assignment.
+Running optimization stage 1 on clockDivider .......
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\counter.v":17:7:17:13|Synthesizing module counter in library work.
+Running optimization stage 1 on counter .......
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":16:7:16:25|Synthesizing module loraPacketGenerator in library work.
+@N: CG179 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":137:39:137:53|Removing redundant assignment.
+@N: CG179 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":138:39:138:52|Removing redundant assignment.
+@N: CG179 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":361:26:361:36|Removing redundant assignment.
+Running optimization stage 1 on loraPacketGenerator .......
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":58:0:58:5|Register bit BW_select[0] is always 1.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":58:0:58:5|Register bit BW_select[1] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":58:0:58:5|Register bit BW_select[2] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":58:0:58:5|Register bit SF_select[0] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":58:0:58:5|Register bit SF_select[1] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":58:0:58:5|Register bit SF_select[2] is always 1.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[0] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[1] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[2] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[3] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[4] is always 1.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[5] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[6] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[7] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[8] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[9] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[10] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[11] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[12] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[13] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[0] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[1] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[2] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[3] is always 1.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[4] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[5] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[6] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[7] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[8] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[9] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[10] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[11] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[12] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[13] is always 0.
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\constant.v":15:7:15:14|Synthesizing module constant in library work.
+Running optimization stage 1 on constant .......
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\initialPhase.v":15:7:15:18|Synthesizing module initialPhase in library work.
+Running optimization stage 1 on initialPhase .......
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\phaseInc.v":16:7:16:14|Synthesizing module phaseInc in library work.
+Running optimization stage 1 on phaseInc .......
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\accInc.v":15:7:15:12|Synthesizing module accInc in library work.
+Running optimization stage 1 on accInc .......
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\cosIdeal.v":4:7:4:14|Synthesizing module cosIdeal in library work.
+Running optimization stage 1 on cosIdeal .......
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\sinIdeal.v":4:7:4:14|Synthesizing module sinIdeal in library work.
+Running optimization stage 1 on sinIdeal .......
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\chirpGenerator.v":22:7:22:20|Synthesizing module chirpGenerator in library work.
+Running optimization stage 1 on chirpGenerator .......
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\loRaModulator.v":19:7:19:19|Synthesizing module loraModulator in library work.
+Running optimization stage 1 on loraModulator .......
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\DEDFF.v":21:7:21:11|Synthesizing module DEDFF in library work.
+Running optimization stage 1 on DEDFF .......
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\IQSerializer.v":20:7:20:18|Synthesizing module IQSerializer in library work.
+@W: CG1340 :"Z:\tmp\lora-modulator\source\rtl\IQSerializer.v":71:33:71:44|Index into variable I could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"Z:\tmp\lora-modulator\source\rtl\IQSerializer.v":72:33:72:44|Index into variable I could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"Z:\tmp\lora-modulator\source\rtl\IQSerializer.v":79:33:79:44|Index into variable Q could be out of range ; a simulation mismatch is possible.
+@W: CG1340 :"Z:\tmp\lora-modulator\source\rtl\IQSerializer.v":80:33:80:44|Index into variable Q could be out of range ; a simulation mismatch is possible.
+Running optimization stage 1 on IQSerializer .......
+@N: CG364 :"Z:\tmp\lora-modulator\source\rtl\topModule.v":8:7:8:15|Synthesizing module topModule in library work.
+@W: CG781 :"Z:\tmp\lora-modulator\source\rtl\topModule.v":77:7:77:7|Input CLKI on instance my_pll_instance is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+Running optimization stage 1 on topModule .......
+Running optimization stage 2 on topModule .......
+Running optimization stage 2 on IQSerializer .......
+@N: CL201 :"Z:\tmp\lora-modulator\source\rtl\IQSerializer.v":121:0:121:5|Trying to extract state machine for register current_state.
 Extracted state machine for register current_state
 State machine has 5 reachable states with original encodings of:
    0000
@@ -71,11 +92,21 @@ State machine has 5 reachable states with original encodings of:
    0011
    0100
    0101
-@W: CL246 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\sinIdeal.v":6:24:6:28|Input port bits 13 to 0 of angle[33:0] are unused. Assign logic for all port bits or change the input port size.
-@W: CL246 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\cosIdeal.v":6:24:6:28|Input port bits 13 to 0 of angle[33:0] are unused. Assign logic for all port bits or change the input port size.
-@N: CL159 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\initialPhase.v":20:39:20:44|Input offset is unused.
-@N: CL159 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\initialPhase.v":21:40:21:49|Input chirp_size is unused.
-@N: CL201 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":112:0:112:5|Trying to extract state machine for register current_state.
+Running optimization stage 2 on DEDFF .......
+Running optimization stage 2 on loraModulator .......
+Running optimization stage 2 on chirpGenerator .......
+Running optimization stage 2 on sinIdeal .......
+@W: CL246 :"Z:\tmp\lora-modulator\source\rtl\sinIdeal.v":6:24:6:28|Input port bits 13 to 0 of angle[33:0] are unused. Assign logic for all port bits or change the input port size.
+Running optimization stage 2 on cosIdeal .......
+@W: CL246 :"Z:\tmp\lora-modulator\source\rtl\cosIdeal.v":6:24:6:28|Input port bits 13 to 0 of angle[33:0] are unused. Assign logic for all port bits or change the input port size.
+Running optimization stage 2 on accInc .......
+Running optimization stage 2 on phaseInc .......
+Running optimization stage 2 on initialPhase .......
+@N: CL159 :"Z:\tmp\lora-modulator\source\rtl\initialPhase.v":20:39:20:44|Input offset is unused.
+@N: CL159 :"Z:\tmp\lora-modulator\source\rtl\initialPhase.v":21:40:21:49|Input chirp_size is unused.
+Running optimization stage 2 on constant .......
+Running optimization stage 2 on loraPacketGenerator .......
+@N: CL201 :"Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v":112:0:112:5|Trying to extract state machine for register current_state.
 Extracted state machine for register current_state
 State machine has 8 reachable states with original encodings of:
    00000
@@ -86,10 +117,22 @@ State machine has 8 reachable states with original encodings of:
    00101
    00110
    00111
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[20] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[21] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[22] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[23] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[24] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[25] is always 0.
-@W: CL279 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Pruning register bits 25 to 20 of waitcount[25:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Running optimization stage 2 on counter .......
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\counter.v":25:0:25:5|Register bit waitcount[20] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\counter.v":25:0:25:5|Register bit waitcount[21] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\counter.v":25:0:25:5|Register bit waitcount[22] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\counter.v":25:0:25:5|Register bit waitcount[23] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\counter.v":25:0:25:5|Register bit waitcount[24] is always 0.
+@N: CL189 :"Z:\tmp\lora-modulator\source\rtl\counter.v":25:0:25:5|Register bit waitcount[25] is always 0.
+@W: CL279 :"Z:\tmp\lora-modulator\source\rtl\counter.v":25:0:25:5|Pruning register bits 25 to 20 of waitcount[25:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Running optimization stage 2 on clockDivider .......
+Running optimization stage 2 on my_pll_64mhz .......
+Running optimization stage 2 on PLLREFCS .......
+Running optimization stage 2 on EHXPLLL .......
+Running optimization stage 2 on VLO .......
+Running optimization stage 2 on VHI .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: Z:\tmp\lora-modulator\impl1\synwork\layer0.rt.csv
+

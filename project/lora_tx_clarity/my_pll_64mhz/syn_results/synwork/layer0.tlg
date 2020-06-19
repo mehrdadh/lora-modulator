@@ -1,0 +1,7 @@
+Selecting top level module my_pll_64mhz
+@N: CG364 :"C:\lscc\diamond\3.10_x64\cae_library\synthesis\verilog\ecp5u.v":757:7:757:9|Synthesizing module VHI in library work.
+@N: CG364 :"C:\lscc\diamond\3.10_x64\cae_library\synthesis\verilog\ecp5u.v":761:7:761:9|Synthesizing module VLO in library work.
+@N: CG364 :"C:\lscc\diamond\3.10_x64\cae_library\synthesis\verilog\ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+@N: CG364 :"C:\lscc\diamond\3.10_x64\cae_library\synthesis\verilog\ecp5u.v":1568:7:1568:14|Synthesizing module PLLREFCS in library work.
+@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":8:7:8:18|Synthesizing module my_pll_64mhz in library work.
+@W: CL168 :"C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":22:8:22:21|Removing instance scuba_vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.

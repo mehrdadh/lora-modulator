@@ -1,0 +1,27 @@
+SCUBA, Version Diamond (64-bit) 3.10.3.144
+Fri Apr 05 11:20:51 2019
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+
+    Issued command   : C:\lscc\diamond\3.10_x64\ispfpga\bin\nt64\scuba.exe -w -n my_pll_64mhz -lang verilog -synth synplify -bus_exp 7 -bb -arch sa5p00 -type pll -fin 32 -fclkop 64 -fclkop_tol 0.0 -enable_sel -phase_cntl STATIC -rst -lock -fb_mode 1 -fdc C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.fdc 
+    Circuit name     : my_pll_64mhz
+    Module type      : pll
+    Module Version   : 5.7
+    Ports            : 
+	Inputs       : CLKI, CLKI2, SEL, RST
+	Outputs      : CLKOP, LOCK
+    I/O buffer       : not inserted
+    EDIF output      : my_pll_64mhz.edn
+    Verilog output   : my_pll_64mhz.v
+    Verilog template : my_pll_64mhz_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : my_pll_64mhz.srp
+    Element Usage    :
+        EHXPLLL : 1
+       PLLREFCS : 1
+    Estimated Resource Usage:

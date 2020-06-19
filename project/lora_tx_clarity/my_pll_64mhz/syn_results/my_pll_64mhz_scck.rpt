@@ -1,0 +1,28 @@
+# Synopsys Constraint Checker(syntax only), version maplat, Build 1796R, built Aug  4 2017
+# Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+# Written on Fri Apr  5 11:20:56 2019
+
+
+##### DESIGN INFO #######################################################
+
+Top View:                "my_pll_64mhz"
+Constraint File(s):      "C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.fdc"
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+          Start      Requested     Requested     Clock      Clock               Clock
+Level     Clock      Frequency     Period        Type       Group               Load 
+-------------------------------------------------------------------------------------
+0 -       System     100.0 MHz     10.000        system     system_clkgroup     0    
+=====================================================================================

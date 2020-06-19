@@ -1,15 +1,20 @@
-@P:  Worst Slack : -3.385
-@P:  my_pll_64mhz|CLKOP_inferred_clock - Estimated Frequency : 62.1 MHz
-@P:  my_pll_64mhz|CLKOP_inferred_clock - Requested Frequency : 107.1 MHz
-@P:  my_pll_64mhz|CLKOP_inferred_clock - Estimated Period : 16.111
-@P:  my_pll_64mhz|CLKOP_inferred_clock - Requested Period : 9.340
-@P:  my_pll_64mhz|CLKOP_inferred_clock - Slack : -3.385
-@P:  System - Estimated Frequency : 1.0 MHz
+@P:  Worst Slack : 489.965
+@P:  clockDivider|clkOut_derived_clock - Estimated Frequency : 49.8 MHz
+@P:  clockDivider|clkOut_derived_clock - Requested Frequency : 1.0 MHz
+@P:  clockDivider|clkOut_derived_clock - Estimated Period : 20.069
+@P:  clockDivider|clkOut_derived_clock - Requested Period : 1000.000
+@P:  clockDivider|clkOut_derived_clock - Slack : 489.965
+@P:  my_pll_64mhz|CLKOP_inferred_clock - Estimated Frequency : 49.8 MHz
+@P:  my_pll_64mhz|CLKOP_inferred_clock - Requested Frequency : 1.0 MHz
+@P:  my_pll_64mhz|CLKOP_inferred_clock - Estimated Period : 20.069
+@P:  my_pll_64mhz|CLKOP_inferred_clock - Requested Period : 1000.000
+@P:  my_pll_64mhz|CLKOP_inferred_clock - Slack : 496.110
+@P:  System - Estimated Frequency : 160.6 MHz
 @P:  System - Requested Frequency : 1.0 MHz
-@P:  System - Estimated Period : 996.785
+@P:  System - Estimated Period : 6.225
 @P:  System - Requested Period : 1000.000
-@P:  System - Slack : 3.215
-@P:  Total Area : 1599.0
+@P:  System - Slack : 993.775
+@P:  Total Area : 1500.0
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
@@ -24,4 +29,4 @@
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
-@P:  CPU Time : 0h:00m:21s
+@P:  CPU Time : 0h:00m:23s

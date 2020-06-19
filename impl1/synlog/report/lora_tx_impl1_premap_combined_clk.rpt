@@ -1,0 +1,22 @@
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+2 gated/generated clock tree(s) driving 344 clock pin(s) of sequential element(s)
+0 instances converted, 344 sequential instances remain driven by gated/generated clocks
+
+=========================================================================== Gated/Generated Clocks ===========================================================================
+Clock Tree ID     Driving Element                     Drive Element Type     Unconverted Fanout     Sample Instance                 Explanation                               
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_1       my_pll_instance.PLLInst_0.CLKOP     EHXPLLL                33                     clockDivider_0.counter[7:0]     Black box on clock path                   
+@KP:ckid0_3       clockDivider_0.clkOut.Q[0]          sdffre                 311                    loraModulator_0.IQStart         Derived clock on input (not legal for GCC)
+==============================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+

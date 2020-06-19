@@ -1,9 +1,10 @@
 #
-# Logical Preferences generated for Lattice by Synplify maplat, Build 1796R.
+# Logical Preferences generated for Lattice by Synplify maplat2018q2p1, Build 055R.
 #
 
 # Period Constraints 
-#FREQUENCY NET "my_pll_instance/pll_clko_0" 107.1 MHz;
+#FREQUENCY NET "my_pll_instance/pll_clko" 1.0 MHz;
+#FREQUENCY NET "clockDivider_0/clk_test_c" 1.0 MHz;
 
 
 # Output Constraints 
@@ -12,6 +13,7 @@
 
 # Point-to-point Delay Constraints 
 
+#MULTICYCLE FROM CLKNET "clockDivider_0/clk_test_c"  TO CLKNET "clockDivider_0/clk_test_c"  2X;
 
 
 # Block Path Constraints 

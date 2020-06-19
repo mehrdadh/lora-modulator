@@ -1,160 +1,17 @@
-Synopsys HDL Compiler, version comp2017q2p1, Build 190R, built Aug  4 2017
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: MEHRDADHESSC8F4
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
 @N|Running in 64-bit mode
-Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
-
-Synopsys Verilog Compiler, version comp2017q2p1, Build 190R, built Aug  4 2017
-@N|Running in 64-bit mode
-Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
-
-@I::"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v" (library work)
-@I::"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\pmi_def.v" (library work)
-@I::"C:\lscc\diamond\3.10_x64\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
-@I::"C:\lscc\diamond\3.10_x64\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
-@I::"C:\lscc\diamond\3.10_x64\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
-@I::"C:\lscc\diamond\3.10_x64\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\accInc.v" (library work)
-@I:"C:\work\tinysdr_fpga_lora_tx\impl1\source\accInc.v":"C:\work\tinysdr_fpga_lora_tx\impl1\source\LoRaTXDefines.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\chirpGenerator.v" (library work)
-@I:"C:\work\tinysdr_fpga_lora_tx\impl1\source\chirpGenerator.v":"C:\work\tinysdr_fpga_lora_tx\impl1\source\RadioDefines.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\clockDivider.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\constant.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\cosIdeal.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\DEDFF.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\initialPhase.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\loRaModulator.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\phaseInc.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\radioDefines.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\sinIdeal.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v" (library work)
-@I::"C:\work\tinysdr_fpga_lora_tx\impl1\source\topModule.v" (library work)
-Verilog syntax check successful!
-File C:\work\tinysdr_fpga_lora_tx\impl1\source\topModule.v changed - recompiling
-Selecting top level module topModule
-@N: CG364 :"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v":757:7:757:9|Synthesizing module VHI in library work.
-@N: CG364 :"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v":761:7:761:9|Synthesizing module VLO in library work.
-@N: CG364 :"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
-@N: CG364 :"C:\lscc\diamond\3.10_x64\synpbase\lib\lucent\ecp5u.v":1568:7:1568:14|Synthesizing module PLLREFCS in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":8:7:8:18|Synthesizing module my_pll_64mhz in library work.
-@W: CL168 :"C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v":22:8:22:21|Removing instance scuba_vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\clockDivider.v":14:7:14:18|Synthesizing module clockDivider in library work.
-@N: CG179 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\clockDivider.v":43:23:43:28|Removing redundant assignment.
-@N: CG179 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\clockDivider.v":50:23:50:29|Removing redundant assignment.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":17:7:17:13|Synthesizing module counter in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":16:7:16:25|Synthesizing module loraPacketGenerator in library work.
-@N: CG179 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":137:39:137:53|Removing redundant assignment.
-@N: CG179 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":138:39:138:52|Removing redundant assignment.
-@N: CG179 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":361:26:361:36|Removing redundant assignment.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit BW_select[0] is always 1.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit BW_select[1] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit BW_select[2] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit SF_select[0] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit SF_select[1] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":58:0:58:5|Register bit SF_select[2] is always 1.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[0] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[1] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[2] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[3] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[4] is always 1.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[5] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[6] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[7] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[8] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[9] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[10] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[11] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[12] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit payloadSize[13] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[0] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[1] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[2] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[3] is always 1.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[4] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[5] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[6] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[7] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[8] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[9] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[10] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[11] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[12] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":66:0:66:5|Register bit preambleSize[13] is always 0.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\constant.v":15:7:15:14|Synthesizing module constant in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\initialPhase.v":15:7:15:18|Synthesizing module initialPhase in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\phaseInc.v":16:7:16:14|Synthesizing module phaseInc in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\accInc.v":15:7:15:12|Synthesizing module accInc in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\cosIdeal.v":4:7:4:14|Synthesizing module cosIdeal in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\sinIdeal.v":4:7:4:14|Synthesizing module sinIdeal in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\chirpGenerator.v":22:7:22:20|Synthesizing module chirpGenerator in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loRaModulator.v":19:7:19:19|Synthesizing module loraModulator in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\DEDFF.v":21:7:21:11|Synthesizing module DEDFF in library work.
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v":20:7:20:18|Synthesizing module IQSerializer in library work.
-@W:"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v":71:33:71:44|Index into variable I could be out of range - a simulation mismatch is possible
-@W:"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v":72:33:72:44|Index into variable I could be out of range - a simulation mismatch is possible
-@W:"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v":79:33:79:44|Index into variable Q could be out of range - a simulation mismatch is possible
-@W:"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v":80:33:80:44|Index into variable Q could be out of range - a simulation mismatch is possible
-@N: CG364 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\topModule.v":8:7:8:15|Synthesizing module topModule in library work.
-@W: CG781 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\topModule.v":77:7:77:7|Input CLKI on instance my_pll_instance is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
-@N: CL201 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\IQSerializer.v":121:0:121:5|Trying to extract state machine for register current_state.
-Extracted state machine for register current_state
-State machine has 5 reachable states with original encodings of:
-   0000
-   0010
-   0011
-   0100
-   0101
-@W: CL246 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\sinIdeal.v":6:24:6:28|Input port bits 13 to 0 of angle[33:0] are unused. Assign logic for all port bits or change the input port size.
-@W: CL246 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\cosIdeal.v":6:24:6:28|Input port bits 13 to 0 of angle[33:0] are unused. Assign logic for all port bits or change the input port size.
-@N: CL159 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\initialPhase.v":20:39:20:44|Input offset is unused.
-@N: CL159 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\initialPhase.v":21:40:21:49|Input chirp_size is unused.
-@N: CL201 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\loraPacketGenerator.v":112:0:112:5|Trying to extract state machine for register current_state.
-Extracted state machine for register current_state
-State machine has 8 reachable states with original encodings of:
-   00000
-   00001
-   00010
-   00011
-   00100
-   00101
-   00110
-   00111
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[20] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[21] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[22] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[23] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[24] is always 0.
-@N: CL189 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Register bit waitcount[25] is always 0.
-@W: CL279 :"C:\work\tinysdr_fpga_lora_tx\impl1\source\counter.v":25:0:25:5|Pruning register bits 25 to 20 of waitcount[25:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
-
-At c_ver Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 79MB peak: 81MB)
-
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-
-Process completed successfully.
-# Fri Jun 28 11:18:40 2019
-
-###########################################################]
-Synopsys Netlist Linker, version comp2017q2p1, Build 190R, built Aug  4 2017
-@N|Running in 64-bit mode
-File C:\work\tinysdr_fpga_lora_tx\impl1\synwork\layer0.srs changed - recompiling
-
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 71MB peak: 72MB)
-
-Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-
-Process completed successfully.
-# Fri Jun 28 11:18:41 2019
-
-###########################################################]
-@END
-
-At c_hdl Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 3MB peak: 4MB)
-
-Process took 0h:00m:02s realtime, 0h:00m:01s cputime
-
-Process completed successfully.
-# Fri Jun 28 11:18:41 2019
-
-###########################################################]

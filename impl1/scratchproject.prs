@@ -1,30 +1,30 @@
 #--  Synopsys, Inc.
-#--  Version M-2017.03L-SP1-1
-#--  Project file C:\work\tinysdr_fpga_lora_tx\impl1\scratchproject.prs
+#--  Version N-2018.03L-SP1-1
+#--  Project file Z:\tmp\lora-modulator\impl1\scratchproject.prs
 
 #project files
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/accInc.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/chirpGenerator.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/clockDivider.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/constant.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/cosIdeal.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/counter.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/DEDFF.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/initialPhase.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/IQSerializer.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/loRaModulator.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/loraPacketGenerator.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/LoRaTXDefines.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/phaseInc.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/radioDefines.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/sinIdeal.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.v"
-add_file -verilog "C:/work/tinysdr_fpga_lora_tx/impl1/source/topModule.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/accInc.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/chirpGenerator.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/clockDivider.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/constant.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/cosIdeal.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/counter.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/DEDFF.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/initialPhase.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/IQSerializer.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/loRaModulator.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/loraPacketGenerator.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/LoRaTXDefines.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/phaseInc.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/radioDefines.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/sinIdeal.v"
+add_file -verilog "Z:/tmp/lora-modulator/source/rtl/topModule.v"
+add_file -verilog "Z:/tmp/lora-modulator/project/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.v"
 
 
 
 #implementation: "impl1"
-impl -add C:\work\tinysdr_fpga_lora_tx\impl1 -type fpga
+impl -add Z:\tmp\lora-modulator\impl1 -type fpga
 
 #
 #implementation attributes
@@ -32,8 +32,8 @@ impl -add C:\work\tinysdr_fpga_lora_tx\impl1 -type fpga
 set_option -vlog_std v2001
 set_option -project_relative_includes 1
 set_option -hdl_define -set SBP_SYNTHESIS
-set_option -include_path {C:/work/tinysdr_fpga_lora_tx/impl1/}
-set_option -include_path {C:/work/tinysdr_fpga_lora_tx}
+set_option -include_path {Z:/tmp/lora-modulator/impl1/}
+set_option -include_path {Z:/tmp/lora-modulator}
 
 #device options
 set_option -technology ECP5U
@@ -86,8 +86,8 @@ set_option -auto_infer_blackbox 0
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "C:/work/tinysdr_fpga_lora_tx/impl1/lora_tx_impl1.edi"
+project -result_file "Z:/tmp/lora-modulator/impl1/lora_tx_impl1.edi"
 
 #set log file 
-set_option log_file "C:/work/tinysdr_fpga_lora_tx/impl1/lora_tx_impl1.srf" 
+set_option log_file "Z:/tmp/lora-modulator/impl1/lora_tx_impl1.srf" 
 impl -active "impl1"

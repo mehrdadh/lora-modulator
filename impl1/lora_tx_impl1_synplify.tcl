@@ -42,32 +42,33 @@ set_option -update_models_cp 0
 set_option -resolve_multiple_driver 0
 
 
+
 #-- add_file options
 set_option -hdl_define -set SBP_SYNTHESIS
-set_option -include_path {C:/work/tinysdr_fpga_lora_tx}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/accInc.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/chirpGenerator.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/clockDivider.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/constant.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/cosIdeal.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/counter.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/DEDFF.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/initialPhase.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/IQSerializer.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/loRaModulator.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/loraPacketGenerator.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/LoRaTXDefines.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/phaseInc.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/radioDefines.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/sinIdeal.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.v}
-add_file -verilog {C:/work/tinysdr_fpga_lora_tx/impl1/source/topModule.v}
+set_option -include_path {Z:/tmp/lora-modulator}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/accInc.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/chirpGenerator.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/clockDivider.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/constant.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/cosIdeal.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/counter.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/DEDFF.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/initialPhase.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/IQSerializer.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/loRaModulator.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/loraPacketGenerator.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/LoRaTXDefines.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/phaseInc.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/radioDefines.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/sinIdeal.v}
+add_file -verilog {Z:/tmp/lora-modulator/source/rtl/topModule.v}
+add_file -verilog {Z:/tmp/lora-modulator/project/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.v}
 
 #-- top module name
 set_option -top_module topModule
 
 #-- set result format/file last
-project -result_file {C:/work/tinysdr_fpga_lora_tx/impl1/lora_tx_impl1.edi}
+project -result_file {Z:/tmp/lora-modulator/impl1/lora_tx_impl1.edi}
 
 #-- error message log file
 project -log_file {lora_tx_impl1.srf}

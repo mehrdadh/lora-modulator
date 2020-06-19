@@ -1,0 +1,128 @@
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: MEHRDADHESSC8F4
+
+Implementation : impl1
+Synopsys HDL compiler and linker, Version comp2018q2p1, Build 461R, Built Apr  1 2019 09:17:43
+
+Modified Files: 36
+FID:  path (prevtimestamp, timestamp)
+51       Z:\tmp\lora-modulator\impl1\source\DEDFF.v (2020-06-18 21:12:48, N/A)
+52       Z:\tmp\lora-modulator\impl1\source\IQSerializer.v (2020-06-18 21:12:48, N/A)
+53       Z:\tmp\lora-modulator\impl1\source\LoRaTXDefines.v (2020-06-18 21:12:48, N/A)
+54       Z:\tmp\lora-modulator\impl1\source\RadioDefines.v (2020-06-18 21:12:48, N/A)
+55       Z:\tmp\lora-modulator\impl1\source\accInc.v (2020-06-18 21:12:48, N/A)
+56       Z:\tmp\lora-modulator\impl1\source\chirpGenerator.v (2020-06-18 21:12:48, N/A)
+57       Z:\tmp\lora-modulator\impl1\source\clockDivider.v (2020-06-18 21:12:48, N/A)
+58       Z:\tmp\lora-modulator\impl1\source\constant.v (2020-06-18 21:12:48, N/A)
+59       Z:\tmp\lora-modulator\impl1\source\cosIdeal.v (2020-06-18 21:12:48, N/A)
+60       Z:\tmp\lora-modulator\impl1\source\counter.v (2020-06-18 21:12:48, N/A)
+61       Z:\tmp\lora-modulator\impl1\source\initialPhase.v (2020-06-18 21:12:48, N/A)
+62       Z:\tmp\lora-modulator\impl1\source\loRaModulator.v (2020-06-18 21:12:48, N/A)
+63       Z:\tmp\lora-modulator\impl1\source\loraPacketGenerator.v (2020-06-18 21:12:48, N/A)
+64       Z:\tmp\lora-modulator\impl1\source\phaseInc.v (2020-06-18 21:12:48, N/A)
+65       Z:\tmp\lora-modulator\impl1\source\radioDefines.v (2020-06-18 21:12:48, N/A)
+66       Z:\tmp\lora-modulator\impl1\source\sinIdeal.v (2020-06-18 21:12:48, N/A)
+67       Z:\tmp\lora-modulator\impl1\source\topModule.v (2020-06-18 21:12:48, N/A)
+68       Z:\tmp\lora-modulator\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v (2020-06-18 21:12:48, N/A)
+69       Z:\tmp\lora-modulator\project\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v (N/A, 2020-06-18 21:12:48)
+70       Z:\tmp\lora-modulator\source\rtl\DEDFF.v (N/A, 2020-06-18 21:12:48)
+71       Z:\tmp\lora-modulator\source\rtl\IQSerializer.v (N/A, 2020-06-18 21:12:48)
+72       Z:\tmp\lora-modulator\source\rtl\LoRaTXDefines.v (N/A, 2020-06-18 21:12:48)
+73       Z:\tmp\lora-modulator\source\rtl\RadioDefines.v (N/A, 2020-06-18 21:12:48)
+74       Z:\tmp\lora-modulator\source\rtl\accInc.v (N/A, 2020-06-18 21:12:48)
+75       Z:\tmp\lora-modulator\source\rtl\chirpGenerator.v (N/A, 2020-06-18 21:12:48)
+76       Z:\tmp\lora-modulator\source\rtl\clockDivider.v (N/A, 2020-06-18 21:12:48)
+77       Z:\tmp\lora-modulator\source\rtl\constant.v (N/A, 2020-06-18 21:12:48)
+78       Z:\tmp\lora-modulator\source\rtl\cosIdeal.v (N/A, 2020-06-18 21:12:48)
+79       Z:\tmp\lora-modulator\source\rtl\counter.v (N/A, 2020-06-18 21:12:48)
+80       Z:\tmp\lora-modulator\source\rtl\initialPhase.v (N/A, 2020-06-18 21:12:48)
+81       Z:\tmp\lora-modulator\source\rtl\loRaModulator.v (N/A, 2020-06-18 21:12:48)
+82       Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v (N/A, 2020-06-18 21:12:48)
+83       Z:\tmp\lora-modulator\source\rtl\phaseInc.v (N/A, 2020-06-18 21:12:48)
+84       Z:\tmp\lora-modulator\source\rtl\radioDefines.v (N/A, 2020-06-18 21:12:48)
+85       Z:\tmp\lora-modulator\source\rtl\sinIdeal.v (N/A, 2020-06-18 21:12:48)
+86       Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 15
+MID:  lib.cell.view
+0        work.DEDFF.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\DEDFF.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\IQSerializer.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+1        work.IQSerializer.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\IQSerializer.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+3        work.accInc.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\accInc.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\chirpGenerator.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+                        Z:\tmp\lora-modulator\source\rtl\loRaModulator.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+4        work.chirpGenerator.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\chirpGenerator.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\loRaModulator.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+5        work.clockDivider.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\clockDivider.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+6        work.constant.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\constant.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\loRaModulator.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+7        work.cosIdeal.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\chirpGenerator.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+                        Z:\tmp\lora-modulator\source\rtl\cosIdeal.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\loRaModulator.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+8        work.counter.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\counter.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+9        work.initialPhase.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\initialPhase.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\loRaModulator.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+10       work.loraModulator.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\loRaModulator.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+11       work.loraPacketGenerator.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\loraPacketGenerator.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+12       work.my_pll_64mhz.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\project\lora_tx_clarity\my_pll_64mhz\my_pll_64mhz.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+13       work.phaseInc.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\chirpGenerator.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+                        Z:\tmp\lora-modulator\source\rtl\loRaModulator.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+                        Z:\tmp\lora-modulator\source\rtl\phaseInc.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+14       work.sinIdeal.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\chirpGenerator.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+                        Z:\tmp\lora-modulator\source\rtl\loRaModulator.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+                        Z:\tmp\lora-modulator\source\rtl\sinIdeal.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (may instantiate this module)
+18       work.topModule.verilog may have changed because the following files changed:
+                        Z:\tmp\lora-modulator\source\rtl\topModule.v (N/A, 2020-06-18 21:12:48) <-- (module definition)
+
+*******************************************************************
+Unmodified files: 6
+FID:  path (timestamp)
+45       C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\ecp5u.v (2019-04-01 09:08:08)
+46       C:\lscc\diamond\3.11_x64\synpbase\lib\lucent\pmi_def.v (2019-04-01 09:08:08)
+47       C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\hypermods.v (2019-04-01 09:07:44)
+48       C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\scemi_objects.v (2019-04-01 09:07:44)
+49       C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\scemi_pipes.svh (2019-04-01 09:07:44)
+50       C:\lscc\diamond\3.11_x64\synpbase\lib\vlog\umr_capim.v (2019-04-01 09:07:44)
+
+*******************************************************************
+Unchanged modules: 0
+MID:  lib.cell.view

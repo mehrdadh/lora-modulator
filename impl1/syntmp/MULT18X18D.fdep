@@ -1,14 +1,14 @@
-#OPTIONS:"|-modgen|-top|MULT18X18D|-I|C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib|-devicelib|C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib\\xilinx\\unisim.v|-encrypt|-pro|-sysv|-dw|-primux|-ram|-fixsmult|-tri_compatible|-autosm|-fid2|-sharing|on|-ll|2000|-params|C:\\work\\tinysdr_fpga_lora_tx\\impl1\\syntmp\\MULT18X18D.param"
-#CUR:"C:\\lscc\\diamond\\3.10_x64\\synpbase\\bin64\\c_ver.exe":1501917216
-#CUR:"C:\\work\\tinysdr_fpga_lora_tx\\impl1\\syntmp\\MULT18X18D.param":1561745947
-#CUR:"C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib\\vlog\\hypermods.v":1501916624
-#CUR:"C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib\\vlog\\umr_capim.v":1501916624
-#CUR:"C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib\\vlog\\scemi_objects.v":1501916624
-#CUR:"C:\\lscc\\diamond\\3.10_x64\\synpbase\\lib\\vlog\\scemi_pipes.svh":1501916624
-#CUR:"C:\\work\\tinysdr_fpga_lora_tx\\impl1\\syntmp\\MULT18X18D.v":1501922464
+#OPTIONS:"|-modgen|-top|MULT18X18D|-I|C:\\lscc\\diamond\\3.11_x64\\synpbase\\lib|-devicelib|C:\\lscc\\diamond\\3.11_x64\\synpbase\\lib\\xilinx\\unisim.v|-encrypt|-pro|-sysv|-dw|-primux|-ram|-fixsmult|-tri_compatible|-autosm|-fid2|-sharing|on|-ll|2000|-params|Z:\\tmp\\lora-modulator\\impl1\\syntmp\\MULT18X18D.param"
+#CUR:"C:\\lscc\\diamond\\3.11_x64\\synpbase\\bin64\\c_ver.exe":1554135558
+#CUR:"C:\\lscc\\diamond\\3.11_x64\\synpbase\\lib\\vlog\\hypermods.v":1554134864
+#CUR:"C:\\lscc\\diamond\\3.11_x64\\synpbase\\lib\\vlog\\umr_capim.v":1554134864
+#CUR:"C:\\lscc\\diamond\\3.11_x64\\synpbase\\lib\\vlog\\scemi_objects.v":1554134864
+#CUR:"C:\\lscc\\diamond\\3.11_x64\\synpbase\\lib\\vlog\\scemi_pipes.svh":1554134864
+#CUR:"Z:\\tmp\\lora-modulator\\impl1\\syntmp\\MULT18X18D.v":1554136120
+#CUR:"Z:\\tmp\\lora-modulator\\impl1\\syntmp\\MULT18X18D.param":1592542645
 #numinternalfiles:4
 #defaultlanguage:verilog
-0			"C:\work\tinysdr_fpga_lora_tx\impl1\syntmp\MULT18X18D.v" verilog
+0			"Z:\tmp\lora-modulator\impl1\syntmp\MULT18X18D.v" verilog
 #Dependency Lists(Uses List)
 0 -1
 #Dependency Lists(Users Of)

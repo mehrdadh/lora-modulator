@@ -1,0 +1,16 @@
+----------------------------------------------------------------------
+Report for cell my_pll_64mhz.verilog
+
+Register bits: 0 of 12096 (0%)
+PIC Latch:       0
+I/O cells:       0
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            EHXPLLL        1       100.0
+                                GSR        1       100.0
+                           PLLREFCS        1       100.0
+                                PUR        1       100.0
+                                VHI        1       100.0
+                                VLO        1       100.0
+                            
+                         TOTAL             6           

@@ -1,0 +1,2 @@
+ckid0_1:@|S:my_pll_instance.PLLInst_0.CLKOP@|E:clockDivider_0.counter[7:0]@|F:@syn_dgcc_clockid0_1==1@|M:ClockId_0_1
+ckid0_3:@|S:clockDivider_0.clkOut.Q[0]@|E:loraModulator_0.IQStart@|F:@syn_dgcc_clockid0_3==1@|M:ClockId_0_3

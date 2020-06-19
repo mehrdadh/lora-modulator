@@ -1,57 +1,48 @@
 <html><body><samp><pre>
-<!@TC:1561421448>
-# Mon Jun 24 17:10:47 2019
+<!@TC:1592541161>
+# Thu Jun 18 21:32:40 2020
 
-<a name=mapperReport5></a>Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1796R, Built Aug  4 2017 11:10:16</a>
-Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
-Product Version M-2017.03L-SP1-1
+
+Copyright (C) 1994-2018 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: N-2018.03L-SP1-1
+Install: C:\lscc\diamond\3.11_x64\synpbase
+OS: Windows 6.2
+
+Hostname: MEHRDADHESSC8F4
+
+Implementation : impl1
+<a name=mapperReport3></a>Synopsys Lattice Technology Pre-mapping, Version maplat2018q2p1, Build 055R, Built Apr  3 2019 09:51:54</a>
+
 
 Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
 
-@A:<a href="@A:MF827:@XP_HELP">MF827</a> : <!@TM:1561421448> | No constraint file specified. 
-Linked File: <a href="C:\work\tinysdr_fpga_lora_tx\impl1\lora_tx_impl1_scck.rpt:@XP_FILE">lora_tx_impl1_scck.rpt</a>
-Printing clock  summary report in "C:\work\tinysdr_fpga_lora_tx\impl1\lora_tx_impl1_scck.rpt" file 
-@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1561421448> | Running in 64-bit mode. 
-@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1561421448> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
+@A:<a href="@A:MF827:@XP_HELP">MF827</a> : <!@TM:1592541161> | No constraint file specified. 
+@N:<a href="@N:MF284:@XP_HELP">MF284</a> : <!@TM:1592541161> | Setting synthesis effort to medium for the design 
+Linked File:  <a href="Z:\tmp\lora-modulator\impl1\lora_tx_impl1_scck.rpt:@XP_FILE">lora_tx_impl1_scck.rpt</a>
+Printing clock  summary report in "Z:\tmp\lora-modulator\impl1\lora_tx_impl1_scck.rpt" file 
+@N:<a href="@N:MF916:@XP_HELP">MF916</a> : <!@TM:1592541161> | Option synthesis_strategy=base is enabled.  
+@N:<a href="@N:MF248:@XP_HELP">MF248</a> : <!@TM:1592541161> | Running in 64-bit mode. 
+@N:<a href="@N:MF666:@XP_HELP">MF666</a> : <!@TM:1592541161> | Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.) 
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 104MB peak: 107MB)
-
-
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 104MB peak: 107MB)
-
-
-Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 116MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 107MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 118MB)
-
-ICG Latch Removal Summary:
-Number of ICG latches removed:	0
-Number of ICG latches not removed:	0
-syn_allowed_resources : blockrams=56  set on top level netlist topModule
-
-Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 146MB peak: 148MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 107MB)
 
 
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 116MB peak: 117MB)
 
-<a name=mapperReport6></a>Clock Summary</a>
-******************
 
-          Start                                   Requested     Requested     Clock                                                Clock                   Clock
-Level     Clock                                   Frequency     Period        Type                                                 Group                   Load 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-0 -       System                                  64.0 MHz      15.625        system                                               system_clkgroup         0    
-                                                                                                                                                                
-0 -       my_pll_64mhz|CLKOP_inferred_clock       64.0 MHz      15.625        inferred                                             Inferred_clkgroup_0     33   
-1 .         clockDivider|clkOut_derived_clock     64.0 MHz      15.625        derived (from my_pll_64mhz|CLKOP_inferred_clock)     Inferred_clkgroup_0     311  
-================================================================================================================================================================
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 119MB)
 
-<font color=#A52A2A>@W:<a href="@W:MT529:@XP_HELP">MT529</a> : <a href="c:\work\tinysdr_fpga_lora_tx\impl1\source\clockdivider.v:31:0:31:6:@W:MT529:@XP_MSG">clockdivider.v(31)</a><!@TM:1561421448> | Found inferred clock my_pll_64mhz|CLKOP_inferred_clock which controls 33 sequential elements including clockDivider_0.counter[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </font>
-
-Finished Pre Mapping Phase.
-
-Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 146MB peak: 148MB)
-
+@N:<a href="@N:MF284:@XP_HELP">MF284</a> : <!@TM:1592541161> | Setting synthesis effort to medium for the design 
+@N:<a href="@N:MH105:@XP_HELP">MH105</a> : <!@TM:1592541161> | UMR3 is only supported for HAPS-80. 
+@N:<a href="@N:MH105:@XP_HELP">MH105</a> : <!@TM:1592541161> | UMR3 is only supported for HAPS-80. 
 Encoding state machine current_state[7:0] (in view: work.loraPacketGenerator(verilog))
 original code -> new code
    00000 -> 00000001
@@ -69,20 +60,84 @@ original code -> new code
    0011 -> 00100
    0100 -> 01000
    0101 -> 10000
+syn_allowed_resources : blockrams=56  set on top level netlist topModule
 
-Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 147MB peak: 148MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 148MB peak: 150MB)
+
+
+
+<a name=mapperReport4></a>Clock Summary</a>
+******************
+
+          Start                                   Requested     Requested     Clock                                                Clock                     Clock
+Level     Clock                                   Frequency     Period        Type                                                 Group                     Load 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+0 -       System                                  1.0 MHz       1000.000      system                                               system_clkgroup           0    
+                                                                                                                                                                  
+0 -       my_pll_64mhz|CLKOP_inferred_clock       1.0 MHz       1000.000      inferred                                             Autoconstr_clkgroup_0     33   
+1 .         clockDivider|clkOut_derived_clock     1.0 MHz       1000.000      derived (from my_pll_64mhz|CLKOP_inferred_clock)     Autoconstr_clkgroup_0     311  
+==================================================================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                      Clock     Source                                       Clock Pin                          Non-clock Pin     Non-clock Pin                   
+Clock                                 Load      Pin                                          Seq Example                        Seq Example       Comb Example                    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                0         -                                            -                                  -                 -                               
+                                                                                                                                                                                  
+my_pll_64mhz|CLKOP_inferred_clock     33        my_pll_instance.PLLInst_0.CLKOP(EHXPLLL)     IQSerializer_0.ICounter[3:0].C     -                 IQSerializer_0.un1_clk.I[0](inv)
+clockDivider|clkOut_derived_clock     311       clockDivider_0.clkOut.Q[0](sdffre)           loraModulator_0.IQStart.C          -                 -                               
+==================================================================================================================================================================================
+
+<font color=#A52A2A>@W:<a href="@W:MT529:@XP_HELP">MT529</a> : <a href="z:\tmp\lora-modulator\impl1\source\clockdivider.v:31:0:31:6:@W:MT529:@XP_MSG">clockdivider.v(31)</a><!@TM:1592541161> | Found inferred clock my_pll_64mhz|CLKOP_inferred_clock which controls 33 sequential elements including clockDivider_0.counter[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. </font>
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+<a name=clockReport5></a>#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[</a>
+
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+2 gated/generated clock tree(s) driving 344 clock pin(s) of sequential element(s)
+0 instances converted, 344 sequential instances remain driven by gated/generated clocks
+
+=========================================================================== Gated/Generated Clocks ===========================================================================
+Clock Tree ID     Driving Element                     Drive Element Type     Unconverted Fanout     Sample Instance                 Explanation                               
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<a href="@|L:Z:\tmp\lora-modulator\impl1\synwork\lora_tx_impl1_prem.srm@|S:my_pll_instance.PLLInst_0.CLKOP@|E:clockDivider_0.counter[7:0]@|F:@syn_dgcc_clockid0_1==1@|M:ClockId_0_1 @XP_NAMES_BY_PROP">ClockId_0_1</a>       my_pll_instance.PLLInst_0.CLKOP     EHXPLLL                33                     clockDivider_0.counter[7:0]     Black box on clock path                   
+<a href="@|L:Z:\tmp\lora-modulator\impl1\synwork\lora_tx_impl1_prem.srm@|S:clockDivider_0.clkOut.Q[0]@|E:loraModulator_0.IQStart@|F:@syn_dgcc_clockid0_3==1@|M:ClockId_0_3 @XP_NAMES_BY_PROP">ClockId_0_3</a>       clockDivider_0.clkOut.Q[0]          sdffre                 311                    loraModulator_0.IQStart         Derived clock on input (not legal for GCC)
+==============================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N:<a href="@N:FX1143:@XP_HELP">FX1143</a> : <!@TM:1592541161> | Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized. 
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 148MB peak: 150MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 149MB peak: 150MB)
 
 None
 None
 
-Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 147MB peak: 148MB)
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 149MB peak: 151MB)
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 61MB peak: 148MB)
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 63MB peak: 151MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Mon Jun 24 17:10:48 2019
+# Thu Jun 18 21:32:41 2020
 
 ###########################################################]
 

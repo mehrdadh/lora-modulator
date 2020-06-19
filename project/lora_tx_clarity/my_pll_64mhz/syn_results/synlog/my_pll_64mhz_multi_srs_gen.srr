@@ -1,0 +1,12 @@
+Synopsys Netlist Linker, version comp2017q2p1, Build 190R, built Aug  4 2017
+@N|Running in 64-bit mode
+File C:\work\tinysdr_fpga_lora_tx\lora_tx_clarity\my_pll_64mhz\syn_results\synwork\my_pll_64mhz_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Apr  5 11:20:55 2019
+
+###########################################################]

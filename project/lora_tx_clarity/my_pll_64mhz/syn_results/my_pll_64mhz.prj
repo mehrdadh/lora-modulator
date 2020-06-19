@@ -1,0 +1,48 @@
+#-- Lattice Semiconductor Corporation Ltd.
+#-- Synplify OEM project file C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/syn_results/my_pll_64mhz.prj
+#-- Written on Fri Apr 05 11:20:52 2019
+
+
+#device options
+set_option -technology ecp5u
+set_option -part LFE5U-25F
+set_option -speed_grade 6
+
+#use verilog 2001 standard option
+set_option -vlog_std v2001
+
+#map options
+set_option -frequency 100
+set_option -fanout_limit 50
+set_option -disable_io_insertion true
+set_option -retiming false
+set_option -pipe false
+set_option -pipe false
+set_option -force_gsr false
+
+#simulation options
+set_option -write_verilog true
+set_option -write_vhdl true
+
+#timing analysis options
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#-- add_file options
+add_file -verilog -lib work "C:/lscc/diamond/3.10_x64/cae_library/synthesis/verilog/ecp5u.v"
+add_file -verilog -lib work "C:/lscc/diamond/3.10_x64/cae_library/synthesis/verilog/pmi_def.v"
+add_file -verilog -lib work "C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.v"
+add_file -constraint {"C:/work/tinysdr_fpga_lora_tx/lora_tx_clarity/my_pll_64mhz/my_pll_64mhz.fdc"}
+
+#-- top module name
+set_option -top_module my_pll_64mhz
+
+#-- set result format/file last
+project -result_file "my_pll_64mhz.edn"
+
+#-- error message log file
+project -log_file my_pll_64mhz.srf
+
+#-- run Synplify with 'arrange VHDL file'
+project -run

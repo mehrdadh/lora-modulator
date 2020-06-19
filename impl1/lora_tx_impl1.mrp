@@ -8,27 +8,27 @@ Design Information
 Command line:   map -a ECP5U -p LFE5U-25F -t CABGA256 -s 6 -oc Industrial
      lora_tx_impl1.ngd -o lora_tx_impl1_map.ncd -pr lora_tx_impl1.prf -mp
      lora_tx_impl1.mrp -lpf
-     C:/work/tinysdr_fpga_lora_tx/impl1/lora_tx_impl1_synplify.lpf -lpf
-     C:/work/tinysdr_fpga_lora_tx/impl1/source/xsdr_fpga_lora_tx.lpf -gui
-     -msgset C:/work/tinysdr_fpga_lora_tx/promote.xml 
+     Z:/tmp/lora-modulator/impl1/lora_tx_impl1_synplify.lpf -lpf
+     Z:/tmp/lora-modulator/source/lora_modulator.lpf -gui -msgset
+     Z:/tmp/lora-modulator/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LFE5U-25FCABGA256
 Target Performance:   6
-Mapper:  sa5p00,  version:  Diamond (64-bit) 3.10.3.144
-Mapped on:  06/28/19  11:19:21
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  06/18/20  21:57:34
 
 Design Summary
 --------------
 
-   Number of registers:    386 out of 24879 (2%)
-      PFU registers:          386 out of 24288 (2%)
+   Number of registers:    344 out of 24879 (1%)
+      PFU registers:          344 out of 24288 (1%)
       PIO registers:            0 out of   591 (0%)
-   Number of SLICEs:      1193 out of 12144 (10%)
-      SLICEs as Logic/ROM:   1193 out of 12144 (10%)
+   Number of SLICEs:      1071 out of 12144 (9%)
+      SLICEs as Logic/ROM:   1071 out of 12144 (9%)
       SLICEs as RAM:            0 out of  9108 (0%)
       SLICEs as Carry:        187 out of 12144 (2%)
-   Number of LUT4s:        1971 out of 24288 (8%)
-      Number used as logic LUTs:        1597
+   Number of LUT4s:        1975 out of 24288 (8%)
+      Number used as logic LUTs:        1601
       Number used as distributed RAM:     0
       Number used as ripple logic:      374
       Number used as shift registers:     0
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  topModule                                     Date:  06/28/19  11:19:21
+Design:  topModule                                     Date:  06/18/20  21:57:34
 
 Design Summary (cont)
 ---------------------
@@ -80,44 +80,40 @@ Design Summary (cont)
    Number of Used DSP MULT Sites:  12 out of 56 (21 %)
    Number of Used DSP ALU Sites:  6 out of 28 (21 %)
    Number of Used DSP PRADD Sites:  0 out of 56 (0 %)
-   Number of clocks:  3
-     Net pll_clko_0: 217 loads, 209 rising, 8 falling (Driver:
+   Number of clocks:  4
+     Net pll_clko: 21 loads, 14 rising, 7 falling (Driver:
      my_pll_instance/PLLInst_0 )
+     Net clk_test_c: 169 loads, 169 rising, 0 falling (Driver:
+     clockDivider_0/clkOut )
      Net my_pll_instance/CLKIt: 1 loads, 1 rising, 0 falling (Driver:
      my_pll_instance/PLLRefcs_0 )
      Net top_clk_c: 1 loads, 1 rising, 0 falling (Driver: PIO top_clk )
-   Number of Clock Enables:  3
-     Net clkOut_RNIP6E01: 135 loads, 135 LSLICEs
-     Net loraPacketGenerator_0/current_statece[0]: 3 loads, 3 LSLICEs
-     Net loraPacketGenerator_0/current_statece[7]: 1 loads, 1 LSLICEs
-   Number of LSRs:  12
-     Net clkOut_RNIP6E01: 53 loads, 53 LSLICEs
-     Net current_state_RNIKA3L1[7]: 59 loads, 59 LSLICEs
-     Net loraModulator_0/chirpGen0/chirp_count7_0_I_99_0_RNIP0IK1: 18 loads, 18
+   Number of Clock Enables:  0
+   Number of LSRs:  11
+     Net loraModulator_0_IQStart: 6 loads, 6 LSLICEs
+     Net counter_0_countDone: 2 loads, 2 LSLICEs
+     Net loraModulator_0/chirpGen0/chirp_count7_0_I_99_0_RNIN2M01: 18 loads, 18
      LSLICEs
-     Net loraModulator_0/loraModulator_0_IQStart: 8 loads, 8 LSLICEs
-     Net loraPacketGenerator_0/current_state_619: 4 loads, 4 LSLICEs
-     Net loraPacketGenerator_0/fb: 1 loads, 1 LSLICEs
-     Net loraPacketGenerator_0/un1_preambleCounter15_0_a2_RNI45SS1: 8 loads, 8
-     LSLICEs
-     Net loraPacketGenerator_0/payloadCounter_1_sqmuxa_1_RNIA68I1: 8 loads, 8
-     LSLICEs
-     Net G_147: 1 loads, 1 LSLICEs
-     Net counter_0/un3_waitcountlto19_0_a2_RNILK0N4: 11 loads, 11 LSLICEs
-     Net pll_lock: 11 loads, 11 LSLICEs
+     Net loraPacketGenerator_0_chirpReset_i: 35 loads, 35 LSLICEs
+     Net loraPacketGenerator_0/next_symVal_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net loraPacketGenerator_0/N_28_i: 9 loads, 9 LSLICEs
+     Net loraPacketGenerator_0/payloadCounter_0_sqmuxa: 8 loads, 8 LSLICEs
+     Net counter_0/un3_waitcountlto19_0_2_RNIVQAM1: 11 loads, 11 LSLICEs
+     Net counter_0/N_9_i_i: 1 loads, 1 LSLICEs
      Net top_rst_n_c_i: 1 loads, 0 LSLICEs
+     Net my_pll_instance/pll_lock: 12 loads, 12 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net clkOut_RNIP6E01: 200 loads
-     Net loraModulator_0/chirpGen0/acc[19]: 70 loads
-     Net loraModulator_0/phaseOut030: 69 loads
-     Net loraModulator_0/chirpGen0/acc[21]: 68 loads
-     Net loraModulator_0/chirpGen0/acc_19_rep2: 67 loads
-     Net loraModulator_0/chirpGen0/acc_21_rep2: 65 loads
-     Net loraModulator_0/chirpGen0/acc[22]: 64 loads
-     Net loraModulator_0/chirpGen0/acc[18]: 62 loads
-     Net loraModulator_0/chirpGen0/acc[20]: 61 loads
-     Net loraModulator_0/chirpGen0/acc[17]: 60 loads
+     Net loraModulator_0/chirpGen0/acc[22]: 196 loads
+     Net loraModulator_0/chirpGen0/acc[18]: 189 loads
+     Net loraModulator_0/chirpGen0/acc[19]: 188 loads
+     Net loraModulator_0/chirpGen0/acc[21]: 176 loads
+     Net loraModulator_0/chirpGen0/acc[20]: 166 loads
+     Net loraModulator_0/chirpGen0/acc[23]: 160 loads
+     Net loraModulator_0/chirpGen0/acc[17]: 154 loads
+     Net loraModulator_0/chirpGen0/acc[16]: 151 loads
+     Net loraModulator_0/chirpGen0/acc[25]: 139 loads
+     Net loraModulator_0/chirpGen0/acc[24]: 121 loads
 
 
 
@@ -126,18 +122,20 @@ Design Summary (cont)
    Number of errors:    0
      
 
+Design Errors/Warnings
+----------------------
+
+WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : removed
 
                                     Page 2
 
 
 
 
-Design:  topModule                                     Date:  06/28/19  11:19:21
+Design:  topModule                                     Date:  06/18/20  21:57:34
 
-Design Errors/Warnings
-----------------------
-
-WARNING - map: loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[0:53] : removed
+Design Errors/Warnings (cont)
+-----------------------------
      the input signal of SIGNEDCIN pin because it's not legal.
 WARNING - map: loraModulator_0/initPhase0/phaseOut0_3_add[0:53] : removed the
      input signal of SIGNEDCIN pin because it's not legal.
@@ -192,18 +190,18 @@ IO (PIO) Attributes
 | clk_test            | OUTPUT    | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | LED                 | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| serial_clk          | OUTPUT    | LVDS      |            |
 
                                     Page 3
 
 
 
 
-Design:  topModule                                     Date:  06/28/19  11:19:21
+Design:  topModule                                     Date:  06/18/20  21:57:34
 
 IO (PIO) Attributes (cont)
 --------------------------
-+---------------------+-----------+-----------+------------+
-| serial_clk          | OUTPUT    | LVDS      |            |
 +---------------------+-----------+-----------+------------+
 | serial_iq           | OUTPUT    | LVDS      |            |
 +---------------------+-----------+-----------+------------+
@@ -215,33 +213,17 @@ Removed logic
 
 Block GSR_INST undriven or does not drive anything - clipped.
 Block GND undriven or does not drive anything - clipped.
-Block clockDivider_0/GND undriven or does not drive anything - clipped.
-Block counter_0/GND undriven or does not drive anything - clipped.
-Block loraPacketGenerator_0/GND undriven or does not drive anything - clipped.
-Block loraModulator_0/GND undriven or does not drive anything - clipped.
 Block loraModulator_0/VCC undriven or does not drive anything - clipped.
-Block loraModulator_0/constant0/GND undriven or does not drive anything -
-     clipped.
-Block loraModulator_0/constant0/VCC undriven or does not drive anything -
-     clipped.
-Block loraModulator_0/chirpGen0/GND undriven or does not drive anything -
-     clipped.
-Block loraModulator_0/chirpGen0/accInc_u1/GND undriven or does not drive
-     anything - clipped.
-Block loraModulator_0/chirpGen0/cosIdeal_0/GND undriven or does not drive
-     anything - clipped.
 Block loraModulator_0/chirpGen0/cosIdeal_0/VCC undriven or does not drive
-     anything - clipped.
-Block loraModulator_0/chirpGen0/sinIdeal_0/GND undriven or does not drive
      anything - clipped.
 Block loraModulator_0/chirpGen0/sinIdeal_0/VCC undriven or does not drive
      anything - clipped.
-Block IQSerializer_0/GND undriven or does not drive anything - clipped.
 Block IQSerializer_0/VCC undriven or does not drive anything - clipped.
-Block IQSerializer_0/DEDFF_0/GND undriven or does not drive anything - clipped.
 Block IQSerializer_0/DEDFF_0/VCC undriven or does not drive anything - clipped.
-Signal pll_lock_i was merged into signal pll_lock
-Signal IQSerializer_0/CN was merged into signal pll_clko_0
+Signal pll_lock_i was merged into signal my_pll_instance/pll_lock
+Signal counter_0_countDone_i was merged into signal counter_0_countDone
+Signal loraModulator_0_IQStart_i was merged into signal loraModulator_0_IQStart
+Signal IQSerializer_0/CN was merged into signal pll_clko
 Signal VCC undriven or does not drive anything - clipped.
 Signal my_pll_instance/VCC undriven or does not drive anything - clipped.
 Signal clockDivider_0/VCC undriven or does not drive anything - clipped.
@@ -258,16 +240,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/GND undriven or does not drive
 Signal loraModulator_0/chirpGen0/phase_u1/VCC undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/chirpGen0/accInc_u1/VCC undriven or does not drive
-
-                                    Page 4
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      anything - clipped.
 Signal my_pll_instance/CLKINTFB undriven or does not drive anything - clipped.
 Signal my_pll_instance/REFCLK undriven or does not drive anything - clipped.
@@ -275,24 +247,34 @@ Signal my_pll_instance/INTLOCK undriven or does not drive anything - clipped.
 Signal my_pll_instance/CLKOS3 undriven or does not drive anything - clipped.
 Signal my_pll_instance/CLKOS2 undriven or does not drive anything - clipped.
 Signal my_pll_instance/CLKOS undriven or does not drive anything - clipped.
-Signal clockDivider_0/un2_counter_cry_0_0_S1 undriven or does not drive anything
-     - clipped.
-Signal clockDivider_0/un2_counter_cry_0_0_S0 undriven or does not drive anything
-     - clipped.
-Signal clockDivider_0/N_1 undriven or does not drive anything - clipped.
-Signal clockDivider_0/un1_lockCounter_s_7_0_S1 undriven or does not drive
-     anything - clipped.
-Signal clockDivider_0/un1_lockCounter_s_7_0_COUT undriven or does not drive
-     anything - clipped.
 Signal clockDivider_0/un1_lockCounter_cry_0_0_S1 undriven or does not drive
      anything - clipped.
 Signal clockDivider_0/un1_lockCounter_cry_0_0_S0 undriven or does not drive
      anything - clipped.
-Signal clockDivider_0/N_2 undriven or does not drive anything - clipped.
+Signal clockDivider_0/N_1 undriven or does not drive anything - clipped.
 Signal clockDivider_0/un2_counter_s_7_0_S1 undriven or does not drive anything -
      clipped.
 Signal clockDivider_0/un2_counter_s_7_0_COUT undriven or does not drive anything
      - clipped.
+Signal clockDivider_0/un2_counter_cry_0_0_S1 undriven or does not drive anything
+     - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
+Signal clockDivider_0/un2_counter_cry_0_0_S0 undriven or does not drive anything
+     - clipped.
+Signal clockDivider_0/N_2 undriven or does not drive anything - clipped.
+Signal clockDivider_0/un1_lockCounter_s_7_0_S1 undriven or does not drive
+     anything - clipped.
+Signal clockDivider_0/un1_lockCounter_s_7_0_COUT undriven or does not drive
+     anything - clipped.
 Signal counter_0/un5_waitcount_s_19_0_S1 undriven or does not drive anything -
      clipped.
 Signal counter_0/un5_waitcount_s_19_0_COUT undriven or does not drive anything -
@@ -315,8 +297,7 @@ Signal loraPacketGenerator_0/un1_preambleCounter_s_13_0_COUT undriven or does
      not drive anything - clipped.
 Signal loraPacketGenerator_0/un1_preambleCounter_cry_0_0_S0 undriven or does not
      drive anything - clipped.
-Signal loraPacketGenerator_0/N_10 undriven or does not drive anything - clipped.
-     
+Signal loraPacketGenerator_0/N_2 undriven or does not drive anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC0 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC1 undriven or does not drive
@@ -324,16 +305,6 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_ROC1 undriven or does not drive
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC2 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC3 undriven or does not drive
-
-                                    Page 5
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC4 undriven or does not drive
      anything - clipped.
@@ -353,6 +324,16 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_ROC11 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC12 undriven or does not drive
      anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC13 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC14 undriven or does not drive
@@ -390,16 +371,6 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_SROB11 undriven or does not drive
 Signal loraModulator_0/initPhase0/phaseOut0_3_SROB12 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_SROB13 undriven or does not drive
-
-                                    Page 6
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_SROB14 undriven or does not drive
      anything - clipped.
@@ -419,6 +390,16 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_SROA3 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_SROA4 undriven or does not drive
      anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/initPhase0/phaseOut0_3_SROA5 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_SROA6 undriven or does not drive
@@ -456,16 +437,6 @@ Signal loraModulator_0/initPhase0/N_1 undriven or does not drive anything -
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC0_0 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC1_0 undriven or does not drive
-
-                                    Page 7
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC2_0 undriven or does not drive
      anything - clipped.
@@ -485,6 +456,16 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_ROC9_0 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC10_0 undriven or does not drive
      anything - clipped.
+
+                                    Page 7
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC11_0 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_ROC12_0 undriven or does not drive
@@ -522,16 +503,6 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_SROB9_0 undriven or does not drive
 Signal loraModulator_0/initPhase0/phaseOut0_3_SROB10_0 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_SROB11_0 undriven or does not
-
-                                    Page 8
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_SROB12_0 undriven or does not
      drive anything - clipped.
@@ -551,6 +522,16 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_SROA1_0 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_SROA2_0 undriven or does not drive
      anything - clipped.
+
+                                    Page 8
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/initPhase0/phaseOut0_3_SROA3_0 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_SROA4_0 undriven or does not drive
@@ -588,16 +569,6 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_add_UNDER undriven or does not
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_OVER undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_EQPATB undriven or does not
-
-                                    Page 9
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_EQPAT undriven or does not
      drive anything - clipped.
@@ -617,6 +588,16 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO3 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO4 undriven or does not drive
      anything - clipped.
+
+                                    Page 9
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO5 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO6 undriven or does not drive
@@ -654,16 +635,6 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO21 undriven or does not
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO22 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO23 undriven or does not
-
-                                   Page 10
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO24 undriven or does not
      drive anything - clipped.
@@ -683,6 +654,16 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO31 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO32 undriven or does not
      drive anything - clipped.
+
+                                   Page 10
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO33 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO34 undriven or does not
@@ -720,16 +701,6 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO49 undriven or does not
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO50 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO51 undriven or does not
-
-                                   Page 11
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_add_CO52 undriven or does not
      drive anything - clipped.
@@ -749,6 +720,16 @@ Signal loraModulator_0/initPhase0/phaseOut0_3_add[39] undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_add[40] undriven or does not drive
      anything - clipped.
+
+                                   Page 11
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/initPhase0/phaseOut0_3_add[41] undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/initPhase0/phaseOut0_3_add[42] undriven or does not drive
@@ -786,16 +767,6 @@ Signal loraModulator_0/chirpGen0/chirp_count7_0_I_93_0_S1 undriven or does not
 Signal loraModulator_0/chirpGen0/chirp_count7_0_I_93_0_S0 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/chirp_count7_0_I_81_0_S1 undriven or does not
-
-                                   Page 12
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/chirp_count7_0_I_81_0_S0 undriven or does not
      drive anything - clipped.
@@ -815,6 +786,16 @@ Signal loraModulator_0/chirpGen0/chirp_count7_0_I_33_0_S1 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/chirp_count7_0_I_33_0_S0 undriven or does not
      drive anything - clipped.
+
+                                   Page 12
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/chirp_count7_0_I_21_0_S1 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/chirp_count7_0_I_21_0_S0 undriven or does not
@@ -852,16 +833,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC4_1 undriven or does not
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC5_1 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC6_1 undriven or does not
-
-                                   Page 13
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC7_1 undriven or does not
      drive anything - clipped.
@@ -881,6 +852,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC14_1 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC15_1 undriven or does not
      drive anything - clipped.
+
+                                   Page 13
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC16_1 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC17_1 undriven or does not
@@ -918,16 +899,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB14_1 undriven or does
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB15_1 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB16_1 undriven or does
-
-                                   Page 14
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB17_1 undriven or does
      not drive anything - clipped.
@@ -947,6 +918,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA6_1 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA7_1 undriven or does not
      drive anything - clipped.
+
+                                   Page 14
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA8_1 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA9_1 undriven or does not
@@ -984,16 +965,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC6 undriven or does not
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC7 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC8 undriven or does not
-
-                                   Page 15
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC9 undriven or does not
      drive anything - clipped.
@@ -1013,6 +984,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC16 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_ROC17 undriven or does not
      drive anything - clipped.
+
+                                   Page 15
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB0 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB1 undriven or does not
@@ -1050,16 +1031,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB16 undriven or does
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROB17 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA0 undriven or does not
-
-                                   Page 16
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA1 undriven or does not
      drive anything - clipped.
@@ -1079,6 +1050,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA8 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA9 undriven or does not
      drive anything - clipped.
+
+                                   Page 16
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA10 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_0_SROA11 undriven or does
@@ -1116,16 +1097,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC8_0 undriven or does not
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC9_0 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC10_0 undriven or does not
-
-                                   Page 17
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC11_0 undriven or does not
      drive anything - clipped.
@@ -1145,6 +1116,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB0_0 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB1_0 undriven or does not
      drive anything - clipped.
+
+                                   Page 17
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB2_0 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB3_0 undriven or does not
@@ -1182,16 +1163,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA0_0 undriven or does not
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA1_0 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA2_0 undriven or does not
-
-                                   Page 18
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA3_0 undriven or does not
      drive anything - clipped.
@@ -1211,6 +1182,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA10_0 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA11_0 undriven or does
      not drive anything - clipped.
+
+                                   Page 18
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA12_0 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA13_0 undriven or does
@@ -1248,16 +1229,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC10 undriven or does not
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC11 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC12 undriven or does not
-
-                                   Page 19
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_ROC13 undriven or does not
      drive anything - clipped.
@@ -1277,6 +1248,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB2 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB3 undriven or does not
      drive anything - clipped.
+
+                                   Page 19
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB4 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROB5 undriven or does not
@@ -1314,16 +1295,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA2 undriven or does not
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA3 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA4 undriven or does not
-
-                                   Page 20
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA5 undriven or does not
      drive anything - clipped.
@@ -1343,6 +1314,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA12 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA13 undriven or does not
      drive anything - clipped.
+
+                                   Page 20
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA14 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_SROA15 undriven or does not
@@ -1380,16 +1361,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO4_0 undriven or does
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO5_0 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO6_0 undriven or does
-
-                                   Page 21
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO7_0 undriven or does
      not drive anything - clipped.
@@ -1409,6 +1380,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO14_0 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO15_0 undriven or does
      not drive anything - clipped.
+
+                                   Page 21
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO16_0 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO17_0 undriven or does
@@ -1446,16 +1427,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO32_0 undriven or does
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO33_0 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO34_0 undriven or does
-
-                                   Page 22
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO35_0 undriven or does
      not drive anything - clipped.
@@ -1475,6 +1446,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO42_0 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO43_0 undriven or does
      not drive anything - clipped.
+
+                                   Page 22
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO44_0 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO45_0 undriven or does
@@ -1512,16 +1493,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_EQZM undriven or does
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_EQZ undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO0 undriven or does not
-
-                                   Page 23
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO1 undriven or does not
      drive anything - clipped.
@@ -1541,6 +1512,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO8 undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO9 undriven or does not
      drive anything - clipped.
+
+                                   Page 23
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO10 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO11 undriven or does
@@ -1578,16 +1559,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO26 undriven or does
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO27 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO28 undriven or does
-
-                                   Page 24
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO29 undriven or does
      not drive anything - clipped.
@@ -1607,6 +1578,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO36 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO37 undriven or does
      not drive anything - clipped.
+
+                                   Page 24
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO38 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_CO39 undriven or does
@@ -1644,16 +1625,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[16] undriven or does not
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add[17] undriven or does not
      drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[18] undriven or does
-
-                                   Page 25
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[19] undriven or does
      not drive anything - clipped.
@@ -1673,6 +1644,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[26] undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[27] undriven or does
      not drive anything - clipped.
+
+                                   Page 25
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[28] undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[29] undriven or does
@@ -1710,16 +1691,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[44] undriven or does
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[45] undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[46] undriven or does
-
-                                   Page 26
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_0[47] undriven or does
      not drive anything - clipped.
@@ -1739,6 +1710,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_BW_SR_add_SIGNEDR undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[32] undriven or
      does not drive anything - clipped.
+
+                                   Page 26
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_COUT[32] undriven or
      does not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[30] undriven or
@@ -1776,16 +1757,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[9] undriven or
 Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[7] undriven or
      does not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[7] undriven or
-
-                                   Page 27
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      does not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S1[5] undriven or
      does not drive anything - clipped.
@@ -1805,6 +1776,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/phaseOut30_cry_0_S0[0] undriven or
      does not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/N_1 undriven or does not drive
      anything - clipped.
+
+                                   Page 27
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[32] undriven
      or does not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_COUT[32] undriven
@@ -1842,16 +1823,6 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[9] undriven or
 Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[9] undriven or
      does not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[7] undriven or
-
-                                   Page 28
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      does not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[7] undriven or
      does not drive anything - clipped.
@@ -1871,6 +1842,16 @@ Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S1[0] undriven or
      does not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/un1_phaseOut_1_cry_0_S0[0] undriven or
      does not drive anything - clipped.
+
+                                   Page 28
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/phase_u1/N_2 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/phaseOut_4_s_33_0_S1 undriven or does
@@ -1889,12 +1870,14 @@ Signal loraModulator_0/chirpGen0/phase_u1/phaseOut_cry_0_0_S0 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/phase_u1/N_4 undriven or does not drive
      anything - clipped.
-Signal loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_5_0_COUT undriven or
-     does not drive anything - clipped.
-Signal loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_0_0_S1 undriven or
-     does not drive anything - clipped.
-Signal loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_0_0_S0 undriven or
-     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_1_s_33_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_1_s_33_0_COUT undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_1_cry_0_0_S1 undriven or does
+     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/accOut_1_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/accInc_u1/N_1 undriven or does not drive
      anything - clipped.
 Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_s_33_0_S1 undriven or does
@@ -1908,16 +1891,6 @@ Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_5_0_S0 undriven or does
 Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_3_0_S1 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_3_0_S0 undriven or does
-
-                                   Page 29
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-Removed logic (cont)
---------------------
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_1_0_S1 undriven or does
      not drive anything - clipped.
@@ -1929,18 +1902,28 @@ Signal loraModulator_0/chirpGen0/accInc_u1/accOut_4_cry_0_0_S0 undriven or does
      not drive anything - clipped.
 Signal loraModulator_0/chirpGen0/accInc_u1/N_2 undriven or does not drive
      anything - clipped.
-Signal loraModulator_0/chirpGen0/accInc_u1/accOut_1_s_33_0_S1 undriven or does
-     not drive anything - clipped.
-Signal loraModulator_0/chirpGen0/accInc_u1/accOut_1_s_33_0_COUT undriven or does
-     not drive anything - clipped.
-Signal loraModulator_0/chirpGen0/accInc_u1/accOut_1_cry_0_0_S1 undriven or does
-     not drive anything - clipped.
-Signal loraModulator_0/chirpGen0/accInc_u1/accOut_1_cry_0_0_S0 undriven or does
-     not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_5_0_COUT undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_0_0_S1 undriven or
+     does not drive anything - clipped.
+Signal loraModulator_0/chirpGen0/accInc_u1/un16_accOut_cry_0_0_S0 undriven or
+     does not drive anything - clipped.
+
+                                   Page 29
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+Removed logic (cont)
+--------------------
 Signal loraModulator_0/chirpGen0/accInc_u1/N_3 undriven or does not drive
      anything - clipped.
 Block my_pll_instance/PLLInst_0_RNI4KT8 was optimized away.
-Block IQSerializer_0/current_state_0_.CN was optimized away.
+Block counter_0/countDone_RNIC3M3 was optimized away.
+Block loraModulator_0/IQStart_RNIA6T7 was optimized away.
+Block IQSerializer_0/current_state_1_.CN was optimized away.
 Block VCC was optimized away.
 Block my_pll_instance/VCC was optimized away.
 Block clockDivider_0/VCC was optimized away.
@@ -1974,16 +1957,6 @@ DSP Component Details
 
      	OpcodeOP0 Registers	CLK	CE	RST
 	--------------------------------------------
-
-                                   Page 30
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-DSP Component Details (cont)
-----------------------------
 		Input		    	   	    
 		Pipeline	    	   	    
 
@@ -2001,6 +1974,16 @@ Data
 	--------------------------------------------
 		C0		    	   	    
 		C1		    	   	    
+
+                                   Page 30
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+DSP Component Details (cont)
+----------------------------
 		CFB		    	   	    
 
      	Output Register		CLK	CE	RST
@@ -2040,16 +2023,6 @@ Other
 	Opcode  2		0
 	Opcode  3		0
 	Opcode  4		0
-
-                                   Page 31
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-DSP Component Details (cont)
-----------------------------
 	Opcode  5		0
 	Opcode  6		0
 	Opcode  7		0
@@ -2067,6 +2040,16 @@ DSP Component Details (cont)
 		Input		    	--	--
 		Pipeline	    	--	--
 
+
+                                   Page 31
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+DSP Component Details (cont)
+----------------------------
      	OpcodeIN Registers	CLK	CE	RST
 	--------------------------------------------
 		Input		    	   	    
@@ -2107,16 +2090,6 @@ Other
 	CLK2_DIV	ENABLED
 	CLK3_DIV	ENABLED
 
-                                   Page 32
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-DSP Component Details (cont)
-----------------------------
-
      . MULT18X18D  loraModulator_0/chirpGen0/phase_u1/un1_BW_SR[0:35]:
 
      Multiplier
@@ -2133,6 +2106,16 @@ DSP Component Details (cont)
 		Pipeline	    	   	    
 Data
 	Input Registers		CLK	CE	RST	Source
+
+                                   Page 32
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+DSP Component Details (cont)
+----------------------------
 	-------------------------------------------------------
 		A		    	   	    	A Data In
 		B		    	   	    	B Data In
@@ -2172,16 +2155,6 @@ Other
 		Pipeline	    	   	    
 
      	Operation B		Unsigned
-
-                                   Page 33
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-DSP Component Details (cont)
-----------------------------
 	Operation B Registers	CLK	CE	RST
 	--------------------------------------------
 		Input		    	   	    
@@ -2199,6 +2172,16 @@ Data
 		Pipe		    	   	    
 
      	Output Register		CLK	CE	RST
+
+                                   Page 33
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+DSP Component Details (cont)
+----------------------------
 	--------------------------------------------
 		Output		    	   	    
 Other
@@ -2239,16 +2222,6 @@ Data
 		C		    	   	    	N/A
 	Cascaded Match
 
-                                   Page 34
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-DSP Component Details (cont)
-----------------------------
-
      	Pipeline Registers	CLK	CE	RST
 	--------------------------------------------
 		Pipe		    	   	    
@@ -2265,6 +2238,16 @@ Other
 	CLK0_DIV	ENABLED
 	CLK1_DIV	ENABLED
 	CLK2_DIV	ENABLED
+
+                                   Page 34
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+DSP Component Details (cont)
+----------------------------
 	CLK3_DIV	ENABLED
 	HIGHSPEED_CLK	NONE
 	PSE17		0b00000000000000000
@@ -2304,16 +2287,6 @@ Data
 Other
 	SOURCEB_MODE	B_SHIFT
 	MULT_BYPASS	DISABLED
-
-                                   Page 35
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-DSP Component Details (cont)
-----------------------------
 	CAS_MATCH_REG	FALSE
 	GSR		DISABLED
 	RESETMODE	ASYNC
@@ -2331,6 +2304,16 @@ DSP Component Details (cont)
 
      54-Bit ALU
 	Opcode  0		1
+
+                                   Page 35
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+DSP Component Details (cont)
+----------------------------
 	Opcode  1		0
 	Opcode  2		0
 	Opcode  3		0
@@ -2370,16 +2353,6 @@ Data
 
      	Flag Register		CLK	CE	RST
 	--------------------------------------------
-
-                                   Page 36
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-DSP Component Details (cont)
-----------------------------
 		Flag		    	   	    
 Other
 	MCPAT_SOURCE	STATIC
@@ -2397,6 +2370,16 @@ Other
      
 	LEGACY  	DISABLED
      
+
+                                   Page 36
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+DSP Component Details (cont)
+----------------------------
 	CLK0_DIV	ENABLED
 	CLK1_DIV	ENABLED
 	CLK2_DIV	ENABLED
@@ -2436,16 +2419,6 @@ Other
 	MULT_BYPASS	DISABLED
 	CAS_MATCH_REG	FALSE
 	GSR		DISABLED
-
-                                   Page 37
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-DSP Component Details (cont)
-----------------------------
 	RESETMODE	ASYNC
 	CLK0_DIV	ENABLED
 	CLK1_DIV	ENABLED
@@ -2463,6 +2436,16 @@ DSP Component Details (cont)
 	Operation A		Unsigned
 	Operation A Registers	CLK	CE	RST
 	--------------------------------------------
+
+                                   Page 37
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+DSP Component Details (cont)
+----------------------------
 		Input		    	   	    
 		Pipeline	    	   	    
 
@@ -2502,16 +2485,6 @@ Other
      
 	C_PSE17		0b00000000000000000
 
-
-                                   Page 38
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
-DSP Component Details (cont)
-----------------------------
      
 
 PLL/DLL Summary
@@ -2523,14 +2496,24 @@ PLL 1:                                     Pin/Node Value
   Input Clock:                             NODE     my_pll_instance/GND
   Input Clock2:                            PIN      top_clk_c
   Input Clock select:                               NONE
-  Output Clock(P):                         PIN,NODE pll_clko_0
+  Output Clock(P):                         PIN,NODE pll_clko
   Output Clock(S):                                  NONE
   Output Clock(S2):                                 NONE
   Output Clock(S3):                                 NONE
-  Feedback Signal:                         NODE     pll_clko_0
+  Feedback Signal:                         NODE     pll_clko
   Reset Signal:                            NODE     top_rst_n_c_i
+
+                                   Page 38
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+PLL/DLL Summary (cont)
+----------------------
   Standby Signal:                          NODE     my_pll_instance/GND
-  PLL LOCK signal:                         NODE     pll_lock
+  PLL LOCK signal:                         NODE     my_pll_instance/pll_lock
   PLL Internal LOCK Signal:                         NONE
   Input Clock Frequency (MHz):                      32.0000
   Output Clock(P) Frequency (MHz):                  64.0000
@@ -2566,16 +2549,6 @@ PLL 1:                                     Pin/Node Value
   CLKOS3 Trim Option Rising/Falling:                NONE
   CLKOS3 Trim Option Delay:                         NONE
 
-
-
-
-                                   Page 39
-
-
-
-
-Design:  topModule                                     Date:  06/28/19  11:19:21
-
 ASIC Components
 ---------------
 
@@ -2595,6 +2568,16 @@ Instance Name: loraModulator_0/initPhase0/phaseOut0_3_add[0:53]
          Type: ALU54B
 Instance Name: loraModulator_0/initPhase0/phaseOut0_3[18:53]
          Type: MULT18X18D
+
+                                   Page 39
+
+
+
+
+Design:  topModule                                     Date:  06/18/20  21:57:34
+
+ASIC Components (cont)
+----------------------
 Instance Name: loraModulator_0/initPhase0/phaseOut0_3[0:35]
          Type: MULT18X18D
 Instance Name: my_pll_instance/PLLInst_0
@@ -2607,8 +2590,25 @@ Run Time and Memory Usage
 
    Total CPU Time: 2 secs  
    Total REAL Time: 2 secs  
-   Peak Memory Usage: 124 MB
+   Peak Memory Usage: 123 MB
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2642,5 +2642,5 @@ Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
      Copyright (c) 1995 AT&T Corp.   All rights reserved.
      Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
      Copyright (c) 2001 Agere Systems   All rights reserved.
-     Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
      reserved.

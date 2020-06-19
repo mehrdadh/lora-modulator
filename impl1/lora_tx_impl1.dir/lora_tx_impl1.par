@@ -1,14 +1,14 @@
-PAR: Place And Route Diamond (64-bit) 3.10.3.144.
+PAR: Place And Route Diamond (64-bit) 3.11.0.396.4.
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Jun 28 11:19:28 2019
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Thu Jun 18 21:57:42 2020
 
-C:/lscc/diamond/3.10_x64/ispfpga\bin\nt64\par -f lora_tx_impl1.p2t
+C:/lscc/diamond/3.11_x64/ispfpga\bin\nt64\par -f lora_tx_impl1.p2t
 lora_tx_impl1_map.ncd lora_tx_impl1.dir lora_tx_impl1.prf -gui -msgset
-C:/work/tinysdr_fpga_lora_tx/promote.xml
+Z:/tmp/lora-modulator/promote.xml
 
 
 Preference file: lora_tx_impl1.prf.
@@ -16,10 +16,12 @@ Preference file: lora_tx_impl1.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            -6.860       16288153     0.168        0            01:15        Success
+5_1   *      0            -16.410      48747910     -0.777       18519        02:31        Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 1 mins 16 secs 
+Total (real) run time for 1-seed: 2 mins 31 secs 
 
 par done!
+
+Note: user must run 'Trace' for timing closure signoff.

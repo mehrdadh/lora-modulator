@@ -1,0 +1,19 @@
+i my_pll_instance.CLKOP_i
+m 0 0
+u 13 33
+n ckid0_0 {t:IQSerializer_0.DEDFF_0.neg_edge.C} Black box on clock path
+p {t:my_pll_instance.PLLInst_0.CLKOP}{t:my_pll_instance.CLKOP_inferred_clock.I[0]}{t:my_pll_instance.CLKOP_inferred_clock.OUT[0]}{p:my_pll_instance.CLKOP}{t:my_pll_instance.CLKOP}{t:clockDivider_0.clk}{p:clockDivider_0.clk}{t:clockDivider_0.counter[7:0].C}
+e ckid0_1 {t:clockDivider_0.counter[7:0].C} sdffr
+d ckid0_0,ckid0_1 {t:my_pll_instance.PLLInst_0.CLKOP} EHXPLLL Black box on clock path
+i clockDivider_0.clkOut_i
+m 0 0
+u 23 311
+n ckid0_2 {t:loraModulator_0.chirpGen0.chirp_count[33:0].C} Derived clock on input (not legal for GCC)
+p {t:clockDivider_0.clkOut.Q[0]}{t:clockDivider_0.clkOut_derived_clock.I[0]}{t:clockDivider_0.clkOut_derived_clock.OUT[0]}{p:clockDivider_0.clkOut}{t:clockDivider_0.clkOut}{t:loraModulator_0.clk}{p:loraModulator_0.clk}{t:loraModulator_0.IQStart.C}
+e ckid0_3 {t:loraModulator_0.IQStart.C} dff
+d ckid0_4 {t:clockDivider_0.clkOut.Q[0]} sdffre Potential generated clock but with a nonconvertable driver or an unknown conversion method
+i my_pll_instance.LOCK
+m 0 0
+u 0 0
+d ckid0_5 {t:my_pll_instance.PLLInst_0.LOCK} EHXPLLL Black box on clock path
+l 0 0 0 0 0
